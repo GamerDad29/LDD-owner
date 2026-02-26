@@ -1,0 +1,119 @@
+{
+  "2026": {
+    "label": "YTD Jan 1 \u2013 Feb 23",
+    "totalAllCategories": 477169.24,
+    "totalUnits": 130744,
+    "categories": [
+      { "name": "Apparel",           "totalSales": 147546.02, "netSales": 136216.54, "units": 43684, "products": 10, "pctOfTotal": 30.9, "color": "#4d9fff" },
+      { "name": "General Merch",     "totalSales":  70678.68, "netSales":  65253.88, "units": 27064, "products": 21, "pctOfTotal": 14.8, "color": "#3dd68c" },
+      { "name": "Specialty Items",   "totalSales":  60984.27, "netSales":  56307.54, "units":  2122, "products": 27, "pctOfTotal": 12.8, "color": "#f5a623" },
+      { "name": "Homegoods",         "totalSales":  41951.57, "netSales":  38732.67, "units":  8149, "products": 20, "pctOfTotal":  8.8, "color": "#a07dfc" },
+      { "name": "Toys",              "totalSales":  37034.43, "netSales":  34191.71, "units": 10181, "products": 20, "pctOfTotal":  7.8, "color": "#4dd4e6" },
+      { "name": "Health & Beauty",   "totalSales":  36939.17, "netSales":  34104.13, "units": 12676, "products": 15, "pctOfTotal":  7.7, "color": "#e87da0" },
+      { "name": "Other",             "totalSales":  29258.13, "netSales":  27673.54, "units": 16918, "products": 56, "pctOfTotal":  6.1, "color": "#6b6f80" },
+      { "name": "Shoes/Footwear",    "totalSales":  19210.24, "netSales":  17734.50, "units":  2980, "products": 12, "pctOfTotal":  4.0, "color": "#74d1a0" },
+      { "name": "Baby & Kids",       "totalSales":  12814.92, "netSales":  11831.40, "units":  4014, "products": 16, "pctOfTotal":  2.7, "color": "#c4b5fd" },
+      { "name": "Pet",               "totalSales":   1868.94, "netSales":   1725.34, "units":   781, "products": 12, "pctOfTotal":  0.4, "color": "#94a3b8" }
+    ],
+    "specialty": {
+      "totalSales": 60984.27,
+      "netSales": 56307.54,
+      "units": 2122,
+      "products": 27,
+      "pctOfTotal": 12.8,
+      "avgPricePerUnit": 26.53,
+      "items": [
+        { "price": "$15",  "units": 695, "netSales": 10048.07 },
+        { "price": "$25",  "units": 325, "netSales":  7871.01 },
+        { "price": "$50",  "units": 136, "netSales":  6559.55 },
+        { "price": "$20",  "units": 333, "netSales":  6439.46 },
+        { "price": "$30",  "units": 139, "netSales":  4041.29 },
+        { "price": "$60",  "units":  67, "netSales":  3949.02 },
+        { "price": "$40",  "units":  97, "netSales":  3738.44 },
+        { "price": "$35",  "units":  70, "netSales":  2395.46 },
+        { "price": "$70",  "units":  24, "netSales":  1624.43 },
+        { "price": "$45",  "units":  35, "netSales":  1522.35 },
+        { "price": "$250", "units":   5, "netSales":  1240.00 },
+        { "price": "Other","units": 196, "netSales":  5878.46 }
+      ]
+    }
+  },
+  "2025": {
+    "label": "Full Year 2025",
+    "totalAllCategories": 2320068.07,
+    "totalUnits": 634200,
+    "categories": [
+      { "name": "Apparel",           "totalSales": 706300, "netSales": 652100, "units": 207400, "products": 10, "pctOfTotal": 30.4, "color": "#4d9fff" },
+      { "name": "General Merch",     "totalSales": 350200, "netSales": 323300, "units": 134600, "products": 21, "pctOfTotal": 15.1, "color": "#3dd68c" },
+      { "name": "Specialty Items",   "totalSales": 238100, "netSales": 219800, "units":  9820,  "products": 27, "pctOfTotal": 10.3, "color": "#f5a623" },
+      { "name": "Homegoods",         "totalSales": 213800, "netSales": 197400, "units": 41600,  "products": 20, "pctOfTotal":  9.2, "color": "#a07dfc" },
+      { "name": "Toys",              "totalSales": 188900, "netSales": 174400, "units": 51900,  "products": 20, "pctOfTotal":  8.1, "color": "#4dd4e6" },
+      { "name": "Health & Beauty",   "totalSales": 188400, "netSales": 173900, "units": 64600,  "products": 15, "pctOfTotal":  8.1, "color": "#e87da0" },
+      { "name": "Other",             "totalSales": 156500, "netSales": 144500, "units": 90400,  "products": 56, "pctOfTotal":  6.7, "color": "#6b6f80" },
+      { "name": "Shoes/Footwear",    "totalSales": 102800, "netSales":  94900, "units": 15900,  "products": 12, "pctOfTotal":  4.4, "color": "#74d1a0" },
+      { "name": "Baby & Kids",       "totalSales":  68600, "netSales":  63300, "units": 21500,  "products": 16, "pctOfTotal":  3.0, "color": "#c4b5fd" },
+      { "name": "Pet",               "totalSales":  10200, "netSales":   9400, "units":  4200,  "products": 12, "pctOfTotal":  0.4, "color": "#94a3b8" }
+    ],
+    "specialty": {
+      "totalSales": 238100,
+      "netSales": 219800,
+      "units": 9820,
+      "products": 27,
+      "pctOfTotal": 10.3,
+      "avgPricePerUnit": 22.38,
+      "items": [
+        { "price": "$15",  "units": 3380, "netSales": 48800 },
+        { "price": "$25",  "units": 1580, "netSales": 38300 },
+        { "price": "$50",  "units":  660, "netSales": 31900 },
+        { "price": "$20",  "units": 1620, "netSales": 31300 },
+        { "price": "$30",  "units":  676, "netSales": 19600 },
+        { "price": "$60",  "units":  326, "netSales": 19200 },
+        { "price": "$40",  "units":  472, "netSales": 18200 },
+        { "price": "$35",  "units":  340, "netSales": 11600 },
+        { "price": "$70",  "units":  117, "netSales":  7900 },
+        { "price": "$45",  "units":  170, "netSales":  7400 },
+        { "price": "$250", "units":   24, "netSales":  6000 },
+        { "price": "Other","units":  455, "netSales": 19600 }
+      ]
+    }
+  },
+  "2024": {
+    "label": "Full Year 2024",
+    "totalAllCategories": 2459701.64,
+    "totalUnits": 670000,
+    "categories": [
+      { "name": "Apparel",           "totalSales": 720100, "netSales": 664700, "units": 213400, "products": 10, "pctOfTotal": 29.3, "color": "#4d9fff" },
+      { "name": "General Merch",     "totalSales": 381800, "netSales": 352400, "units": 145200, "products": 21, "pctOfTotal": 15.5, "color": "#3dd68c" },
+      { "name": "Specialty Items",   "totalSales": 221000, "netSales": 204000, "units":  7900,  "products": 27, "pctOfTotal":  9.0, "color": "#f5a623" },
+      { "name": "Homegoods",         "totalSales": 233800, "netSales": 215800, "units": 45400,  "products": 20, "pctOfTotal":  9.5, "color": "#a07dfc" },
+      { "name": "Toys",              "totalSales": 209700, "netSales": 193600, "units": 57600,  "products": 20, "pctOfTotal":  8.5, "color": "#4dd4e6" },
+      { "name": "Health & Beauty",   "totalSales": 209200, "netSales": 193100, "units": 70000,  "products": 15, "pctOfTotal":  8.5, "color": "#e87da0" },
+      { "name": "Other",             "totalSales": 172800, "netSales": 162100, "units": 98200,  "products": 56, "pctOfTotal":  7.0, "color": "#6b6f80" },
+      { "name": "Shoes/Footwear",    "totalSales": 118500, "netSales": 109400, "units": 18300,  "products": 12, "pctOfTotal":  4.8, "color": "#74d1a0" },
+      { "name": "Baby & Kids",       "totalSales":  79400, "netSales":  73300, "units": 23400,  "products": 16, "pctOfTotal":  3.2, "color": "#c4b5fd" },
+      { "name": "Pet",               "totalSales":  12500, "netSales":  11500, "units":  4800,  "products": 12, "pctOfTotal":  0.5, "color": "#94a3b8" }
+    ],
+    "specialty": {
+      "totalSales": 221000,
+      "netSales": 204000,
+      "units": 7900,
+      "products": 27,
+      "pctOfTotal": 9.0,
+      "avgPricePerUnit": 25.82,
+      "items": [
+        { "price": "$15",  "units": 3140, "netSales": 45300 },
+        { "price": "$25",  "units": 1470, "netSales": 35600 },
+        { "price": "$50",  "units":  610, "netSales": 29600 },
+        { "price": "$20",  "units": 1500, "netSales": 29000 },
+        { "price": "$30",  "units":  628, "netSales": 18200 },
+        { "price": "$60",  "units":  303, "netSales": 17800 },
+        { "price": "$40",  "units":  438, "netSales": 16900 },
+        { "price": "$35",  "units":  316, "netSales": 10800 },
+        { "price": "$70",  "units":  108, "netSales":  7300 },
+        { "price": "$45",  "units":  158, "netSales":  6900 },
+        { "price": "$250", "units":   22, "netSales":  5500 },
+        { "price": "Other","units":  207, "netSales": 21100 }
+      ]
+    }
+  }
+}

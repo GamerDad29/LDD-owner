@@ -1,0 +1,43 @@
+{
+  "currentAllocations": {
+    "monthlyRevenue": 54827,
+    "ownersPay": { "amount": 700, "percentage": 1.28 },
+    "inventory": { "amount": 26260, "percentage": 47.9 },
+    "cashReserves": { "amount": 4418, "percentage": 8.06 },
+    "salesTax": { "amount": 4500, "percentage": 8.21 },
+    "payroll": { "amount": 14000, "percentage": 25.54 },
+    "operating": { "amount": 6500, "percentage": 11.86 },
+    "profit": { "amount": -1551, "percentage": -2.83 }
+  },
+  "cashFlowProjection": {
+    "weeklyTargetRevenue": 50000,
+    "projectedMonthlyRevenue": 200000,
+    "categories": {
+      "salesTax": 4000,
+      "ownersPay": 460,
+      "inventory": 25000,
+      "payroll": 9000,
+      "operating": 6500
+    },
+    "projectedWeeklyProfit": 5040,
+    "cumulativeProfitTarget": 62615.60
+  },
+  "targetAllocationRatios": {
+    "profit": { "min": 5, "target": 10, "max": 15 },
+    "ownersPay": { "min": 1, "target": 5, "max": 10 },
+    "inventory": { "min": 35, "target": 45, "max": 50 },
+    "salesTax": { "min": 7, "target": 8, "max": 10 },
+    "payroll": { "min": 20, "target": 25, "max": 30 },
+    "operating": { "min": 10, "target": 12, "max": 15 }
+  },
+  "recentMonthlySnapshot": {
+    "totalSales": 35000,
+    "income": 44480,
+    "profit": 513.80,
+    "ownersPay": 444,
+    "inventory": 16800,
+    "payroll": 10000,
+    "operating": 6500,
+    "salesTax": 3995
+  }
+}

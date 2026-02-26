@@ -1,0 +1,57 @@
+{
+  "years": {
+    "2024": {
+      "totalSales": 2459701.64,
+      "totalOrders": 81723,
+      "aov": 30.098034090770042,
+      "returns": -113220.17,
+      "returnRate": 4.603,
+      "monthlyAvg": 204975.14,
+      "yoyVs2023": 5.073
+    },
+    "2025": {
+      "totalSales": 2320068.07,
+      "totalOrders": 75927,
+      "aov": 30.556561829125343,
+      "returns": -109361.93,
+      "returnRate": 4.713737989592693,
+      "yoyVs2024": -5.676849896315079,
+      "monthlyAvg": 193339.00583333333
+    },
+    "2026": {
+      "periodDays": 54,
+      "totalSales": 477169.24,
+      "totalOrders": 14943,
+      "aov": 31.932626647928796,
+      "dailyAvg": 8836.467407407406,
+      "returns": -20486.48,
+      "returnRate": 4.293336259478922,
+      "annualizedSales": 3225310.6037037033,
+      "annualizedOrders": 101003.61111111111,
+      "yoyVs2025SamePeriod": 68.50812387233181,
+      "yoyVs2025Full": 39.0179299223623
+    }
+  },
+  "periodComparison": {
+    "label": "Jan 1 - Feb 23",
+    "2024": {
+      "totalSales": 377124.93,
+      "totalOrders": 11294,
+      "aov": 33.39
+    },
+    "2025": {
+      "totalSales": 283172.84,
+      "totalOrders": 9707,
+      "aov": 29.172024312351915
+    },
+    "2026": {
+      "totalSales": 477169.24,
+      "totalOrders": 14943,
+      "aov": 31.932626647928796
+    },
+    "salesGrowth": 68.50812387233181,
+    "orderGrowth": 53.94045534150613,
+    "salesGrowthVs2024": 26.52,
+    "orderGrowthVs2024": 32.31
+  }
+}

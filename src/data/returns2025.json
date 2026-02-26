@@ -1,0 +1,74 @@
+[
+  {
+    "month": "2025-01",
+    "returns": -7232.55,
+    "prevYearReturns": -7976.66,
+    "yoyChange": 9.328
+  },
+  {
+    "month": "2025-02",
+    "returns": -9994.48,
+    "prevYearReturns": -10509.13,
+    "yoyChange": 4.897
+  },
+  {
+    "month": "2025-03",
+    "returns": -8928.44,
+    "prevYearReturns": -11747.2,
+    "yoyChange": 23.995
+  },
+  {
+    "month": "2025-04",
+    "returns": -10144.44,
+    "prevYearReturns": -12201.65,
+    "yoyChange": 16.86
+  },
+  {
+    "month": "2025-05",
+    "returns": -11171.18,
+    "prevYearReturns": -11880.7,
+    "yoyChange": 5.972
+  },
+  {
+    "month": "2025-06",
+    "returns": -10044.48,
+    "prevYearReturns": -11114.04,
+    "yoyChange": 9.623
+  },
+  {
+    "month": "2025-07",
+    "returns": -9325.42,
+    "prevYearReturns": -12762.93,
+    "yoyChange": 26.933
+  },
+  {
+    "month": "2025-08",
+    "returns": -11466.83,
+    "prevYearReturns": -9059.8,
+    "yoyChange": -26.568
+  },
+  {
+    "month": "2025-09",
+    "returns": -7608.67,
+    "prevYearReturns": -6798.66,
+    "yoyChange": -11.914
+  },
+  {
+    "month": "2025-10",
+    "returns": -7063.5,
+    "prevYearReturns": -6210.79,
+    "yoyChange": -13.729
+  },
+  {
+    "month": "2025-11",
+    "returns": -6769.72,
+    "prevYearReturns": -6714.26,
+    "yoyChange": -0.826
+  },
+  {
+    "month": "2025-12",
+    "returns": -9612.22,
+    "prevYearReturns": -6244.35,
+    "yoyChange": -53.934
+  }
+]

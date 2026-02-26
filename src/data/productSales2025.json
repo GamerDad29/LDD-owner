@@ -1,0 +1,2692 @@
+[
+  {
+    "name": "$5 Apparel Item",
+    "unitsSold": 86055,
+    "grossSales": 463245,
+    "discounts": -26763.67,
+    "returns": -31637.66,
+    "netSales": 404843.67,
+    "taxes": 33675.98,
+    "totalSales": 438519.65
+  },
+  {
+    "name": "$5.00 General Merchandise",
+    "unitsSold": 12149,
+    "grossSales": 62125,
+    "discounts": -3369.38,
+    "returns": -1315.7,
+    "netSales": 57439.92,
+    "taxes": 4790.59,
+    "totalSales": 62230.51
+  },
+  {
+    "name": "$3 Apparel Item",
+    "unitsSold": 19673,
+    "grossSales": 60213,
+    "discounts": -3419.77,
+    "returns": -1144.1,
+    "netSales": 55649.13,
+    "taxes": 4627.77,
+    "totalSales": 60276.9
+  },
+  {
+    "name": "$10 Homegoods Item",
+    "unitsSold": 5247,
+    "grossSales": 55490,
+    "discounts": -2543.57,
+    "returns": -2938.48,
+    "netSales": 50007.95,
+    "taxes": 4151.17,
+    "totalSales": 54159.12
+  },
+  {
+    "name": "$15 Homegoods Item",
+    "unitsSold": 3052,
+    "grossSales": 47865,
+    "discounts": -2039.12,
+    "returns": -1999.34,
+    "netSales": 43826.54,
+    "taxes": 3644.92,
+    "totalSales": 47471.46
+  },
+  {
+    "name": "$10.00 General Merchandise",
+    "unitsSold": 4369,
+    "grossSales": 45190,
+    "discounts": -2272.66,
+    "returns": -1435.49,
+    "netSales": 41481.85,
+    "taxes": 3443.63,
+    "totalSales": 44925.48
+  },
+  {
+    "name": "$1.00 General Merchandise",
+    "unitsSold": 39085,
+    "grossSales": 39365,
+    "discounts": -2235.75,
+    "returns": -269.94,
+    "netSales": 36859.31,
+    "taxes": 3090.89,
+    "totalSales": 39950.2
+  },
+  {
+    "name": "$3.00 General Merchandise",
+    "unitsSold": 12797,
+    "grossSales": 38802,
+    "discounts": -2099.28,
+    "returns": -399.89,
+    "netSales": 36302.83,
+    "taxes": 3019.3,
+    "totalSales": 39322.13
+  },
+  {
+    "name": "$5 Homegoods Item",
+    "unitsSold": 7450,
+    "grossSales": 38155,
+    "discounts": -1917.16,
+    "returns": -877.47,
+    "netSales": 35360.37,
+    "taxes": 2947.7,
+    "totalSales": 38308.07
+  },
+  {
+    "name": "$30 Homegoods Item",
+    "unitsSold": 1192,
+    "grossSales": 38340,
+    "discounts": -1501.04,
+    "returns": -2492.92,
+    "netSales": 34346.04,
+    "taxes": 2851.08,
+    "totalSales": 37197.12
+  },
+  {
+    "name": "$6.00 General Merchandise",
+    "unitsSold": 5829,
+    "grossSales": 35730,
+    "discounts": -1766.19,
+    "returns": -728.17,
+    "netSales": 33235.64,
+    "taxes": 2763.26,
+    "totalSales": 35998.9
+  },
+  {
+    "name": "$2.00 General Merchandise",
+    "unitsSold": 17370,
+    "grossSales": 34972,
+    "discounts": -1895.05,
+    "returns": -225.35,
+    "netSales": 32851.6,
+    "taxes": 2697.26,
+    "totalSales": 35548.86
+  },
+  {
+    "name": "$20 Homegoods Item",
+    "unitsSold": 1576,
+    "grossSales": 33240,
+    "discounts": -1257.66,
+    "returns": -1671.86,
+    "netSales": 30310.48,
+    "taxes": 2516.2,
+    "totalSales": 32826.68
+  },
+  {
+    "name": "$10 Shoes",
+    "unitsSold": 3084,
+    "grossSales": 32090,
+    "discounts": -2333.57,
+    "returns": -1200.21,
+    "netSales": 28556.22,
+    "taxes": 2371.38,
+    "totalSales": 30927.6
+  },
+  {
+    "name": "$5 Baby Item",
+    "unitsSold": 6003,
+    "grossSales": 30455,
+    "discounts": -1910,
+    "returns": -424.49,
+    "netSales": 28120.51,
+    "taxes": 2342.25,
+    "totalSales": 30462.76
+  },
+  {
+    "name": "$15.00 General Merchandise",
+    "unitsSold": 1826,
+    "grossSales": 28740,
+    "discounts": -1282.39,
+    "returns": -1294.08,
+    "netSales": 26163.53,
+    "taxes": 2176.36,
+    "totalSales": 28339.89
+  },
+  {
+    "name": "$40 Homegoods Item",
+    "unitsSold": 671,
+    "grossSales": 28920,
+    "discounts": -992.99,
+    "returns": -2044.68,
+    "netSales": 25882.33,
+    "taxes": 2148.15,
+    "totalSales": 28030.48
+  },
+  {
+    "name": "$1 Apparel Item",
+    "unitsSold": 27380,
+    "grossSales": 27642,
+    "discounts": -1542.53,
+    "returns": -252.47,
+    "netSales": 25847,
+    "taxes": 2170.77,
+    "totalSales": 28017.77
+  },
+  {
+    "name": "$12 Homegoods Item",
+    "unitsSold": 2189,
+    "grossSales": 27384,
+    "discounts": -1282.92,
+    "returns": -1092.39,
+    "netSales": 25008.69,
+    "taxes": 2069.5,
+    "totalSales": 27078.19
+  },
+  {
+    "name": "$50 Homegoods Item",
+    "unitsSold": 518,
+    "grossSales": 29350,
+    "discounts": -1159.39,
+    "returns": -3375.65,
+    "netSales": 24814.96,
+    "taxes": 2059.77,
+    "totalSales": 26874.73
+  },
+  {
+    "name": "$25 Homegoods Item",
+    "unitsSold": 950,
+    "grossSales": 25200,
+    "discounts": -953.37,
+    "returns": -1420.78,
+    "netSales": 22825.85,
+    "taxes": 1897.09,
+    "totalSales": 24722.94
+  },
+  {
+    "name": "$10 Toy Item",
+    "unitsSold": 2356,
+    "grossSales": 23930,
+    "discounts": -1117.39,
+    "returns": -348.75,
+    "netSales": 22463.86,
+    "taxes": 1864.91,
+    "totalSales": 24328.77
+  },
+  {
+    "name": "$6 Homegoods Item",
+    "unitsSold": 3892,
+    "grossSales": 23880,
+    "discounts": -1303.05,
+    "returns": -508.4,
+    "netSales": 22068.55,
+    "taxes": 1834.59,
+    "totalSales": 23903.14
+  },
+  {
+    "name": "$6.00 Health & Beauty Item",
+    "unitsSold": 3761,
+    "grossSales": 22920,
+    "discounts": -1115.96,
+    "returns": -341.98,
+    "netSales": 21462.06,
+    "taxes": 1784.22,
+    "totalSales": 23246.28
+  },
+  {
+    "name": "$5 Toy Item",
+    "unitsSold": 4419,
+    "grossSales": 22295,
+    "discounts": -1233.44,
+    "returns": -189.94,
+    "netSales": 20871.62,
+    "taxes": 1741.59,
+    "totalSales": 22613.21
+  },
+  {
+    "name": "$5.00 Health & Beauty Item",
+    "unitsSold": 4276,
+    "grossSales": 21700,
+    "discounts": -1192.77,
+    "returns": -305.64,
+    "netSales": 20201.59,
+    "taxes": 1685.83,
+    "totalSales": 21887.42
+  },
+  {
+    "name": "$3.00 Health & Beauty Item",
+    "unitsSold": 6944,
+    "grossSales": 20979,
+    "discounts": -1217.26,
+    "returns": -138.69,
+    "netSales": 19623.05,
+    "taxes": 1632.64,
+    "totalSales": 21255.69
+  },
+  {
+    "name": "$20.00 General Merchandise",
+    "unitsSold": 988,
+    "grossSales": 20720,
+    "discounts": -957.09,
+    "returns": -930.59,
+    "netSales": 18832.32,
+    "taxes": 1563.32,
+    "totalSales": 20395.64
+  },
+  {
+    "name": "$3 Baby Item",
+    "unitsSold": 6291,
+    "grossSales": 19020,
+    "discounts": -1143.75,
+    "returns": -143.61,
+    "netSales": 17732.64,
+    "taxes": 1474.14,
+    "totalSales": 19206.78
+  },
+  {
+    "name": "$3 Bra",
+    "unitsSold": 6169,
+    "grossSales": 19305,
+    "discounts": -1083.43,
+    "returns": -758.21,
+    "netSales": 17463.36,
+    "taxes": 1452.4,
+    "totalSales": 18915.76
+  },
+  {
+    "name": "$8.00 General Merchandise",
+    "unitsSold": 2274,
+    "grossSales": 18680,
+    "discounts": -914.06,
+    "returns": -476.05,
+    "netSales": 17289.89,
+    "taxes": 1441.7,
+    "totalSales": 18731.59
+  },
+  {
+    "name": "$12.00 General Merchandise",
+    "unitsSold": 1411,
+    "grossSales": 17652,
+    "discounts": -898.91,
+    "returns": -689.55,
+    "netSales": 16063.54,
+    "taxes": 1328.65,
+    "totalSales": 17392.19
+  },
+  {
+    "name": "$5.00 Swim",
+    "unitsSold": 3321,
+    "grossSales": 18945,
+    "discounts": -866.47,
+    "returns": -2275.65,
+    "netSales": 15802.88,
+    "taxes": 1317.76,
+    "totalSales": 17120.64
+  },
+  {
+    "name": "$10.00 Health & Beauty Item",
+    "unitsSold": 1588,
+    "grossSales": 16240,
+    "discounts": -684.23,
+    "returns": -348.49,
+    "netSales": 15207.28,
+    "taxes": 1262.45,
+    "totalSales": 16469.73
+  },
+  {
+    "name": "$6 Toy Item",
+    "unitsSold": 2595,
+    "grossSales": 15750,
+    "discounts": -765.08,
+    "returns": -171.02,
+    "netSales": 14813.9,
+    "taxes": 1231.62,
+    "totalSales": 16045.52
+  },
+  {
+    "name": "$3 Homegoods Item",
+    "unitsSold": 5148,
+    "grossSales": 15696,
+    "discounts": -761.84,
+    "returns": -245.11,
+    "netSales": 14689.05,
+    "taxes": 1221.42,
+    "totalSales": 15910.47
+  },
+  {
+    "name": "$60 Homegoods Item",
+    "unitsSold": 253,
+    "grossSales": 17280,
+    "discounts": -590.24,
+    "returns": -2021.49,
+    "netSales": 14668.27,
+    "taxes": 1217.57,
+    "totalSales": 15885.84
+  },
+  {
+    "name": "$30.00 General Merchandise",
+    "unitsSold": 477,
+    "grossSales": 15270,
+    "discounts": -636.6,
+    "returns": -919.14,
+    "netSales": 13714.26,
+    "taxes": 1138.44,
+    "totalSales": 14852.7
+  },
+  {
+    "name": "$1.00 Health & Beauty Item",
+    "unitsSold": 14406,
+    "grossSales": 14456,
+    "discounts": -734.6,
+    "returns": -48.18,
+    "netSales": 13673.22,
+    "taxes": 1150.54,
+    "totalSales": 14823.76
+  },
+  {
+    "name": "$12 Toy Item",
+    "unitsSold": 1174,
+    "grossSales": 14340,
+    "discounts": -664.11,
+    "returns": -241.29,
+    "netSales": 13434.6,
+    "taxes": 1111.2,
+    "totalSales": 14545.8
+  },
+  {
+    "name": "$15 Toy Item",
+    "unitsSold": 927,
+    "grossSales": 14355,
+    "discounts": -575.94,
+    "returns": -426.23,
+    "netSales": 13352.83,
+    "taxes": 1111.09,
+    "totalSales": 14463.92
+  },
+  {
+    "name": "$8 Homegoods Item",
+    "unitsSold": 1601,
+    "grossSales": 13136,
+    "discounts": -597.22,
+    "returns": -321.45,
+    "netSales": 12217.33,
+    "taxes": 1018.55,
+    "totalSales": 13235.88
+  },
+  {
+    "name": "$3 Toy Item",
+    "unitsSold": 4254,
+    "grossSales": 12819,
+    "discounts": -600.48,
+    "returns": -53.75,
+    "netSales": 12164.77,
+    "taxes": 1011.86,
+    "totalSales": 13176.63
+  },
+  {
+    "name": "$4.00 Health & Beauty Item",
+    "unitsSold": 3176,
+    "grossSales": 12824,
+    "discounts": -645.44,
+    "returns": -112.96,
+    "netSales": 12065.6,
+    "taxes": 999.46,
+    "totalSales": 13065.06
+  },
+  {
+    "name": "$2 Apparel Item",
+    "unitsSold": 6246,
+    "grossSales": 12618,
+    "discounts": -760.66,
+    "returns": -118.91,
+    "netSales": 11738.43,
+    "taxes": 959.51,
+    "totalSales": 12697.94
+  },
+  {
+    "name": "$25.00 General Merchandise",
+    "unitsSold": 474,
+    "grossSales": 12675,
+    "discounts": -512.03,
+    "returns": -807.99,
+    "netSales": 11354.98,
+    "taxes": 943.84,
+    "totalSales": 12298.82
+  },
+  {
+    "name": "$5 Shoes",
+    "unitsSold": 2343,
+    "grossSales": 12020,
+    "discounts": -756.46,
+    "returns": -295.73,
+    "netSales": 10967.81,
+    "taxes": 915.34,
+    "totalSales": 11883.15
+  },
+  {
+    "name": "$1 Homegoods Item",
+    "unitsSold": 11529,
+    "grossSales": 11594,
+    "discounts": -601.21,
+    "returns": -63.69,
+    "netSales": 10929.1,
+    "taxes": 915.45,
+    "totalSales": 11844.55
+  },
+  {
+    "name": "$2 Homegoods Item",
+    "unitsSold": 5547,
+    "grossSales": 11274,
+    "discounts": -595.95,
+    "returns": -175.8,
+    "netSales": 10502.25,
+    "taxes": 861.97,
+    "totalSales": 11364.22
+  },
+  {
+    "name": "$8 Toy Item",
+    "unitsSold": 1368,
+    "grossSales": 11024,
+    "discounts": -543.78,
+    "returns": -73.72,
+    "netSales": 10406.5,
+    "taxes": 867.54,
+    "totalSales": 11274.04
+  },
+  {
+    "name": "$2.00 Health & Beauty Item",
+    "unitsSold": 5481,
+    "grossSales": 11022,
+    "discounts": -578.59,
+    "returns": -55.27,
+    "netSales": 10388.14,
+    "taxes": 849.88,
+    "totalSales": 11238.02
+  },
+  {
+    "name": "$70 Homegoods Item",
+    "unitsSold": 151,
+    "grossSales": 12460,
+    "discounts": -494.25,
+    "returns": -1824.99,
+    "netSales": 10140.76,
+    "taxes": 841.79,
+    "totalSales": 10982.55
+  },
+  {
+    "name": "$20 Toy Item",
+    "unitsSold": 523,
+    "grossSales": 10860,
+    "discounts": -413.48,
+    "returns": -386.69,
+    "netSales": 10059.83,
+    "taxes": 834.98,
+    "totalSales": 10894.81
+  },
+  {
+    "name": "$5.00 Fall",
+    "unitsSold": 2318,
+    "grossSales": 11965,
+    "discounts": -1600.6,
+    "returns": -342.23,
+    "netSales": 10022.17,
+    "taxes": 835.48,
+    "totalSales": 10857.65
+  },
+  {
+    "name": "$5.00 Christmas",
+    "unitsSold": 2232,
+    "grossSales": 11460,
+    "discounts": -1388.87,
+    "returns": -275.19,
+    "netSales": 9795.94,
+    "taxes": 816.45,
+    "totalSales": 10612.39
+  },
+  {
+    "name": "$4 Apparel Item",
+    "unitsSold": 2594,
+    "grossSales": 10520,
+    "discounts": -625.56,
+    "returns": -136.1,
+    "netSales": 9758.34,
+    "taxes": 807.82,
+    "totalSales": 10566.16
+  },
+  {
+    "name": "$2.50 Swim",
+    "unitsSold": 4029,
+    "grossSales": 10995,
+    "discounts": -450.8,
+    "returns": -897.18,
+    "netSales": 9647.02,
+    "taxes": 804.59,
+    "totalSales": 10451.61
+  },
+  {
+    "name": "$10 Kid's Shoes",
+    "unitsSold": 1013,
+    "grossSales": 10570,
+    "discounts": -770,
+    "returns": -410.3,
+    "netSales": 9389.7,
+    "taxes": 779.86,
+    "totalSales": 10169.56
+  },
+  {
+    "name": "$8.00 Health & Beauty Item",
+    "unitsSold": 1154,
+    "grossSales": 9392,
+    "discounts": -475.7,
+    "returns": -153.21,
+    "netSales": 8763.09,
+    "taxes": 730.94,
+    "totalSales": 9494.03
+  },
+  {
+    "name": "$6 Socks/Underwear Pack",
+    "unitsSold": 1521,
+    "grossSales": 9246,
+    "discounts": -550.97,
+    "returns": -115.77,
+    "netSales": 8579.26,
+    "taxes": 713.52,
+    "totalSales": 9292.78
+  },
+  {
+    "name": "$40.00 General Merchandise",
+    "unitsSold": 222,
+    "grossSales": 9960,
+    "discounts": -345.27,
+    "returns": -1062.43,
+    "netSales": 8552.3,
+    "taxes": 709.81,
+    "totalSales": 9262.11
+  },
+  {
+    "name": "$15.00 Health & Beauty Item",
+    "unitsSold": 581,
+    "grossSales": 9180,
+    "discounts": -366.46,
+    "returns": -452.83,
+    "netSales": 8360.71,
+    "taxes": 695.46,
+    "totalSales": 9056.17
+  },
+  {
+    "name": "$50.00 General Merchandise",
+    "unitsSold": 174,
+    "grossSales": 9650,
+    "discounts": -395.08,
+    "returns": -917.13,
+    "netSales": 8337.79,
+    "taxes": 692.05,
+    "totalSales": 9029.84
+  },
+  {
+    "name": "$2 Toy Item",
+    "unitsSold": 4381,
+    "grossSales": 8790,
+    "discounts": -482.37,
+    "returns": -27.67,
+    "netSales": 8279.96,
+    "taxes": 677.59,
+    "totalSales": 8957.55
+  },
+  {
+    "name": "$0.50 General Merchandise",
+    "unitsSold": 16931,
+    "grossSales": 8516.5,
+    "discounts": -419.31,
+    "returns": -49.64,
+    "netSales": 8047.55,
+    "taxes": 671.04,
+    "totalSales": 8718.59
+  },
+  {
+    "name": "$10 Apparel Item",
+    "unitsSold": 810,
+    "grossSales": 8470,
+    "discounts": -414.24,
+    "returns": -360.7,
+    "netSales": 7695.06,
+    "taxes": 639.02,
+    "totalSales": 8334.08
+  },
+  {
+    "name": "$1 Toy Item",
+    "unitsSold": 7425,
+    "grossSales": 7446,
+    "discounts": -408.8,
+    "returns": -19.56,
+    "netSales": 7017.64,
+    "taxes": 594.3,
+    "totalSales": 7611.94
+  },
+  {
+    "name": "$100 Homegoods Item",
+    "unitsSold": 74,
+    "grossSales": 8200,
+    "discounts": -379.19,
+    "returns": -793.36,
+    "netSales": 7027.45,
+    "taxes": 583.29,
+    "totalSales": 7610.74
+  },
+  {
+    "name": "$6.00 Patio & Outdoor",
+    "unitsSold": 1285,
+    "grossSales": 7776,
+    "discounts": -947.52,
+    "returns": -60.91,
+    "netSales": 6767.57,
+    "taxes": 561.59,
+    "totalSales": 7329.16
+  },
+  {
+    "name": "$12.00 Health & Beauty Item",
+    "unitsSold": 588,
+    "grossSales": 7332,
+    "discounts": -348.5,
+    "returns": -271.22,
+    "netSales": 6712.28,
+    "taxes": 555.17,
+    "totalSales": 7267.45
+  },
+  {
+    "name": "$5 Kid's Shoes",
+    "unitsSold": 1428,
+    "grossSales": 7230,
+    "discounts": -469.73,
+    "returns": -84.5,
+    "netSales": 6675.77,
+    "taxes": 556.99,
+    "totalSales": 7232.76
+  },
+  {
+    "name": "$4.00 General Merchandise",
+    "unitsSold": 1766,
+    "grossSales": 7112,
+    "discounts": -400.44,
+    "returns": -46.37,
+    "netSales": 6665.19,
+    "taxes": 552.34,
+    "totalSales": 7217.53
+  },
+  {
+    "name": "$20.00 Health & Beauty Item",
+    "unitsSold": 318,
+    "grossSales": 6860,
+    "discounts": -240.15,
+    "returns": -483.98,
+    "netSales": 6135.87,
+    "taxes": 509.4,
+    "totalSales": 6645.27
+  },
+  {
+    "name": "$2.00 Christmas",
+    "unitsSold": 2962,
+    "grossSales": 5984,
+    "discounts": -547.29,
+    "returns": -55.02,
+    "netSales": 5381.69,
+    "taxes": 443.68,
+    "totalSales": 5825.37
+  },
+  {
+    "name": "$1 Baby",
+    "unitsSold": 5555,
+    "grossSales": 5583,
+    "discounts": -351.03,
+    "returns": -25.93,
+    "netSales": 5206.04,
+    "taxes": 438.19,
+    "totalSales": 5644.23
+  },
+  {
+    "name": "$30 Toy Item",
+    "unitsSold": 178,
+    "grossSales": 5640,
+    "discounts": -223.47,
+    "returns": -289.6,
+    "netSales": 5126.93,
+    "taxes": 425.55,
+    "totalSales": 5552.48
+  },
+  {
+    "name": "$1.00 Christmas",
+    "unitsSold": 5534,
+    "grossSales": 5557,
+    "discounts": -465.71,
+    "returns": -22.9,
+    "netSales": 5068.39,
+    "taxes": 424.18,
+    "totalSales": 5492.57
+  },
+  {
+    "name": "$25 Toy Item",
+    "unitsSold": 212,
+    "grossSales": 5625,
+    "discounts": -250.76,
+    "returns": -304.84,
+    "netSales": 5069.4,
+    "taxes": 421.44,
+    "totalSales": 5490.84
+  },
+  {
+    "name": "$5.00 Patio & Outdoor",
+    "unitsSold": 1105,
+    "grossSales": 5550,
+    "discounts": -602.96,
+    "returns": -22.5,
+    "netSales": 4924.54,
+    "taxes": 410.95,
+    "totalSales": 5335.49
+  },
+  {
+    "name": "$15.00 Patio & Outdoor",
+    "unitsSold": 372,
+    "grossSales": 5775,
+    "discounts": -749.77,
+    "returns": -176.7,
+    "netSales": 4848.53,
+    "taxes": 403.39,
+    "totalSales": 5251.92
+  },
+  {
+    "name": "$2 Baby Item",
+    "unitsSold": 2416,
+    "grossSales": 4868,
+    "discounts": -280.7,
+    "returns": -33.56,
+    "netSales": 4553.74,
+    "taxes": 372.6,
+    "totalSales": 4926.34
+  },
+  {
+    "name": "$10.00 Patio & Outdoor",
+    "unitsSold": 503,
+    "grossSales": 5140,
+    "discounts": -571.47,
+    "returns": -96.46,
+    "netSales": 4472.07,
+    "taxes": 371.14,
+    "totalSales": 4843.21
+  },
+  {
+    "name": "$80 Homegoods Item",
+    "unitsSold": 57,
+    "grossSales": 5040,
+    "discounts": -245.55,
+    "returns": -454.41,
+    "netSales": 4340.04,
+    "taxes": 360.22,
+    "totalSales": 4700.26
+  },
+  {
+    "name": "$1.00 Grocery Item",
+    "unitsSold": 4757,
+    "grossSales": 4803,
+    "discounts": -271.6,
+    "returns": -46,
+    "netSales": 4485.4,
+    "taxes": 0,
+    "totalSales": 4485.4
+  },
+  {
+    "name": "$25.00 Health & Beauty Item",
+    "unitsSold": 171,
+    "grossSales": 4750,
+    "discounts": -152.94,
+    "returns": -458.65,
+    "netSales": 4138.41,
+    "taxes": 343.99,
+    "totalSales": 4482.4
+  },
+  {
+    "name": "$10.00 Christmas",
+    "unitsSold": 485,
+    "grossSales": 5000,
+    "discounts": -720.99,
+    "returns": -141.88,
+    "netSales": 4137.13,
+    "taxes": 343.63,
+    "totalSales": 4480.76
+  },
+  {
+    "name": "$3.00 Swim",
+    "unitsSold": 1426,
+    "grossSales": 4611,
+    "discounts": -220.54,
+    "returns": -321.26,
+    "netSales": 4069.2,
+    "taxes": 338.58,
+    "totalSales": 4407.78
+  },
+  {
+    "name": "$3.00 Patio & Outdoor",
+    "unitsSold": 1490,
+    "grossSales": 4512,
+    "discounts": -491.69,
+    "returns": -41.25,
+    "netSales": 3979.06,
+    "taxes": 332.06,
+    "totalSales": 4311.12
+  },
+  {
+    "name": "$30.00 Patio & Outdoor",
+    "unitsSold": 157,
+    "grossSales": 4920,
+    "discounts": -874.99,
+    "returns": -182.88,
+    "netSales": 3862.13,
+    "taxes": 320.67,
+    "totalSales": 4182.8
+  },
+  {
+    "name": "$2.00 Fall",
+    "unitsSold": 2194,
+    "grossSales": 4402,
+    "discounts": -585.21,
+    "returns": -12.61,
+    "netSales": 3804.18,
+    "taxes": 313.59,
+    "totalSales": 4117.77
+  },
+  {
+    "name": "$50 Toy Item",
+    "unitsSold": 78,
+    "grossSales": 4000,
+    "discounts": -113.66,
+    "returns": -96.72,
+    "netSales": 3789.62,
+    "taxes": 314.57,
+    "totalSales": 4104.19
+  },
+  {
+    "name": "$20 Baby Item",
+    "unitsSold": 199,
+    "grossSales": 4020,
+    "discounts": -230.51,
+    "returns": -40,
+    "netSales": 3749.49,
+    "taxes": 311.23,
+    "totalSales": 4060.72
+  },
+  {
+    "name": "$12.00 Patio & Outdoor",
+    "unitsSold": 341,
+    "grossSales": 4176,
+    "discounts": -491.27,
+    "returns": -73.27,
+    "netSales": 3611.46,
+    "taxes": 298.91,
+    "totalSales": 3910.37
+  },
+  {
+    "name": "$60.00 General Merchandise",
+    "unitsSold": 61,
+    "grossSales": 4020,
+    "discounts": -133.95,
+    "returns": -360,
+    "netSales": 3526.05,
+    "taxes": 292.72,
+    "totalSales": 3818.77
+  },
+  {
+    "name": "$1.00 Fall",
+    "unitsSold": 3790,
+    "grossSales": 3795,
+    "discounts": -464.9,
+    "returns": -4,
+    "netSales": 3326.1,
+    "taxes": 278.06,
+    "totalSales": 3604.16
+  },
+  {
+    "name": "$3.00 Christmas",
+    "unitsSold": 1219,
+    "grossSales": 3795,
+    "discounts": -454.69,
+    "returns": -128.07,
+    "netSales": 3212.24,
+    "taxes": 266.89,
+    "totalSales": 3479.13
+  },
+  {
+    "name": "$12 Baby Item",
+    "unitsSold": 279,
+    "grossSales": 3468,
+    "discounts": -179.13,
+    "returns": -115.02,
+    "netSales": 3173.85,
+    "taxes": 262.55,
+    "totalSales": 3436.4
+  },
+  {
+    "name": "$1.00 Swim",
+    "unitsSold": 3149,
+    "grossSales": 3376,
+    "discounts": -144.63,
+    "returns": -223.45,
+    "netSales": 3007.92,
+    "taxes": 250.58,
+    "totalSales": 3258.5
+  },
+  {
+    "name": "$20.00 Patio & Outdoor",
+    "unitsSold": 168,
+    "grossSales": 3380,
+    "discounts": -437.99,
+    "returns": -20,
+    "netSales": 2922.01,
+    "taxes": 242.59,
+    "totalSales": 3164.6
+  },
+  {
+    "name": "Pet $5",
+    "unitsSold": 518,
+    "grossSales": 2670,
+    "discounts": -129.29,
+    "returns": -78.28,
+    "netSales": 2462.43,
+    "taxes": 205.51,
+    "totalSales": 2667.94
+  },
+  {
+    "name": "$8 Socks/Underwear Pack",
+    "unitsSold": 326,
+    "grossSales": 2640,
+    "discounts": -161.52,
+    "returns": -31.71,
+    "netSales": 2446.77,
+    "taxes": 204.11,
+    "totalSales": 2650.88
+  },
+  {
+    "name": "$.50 Toy",
+    "unitsSold": 5077,
+    "grossSales": 2541,
+    "discounts": -149.89,
+    "returns": -2.3,
+    "netSales": 2388.81,
+    "taxes": 199.27,
+    "totalSales": 2588.08
+  },
+  {
+    "name": "$15 Baby Item",
+    "unitsSold": 167,
+    "grossSales": 2580,
+    "discounts": -116.48,
+    "returns": -75,
+    "netSales": 2388.52,
+    "taxes": 198.73,
+    "totalSales": 2587.25
+  },
+  {
+    "name": "$6.00 Christmas",
+    "unitsSold": 463,
+    "grossSales": 2892,
+    "discounts": -416.74,
+    "returns": -106.5,
+    "netSales": 2368.76,
+    "taxes": 196.75,
+    "totalSales": 2565.51
+  },
+  {
+    "name": "$4 Toy Item",
+    "unitsSold": 617,
+    "grossSales": 2488,
+    "discounts": -123.77,
+    "returns": -18.92,
+    "netSales": 2345.31,
+    "taxes": 194.2,
+    "totalSales": 2539.51
+  },
+  {
+    "name": "$15.00 Christmas",
+    "unitsSold": 182,
+    "grossSales": 2790,
+    "discounts": -425.29,
+    "returns": -51.48,
+    "netSales": 2313.23,
+    "taxes": 192.36,
+    "totalSales": 2505.59
+  },
+  {
+    "name": "$40 Toy Item",
+    "unitsSold": 59,
+    "grossSales": 2520,
+    "discounts": -103.52,
+    "returns": -152,
+    "netSales": 2264.48,
+    "taxes": 187.97,
+    "totalSales": 2452.45
+  },
+  {
+    "name": "$8.00 Patio & Outdoor",
+    "unitsSold": 302,
+    "grossSales": 2424,
+    "discounts": -234.8,
+    "returns": -8,
+    "netSales": 2181.2,
+    "taxes": 181.66,
+    "totalSales": 2362.86
+  },
+  {
+    "name": "$80.00 General Merchandise",
+    "unitsSold": 28,
+    "grossSales": 2320,
+    "discounts": -73.44,
+    "returns": -80,
+    "netSales": 2166.56,
+    "taxes": 179.81,
+    "totalSales": 2346.37
+  },
+  {
+    "name": "$70.00 General Merchandise",
+    "unitsSold": 31,
+    "grossSales": 2590,
+    "discounts": -95.06,
+    "returns": -401.68,
+    "netSales": 2093.26,
+    "taxes": 173.77,
+    "totalSales": 2267.03
+  },
+  {
+    "name": "$40.00 Patio & Outdoor",
+    "unitsSold": 62,
+    "grossSales": 2680,
+    "discounts": -449.43,
+    "returns": -185.57,
+    "netSales": 2045,
+    "taxes": 169.71,
+    "totalSales": 2214.71
+  },
+  {
+    "name": "$10.00 Fall",
+    "unitsSold": 232,
+    "grossSales": 2460,
+    "discounts": -322.23,
+    "returns": -123.68,
+    "netSales": 2014.09,
+    "taxes": 167.19,
+    "totalSales": 2181.28
+  },
+  {
+    "name": "$4 Homegoods Item",
+    "unitsSold": 527,
+    "grossSales": 2164,
+    "discounts": -99.71,
+    "returns": -52.28,
+    "netSales": 2012.01,
+    "taxes": 166.56,
+    "totalSales": 2178.57
+  },
+  {
+    "name": "$60 Toy Item",
+    "unitsSold": 32,
+    "grossSales": 2040,
+    "discounts": -55.53,
+    "returns": -116.84,
+    "netSales": 1867.63,
+    "taxes": 155.04,
+    "totalSales": 2022.67
+  },
+  {
+    "name": "$0.50 Apparel",
+    "unitsSold": 3927,
+    "grossSales": 1968,
+    "discounts": -107.46,
+    "returns": -4.02,
+    "netSales": 1856.52,
+    "taxes": 154.6,
+    "totalSales": 2011.12
+  },
+  {
+    "name": "$10 Baby Item",
+    "unitsSold": 192,
+    "grossSales": 1990,
+    "discounts": -104.06,
+    "returns": -67.44,
+    "netSales": 1818.5,
+    "taxes": 150.95,
+    "totalSales": 1969.45
+  },
+  {
+    "name": "$.50 Christmas",
+    "unitsSold": 3925,
+    "grossSales": 1967.5,
+    "discounts": -183.82,
+    "returns": -5,
+    "netSales": 1778.68,
+    "taxes": 148.24,
+    "totalSales": 1926.92
+  },
+  {
+    "name": "$6.00 Apparel",
+    "unitsSold": 322,
+    "grossSales": 1944,
+    "discounts": -154.03,
+    "returns": -12,
+    "netSales": 1777.97,
+    "taxes": 147.84,
+    "totalSales": 1925.81
+  },
+  {
+    "name": "$2.00 Patio & Outdoor",
+    "unitsSold": 991,
+    "grossSales": 2004,
+    "discounts": -204.43,
+    "returns": -21.6,
+    "netSales": 1777.97,
+    "taxes": 145.57,
+    "totalSales": 1923.54
+  },
+  {
+    "name": "$0.25 General Merchandise",
+    "unitsSold": 6873,
+    "grossSales": 1719,
+    "discounts": -85.45,
+    "returns": -0.69,
+    "netSales": 1632.86,
+    "taxes": 137.01,
+    "totalSales": 1769.87
+  },
+  {
+    "name": "$12.00 Christmas",
+    "unitsSold": 155,
+    "grossSales": 1908,
+    "discounts": -284.32,
+    "returns": -48,
+    "netSales": 1575.68,
+    "taxes": 130.41,
+    "totalSales": 1706.09
+  },
+  {
+    "name": "$25.00 Patio & Outdoor",
+    "unitsSold": 73,
+    "grossSales": 2000,
+    "discounts": -283.4,
+    "returns": -165.5,
+    "netSales": 1551.1,
+    "taxes": 128.92,
+    "totalSales": 1680.02
+  },
+  {
+    "name": "$150 Homegoods Item",
+    "unitsSold": 11,
+    "grossSales": 2550,
+    "discounts": -131.46,
+    "returns": -896.43,
+    "netSales": 1522.11,
+    "taxes": 126.35,
+    "totalSales": 1648.46
+  },
+  {
+    "name": "$6 Baby Item",
+    "unitsSold": 256,
+    "grossSales": 1566,
+    "discounts": -82.07,
+    "returns": -28.93,
+    "netSales": 1455,
+    "taxes": 121.07,
+    "totalSales": 1576.07
+  },
+  {
+    "name": "$100.00 General Merchandise",
+    "unitsSold": 14,
+    "grossSales": 1500,
+    "discounts": -62.07,
+    "returns": -97.22,
+    "netSales": 1340.71,
+    "taxes": 111.28,
+    "totalSales": 1451.99
+  },
+  {
+    "name": "$40.00 Art/Lighting",
+    "unitsSold": 38,
+    "grossSales": 1600,
+    "discounts": -248.27,
+    "returns": -72,
+    "netSales": 1279.73,
+    "taxes": 106.09,
+    "totalSales": 1385.82
+  },
+  {
+    "name": "$50.00 Patio & Outdoor",
+    "unitsSold": 31,
+    "grossSales": 1650,
+    "discounts": -285.11,
+    "returns": -87.5,
+    "netSales": 1277.39,
+    "taxes": 106.02,
+    "totalSales": 1383.41
+  },
+  {
+    "name": "$4 Baby Item",
+    "unitsSold": 315,
+    "grossSales": 1272,
+    "discounts": -68.63,
+    "returns": -11.15,
+    "netSales": 1192.22,
+    "taxes": 98.76,
+    "totalSales": 1290.98
+  },
+  {
+    "name": "Pet $3",
+    "unitsSold": 413,
+    "grossSales": 1248,
+    "discounts": -72.6,
+    "returns": -8.7,
+    "netSales": 1166.7,
+    "taxes": 97.14,
+    "totalSales": 1263.84
+  },
+  {
+    "name": "$3.00 Grocery Item",
+    "unitsSold": 435,
+    "grossSales": 1314,
+    "discounts": -67.27,
+    "returns": -9,
+    "netSales": 1237.73,
+    "taxes": 0,
+    "totalSales": 1237.73
+  },
+  {
+    "name": "$90.00 General Merchandise",
+    "unitsSold": 13,
+    "grossSales": 1440,
+    "discounts": -38.16,
+    "returns": -270,
+    "netSales": 1131.84,
+    "taxes": 93.94,
+    "totalSales": 1225.78
+  },
+  {
+    "name": "$.50 Grocery Item",
+    "unitsSold": 2494,
+    "grossSales": 1248,
+    "discounts": -62.03,
+    "returns": -1,
+    "netSales": 1184.97,
+    "taxes": 0,
+    "totalSales": 1184.97
+  },
+  {
+    "name": "$2.00 Grocery Item",
+    "unitsSold": 629,
+    "grossSales": 1258,
+    "discounts": -77.59,
+    "returns": 0,
+    "netSales": 1180.41,
+    "taxes": 0,
+    "totalSales": 1180.41
+  },
+  {
+    "name": "$25 Baby Item",
+    "unitsSold": 45,
+    "grossSales": 1175,
+    "discounts": -55.91,
+    "returns": -45.84,
+    "netSales": 1073.25,
+    "taxes": 89.21,
+    "totalSales": 1162.46
+  },
+  {
+    "name": "$6.00 Fall",
+    "unitsSold": 208,
+    "grossSales": 1254,
+    "discounts": -182.24,
+    "returns": -5.36,
+    "netSales": 1066.4,
+    "taxes": 88.68,
+    "totalSales": 1155.08
+  },
+  {
+    "name": "$5.00 Grocery Item",
+    "unitsSold": 238,
+    "grossSales": 1195,
+    "discounts": -47.47,
+    "returns": -5,
+    "netSales": 1142.53,
+    "taxes": 0,
+    "totalSales": 1142.53
+  },
+  {
+    "name": "$3 Shoes",
+    "unitsSold": 367,
+    "grossSales": 1119,
+    "discounts": -69.27,
+    "returns": -16.73,
+    "netSales": 1033,
+    "taxes": 86,
+    "totalSales": 1119
+  },
+  {
+    "name": "$2.50 Christmas",
+    "unitsSold": 429,
+    "grossSales": 1090,
+    "discounts": -73.1,
+    "returns": -16.5,
+    "netSales": 1000.4,
+    "taxes": 83.36,
+    "totalSales": 1083.76
+  },
+  {
+    "name": "$10 Socks/Underwear Pack",
+    "unitsSold": 106,
+    "grossSales": 1070,
+    "discounts": -71.17,
+    "returns": -7.72,
+    "netSales": 991.11,
+    "taxes": 82.37,
+    "totalSales": 1073.48
+  },
+  {
+    "name": "Pet $6",
+    "unitsSold": 176,
+    "grossSales": 1074,
+    "discounts": -65.53,
+    "returns": -18,
+    "netSales": 990.47,
+    "taxes": 82.34,
+    "totalSales": 1072.81
+  },
+  {
+    "name": "$1.00 Patio & Outdoor",
+    "unitsSold": 1062,
+    "grossSales": 1074,
+    "discounts": -88.71,
+    "returns": -12,
+    "netSales": 973.29,
+    "taxes": 81.63,
+    "totalSales": 1054.92
+  },
+  {
+    "name": "$20.00 Christmas",
+    "unitsSold": 56,
+    "grossSales": 1160,
+    "discounts": -190.52,
+    "returns": -39.27,
+    "netSales": 930.21,
+    "taxes": 77.23,
+    "totalSales": 1007.44
+  },
+  {
+    "name": "$3.00 Fall",
+    "unitsSold": 394,
+    "grossSales": 1191,
+    "discounts": -256.63,
+    "returns": -9,
+    "netSales": 925.37,
+    "taxes": 77.12,
+    "totalSales": 1002.49
+  },
+  {
+    "name": "$4.00 Patio & Outdoor",
+    "unitsSold": 250,
+    "grossSales": 1008,
+    "discounts": -106.42,
+    "returns": -8,
+    "netSales": 893.58,
+    "taxes": 74.12,
+    "totalSales": 967.7
+  },
+  {
+    "name": "$20.00 Fall",
+    "unitsSold": 47,
+    "grossSales": 940,
+    "discounts": -56.41,
+    "returns": 0,
+    "netSales": 883.59,
+    "taxes": 73.37,
+    "totalSales": 956.96
+  },
+  {
+    "name": "$30.00 Art/Lighting",
+    "unitsSold": 36,
+    "grossSales": 1200,
+    "discounts": -226.09,
+    "returns": -94.73,
+    "netSales": 879.18,
+    "taxes": 72.97,
+    "totalSales": 952.15
+  },
+  {
+    "name": "Pet $1",
+    "unitsSold": 881,
+    "grossSales": 885,
+    "discounts": -41.14,
+    "returns": -4,
+    "netSales": 839.86,
+    "taxes": 71.61,
+    "totalSales": 911.47
+  },
+  {
+    "name": "$6.00 Grocery Item",
+    "unitsSold": 158,
+    "grossSales": 954,
+    "discounts": -48.42,
+    "returns": -4.85,
+    "netSales": 900.73,
+    "taxes": 0,
+    "totalSales": 900.73
+  },
+  {
+    "name": "$0.50 Homegood",
+    "unitsSold": 1667,
+    "grossSales": 833.5,
+    "discounts": -47.65,
+    "returns": 0,
+    "netSales": 785.85,
+    "taxes": 65.67,
+    "totalSales": 851.52
+  },
+  {
+    "name": "Pet $2",
+    "unitsSold": 398,
+    "grossSales": 800,
+    "discounts": -30.85,
+    "returns": -4,
+    "netSales": 765.15,
+    "taxes": 62.16,
+    "totalSales": 827.31
+  },
+  {
+    "name": "$30 Baby Item",
+    "unitsSold": 26,
+    "grossSales": 810,
+    "discounts": -55.89,
+    "returns": -30,
+    "netSales": 724.11,
+    "taxes": 60.13,
+    "totalSales": 784.24
+  },
+  {
+    "name": "$25.00 Christmas",
+    "unitsSold": 33,
+    "grossSales": 900,
+    "discounts": -112.26,
+    "returns": -71.21,
+    "netSales": 716.53,
+    "taxes": 59.53,
+    "totalSales": 776.06
+  },
+  {
+    "name": "$8 Baby Item",
+    "unitsSold": 93,
+    "grossSales": 760,
+    "discounts": -40.11,
+    "returns": -12.99,
+    "netSales": 706.9,
+    "taxes": 59.01,
+    "totalSales": 765.91
+  },
+  {
+    "name": "$10.00 Art/Lighting",
+    "unitsSold": 80,
+    "grossSales": 840,
+    "discounts": -98.01,
+    "returns": -38,
+    "netSales": 703.99,
+    "taxes": 58.5,
+    "totalSales": 762.49
+  },
+  {
+    "name": "$0.25 Toy",
+    "unitsSold": 2863,
+    "grossSales": 719.25,
+    "discounts": -44.44,
+    "returns": -2.98,
+    "netSales": 671.83,
+    "taxes": 56.27,
+    "totalSales": 728.1
+  },
+  {
+    "name": "$8.00 Christmas",
+    "unitsSold": 99,
+    "grossSales": 816,
+    "discounts": -155.3,
+    "returns": -22.4,
+    "netSales": 638.3,
+    "taxes": 53.16,
+    "totalSales": 691.46
+  },
+  {
+    "name": "$15.00 Fall",
+    "unitsSold": 50,
+    "grossSales": 780,
+    "discounts": -131.52,
+    "returns": -27,
+    "netSales": 621.48,
+    "taxes": 51.7,
+    "totalSales": 673.18
+  },
+  {
+    "name": "$1 Shoes",
+    "unitsSold": 646,
+    "grossSales": 651,
+    "discounts": -43.78,
+    "returns": -5,
+    "netSales": 602.22,
+    "taxes": 50.92,
+    "totalSales": 653.14
+  },
+  {
+    "name": "$3 Kid's Shoes",
+    "unitsSold": 212,
+    "grossSales": 636,
+    "discounts": -37.2,
+    "returns": 0,
+    "netSales": 598.8,
+    "taxes": 49.89,
+    "totalSales": 648.69
+  },
+  {
+    "name": "$60.00 Patio & Outdoor",
+    "unitsSold": 12,
+    "grossSales": 720,
+    "discounts": -129.05,
+    "returns": 0,
+    "netSales": 590.95,
+    "taxes": 49.07,
+    "totalSales": 640.02
+  },
+  {
+    "name": "$ .25 Grocery Item",
+    "unitsSold": 2598,
+    "grossSales": 649.5,
+    "discounts": -31.78,
+    "returns": 0,
+    "netSales": 617.72,
+    "taxes": 0,
+    "totalSales": 617.72
+  },
+  {
+    "name": "$0.50 Health & Beauty",
+    "unitsSold": 1154,
+    "grossSales": 579.5,
+    "discounts": -26.16,
+    "returns": -2.5,
+    "netSales": 550.84,
+    "taxes": 45.75,
+    "totalSales": 596.59
+  },
+  {
+    "name": "Pet $12",
+    "unitsSold": 47,
+    "grossSales": 600,
+    "discounts": -27.81,
+    "returns": -29.23,
+    "netSales": 542.96,
+    "taxes": 44.94,
+    "totalSales": 587.9
+  },
+  {
+    "name": "$60.00 Art/Lighting",
+    "unitsSold": 11,
+    "grossSales": 720,
+    "discounts": -136.11,
+    "returns": -46.74,
+    "netSales": 537.15,
+    "taxes": 44.63,
+    "totalSales": 581.78
+  },
+  {
+    "name": "$1 Women's Shorts",
+    "unitsSold": 549,
+    "grossSales": 552,
+    "discounts": -22.52,
+    "returns": -3,
+    "netSales": 526.48,
+    "taxes": 43.98,
+    "totalSales": 570.46
+  },
+  {
+    "name": "$20.00 Art/Lighting",
+    "unitsSold": 30,
+    "grossSales": 700,
+    "discounts": -104.84,
+    "returns": -81.06,
+    "netSales": 514.1,
+    "taxes": 42.68,
+    "totalSales": 556.78
+  },
+  {
+    "name": "$25.00 Art/Lighting",
+    "unitsSold": 22,
+    "grossSales": 550,
+    "discounts": -73.48,
+    "returns": 0,
+    "netSales": 476.52,
+    "taxes": 39.57,
+    "totalSales": 516.09
+  },
+  {
+    "name": "$0.25 Food",
+    "unitsSold": 2033,
+    "grossSales": 508.25,
+    "discounts": -18.27,
+    "returns": 0,
+    "netSales": 489.98,
+    "taxes": 0,
+    "totalSales": 489.98
+  },
+  {
+    "name": "$.50 Fall",
+    "unitsSold": 1001,
+    "grossSales": 500.5,
+    "discounts": -52.86,
+    "returns": 0,
+    "netSales": 447.64,
+    "taxes": 37.33,
+    "totalSales": 484.97
+  },
+  {
+    "name": "Pet $15",
+    "unitsSold": 31,
+    "grossSales": 555,
+    "discounts": -22.76,
+    "returns": -88.6,
+    "netSales": 443.64,
+    "taxes": 36.92,
+    "totalSales": 480.56
+  },
+  {
+    "name": "$8 Kid's Shoes",
+    "unitsSold": 57,
+    "grossSales": 488,
+    "discounts": -29.38,
+    "returns": -30.41,
+    "netSales": 428.21,
+    "taxes": 35.72,
+    "totalSales": 463.93
+  },
+  {
+    "name": "$80 Toy Item",
+    "unitsSold": 5,
+    "grossSales": 560,
+    "discounts": -3.64,
+    "returns": -156.36,
+    "netSales": 400,
+    "taxes": 33.2,
+    "totalSales": 433.2
+  },
+  {
+    "name": "$6 Kids Socks/Underwear Pack",
+    "unitsSold": 67,
+    "grossSales": 408,
+    "discounts": -30.72,
+    "returns": -5.4,
+    "netSales": 371.88,
+    "taxes": 30.94,
+    "totalSales": 402.82
+  },
+  {
+    "name": "$8.00 Fall",
+    "unitsSold": 72,
+    "grossSales": 576,
+    "discounts": -210.3,
+    "returns": 0,
+    "netSales": 365.7,
+    "taxes": 30.39,
+    "totalSales": 396.09
+  },
+  {
+    "name": "Pet $10",
+    "unitsSold": 39,
+    "grossSales": 390,
+    "discounts": -27.3,
+    "returns": 0,
+    "netSales": 362.7,
+    "taxes": 30.11,
+    "totalSales": 392.81
+  },
+  {
+    "name": "$1.00 Bra",
+    "unitsSold": 378,
+    "grossSales": 384,
+    "discounts": -18.34,
+    "returns": -5.95,
+    "netSales": 359.71,
+    "taxes": 30.58,
+    "totalSales": 390.29
+  },
+  {
+    "name": "$4.00 Christmas",
+    "unitsSold": 105,
+    "grossSales": 424,
+    "discounts": -61.14,
+    "returns": -2.94,
+    "netSales": 359.92,
+    "taxes": 29.79,
+    "totalSales": 389.71
+  },
+  {
+    "name": "$15.00 Art/Lighting",
+    "unitsSold": 29,
+    "grossSales": 435,
+    "discounts": -79.8,
+    "returns": 0,
+    "netSales": 355.2,
+    "taxes": 29.41,
+    "totalSales": 384.61
+  },
+  {
+    "name": "$70.00 Patio & Outdoor",
+    "unitsSold": 6,
+    "grossSales": 420,
+    "discounts": -69.93,
+    "returns": 0,
+    "netSales": 350.07,
+    "taxes": 29.06,
+    "totalSales": 379.13
+  },
+  {
+    "name": "Pet $8",
+    "unitsSold": 45,
+    "grossSales": 376,
+    "discounts": -17.28,
+    "returns": -14.83,
+    "netSales": 343.89,
+    "taxes": 28.67,
+    "totalSales": 372.56
+  },
+  {
+    "name": "$5 Bra",
+    "unitsSold": 72,
+    "grossSales": 370,
+    "discounts": -26.99,
+    "returns": -8.38,
+    "netSales": 334.63,
+    "taxes": 27.95,
+    "totalSales": 362.58
+  },
+  {
+    "name": "$50.00 Art/Lighting",
+    "unitsSold": 8,
+    "grossSales": 400,
+    "discounts": -70,
+    "returns": 0,
+    "netSales": 330,
+    "taxes": 27.39,
+    "totalSales": 357.39
+  },
+  {
+    "name": "$5.00 Art/Lighting",
+    "unitsSold": 68,
+    "grossSales": 355,
+    "discounts": -47.77,
+    "returns": -12,
+    "netSales": 295.23,
+    "taxes": 24.57,
+    "totalSales": 319.8
+  },
+  {
+    "name": "$30.00 Christmas",
+    "unitsSold": 12,
+    "grossSales": 450,
+    "discounts": -104.5,
+    "returns": -73.39,
+    "netSales": 272.11,
+    "taxes": 22.59,
+    "totalSales": 294.7
+  },
+  {
+    "name": "$80.00 Patio & Outdoor",
+    "unitsSold": 4,
+    "grossSales": 320,
+    "discounts": -52,
+    "returns": 0,
+    "netSales": 268,
+    "taxes": 22.24,
+    "totalSales": 290.24
+  },
+  {
+    "name": "$12.00 Art/Lighting",
+    "unitsSold": 25,
+    "grossSales": 348,
+    "discounts": -58.11,
+    "returns": -42.69,
+    "netSales": 247.2,
+    "taxes": 20.54,
+    "totalSales": 267.74
+  },
+  {
+    "name": "Pet $4",
+    "unitsSold": 63,
+    "grossSales": 256,
+    "discounts": -10.64,
+    "returns": -4,
+    "netSales": 241.36,
+    "taxes": 19.96,
+    "totalSales": 261.32
+  },
+  {
+    "name": "$100.00 Patio & Outdoor",
+    "unitsSold": 3,
+    "grossSales": 400,
+    "discounts": -70,
+    "returns": -90,
+    "netSales": 240,
+    "taxes": 19.93,
+    "totalSales": 259.93
+  },
+  {
+    "name": "$120 Homegoods Item",
+    "unitsSold": 2,
+    "grossSales": 240,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 240,
+    "taxes": 19.92,
+    "totalSales": 259.92
+  },
+  {
+    "name": "$8.00 Art/Lighting",
+    "unitsSold": 34,
+    "grossSales": 280,
+    "discounts": -39.73,
+    "returns": -8,
+    "netSales": 232.27,
+    "taxes": 19.31,
+    "totalSales": 251.58
+  },
+  {
+    "name": "$0.25 Homegood",
+    "unitsSold": 907,
+    "grossSales": 227,
+    "discounts": -11.42,
+    "returns": -0.25,
+    "netSales": 215.33,
+    "taxes": 18.09,
+    "totalSales": 233.42
+  },
+  {
+    "name": "$90.00 Patio & Outdoor",
+    "unitsSold": 3,
+    "grossSales": 270,
+    "discounts": -67.5,
+    "returns": 0,
+    "netSales": 202.5,
+    "taxes": 16.8,
+    "totalSales": 219.3
+  },
+  {
+    "name": "$70.00 Art/Lighting",
+    "unitsSold": 3,
+    "grossSales": 280,
+    "discounts": -14,
+    "returns": -70,
+    "netSales": 196,
+    "taxes": 16.27,
+    "totalSales": 212.27
+  },
+  {
+    "name": "Pet $20",
+    "unitsSold": 10,
+    "grossSales": 200,
+    "discounts": -12.57,
+    "returns": 0,
+    "netSales": 187.43,
+    "taxes": 15.55,
+    "totalSales": 202.98
+  },
+  {
+    "name": "$6.00 Art/Lighting",
+    "unitsSold": 37,
+    "grossSales": 252,
+    "discounts": -45.73,
+    "returns": -24,
+    "netSales": 182.27,
+    "taxes": 15.16,
+    "totalSales": 197.43
+  },
+  {
+    "name": "$12 Socks/Underwear Pack",
+    "unitsSold": 15,
+    "grossSales": 180,
+    "discounts": -7.57,
+    "returns": 0,
+    "netSales": 172.43,
+    "taxes": 14.27,
+    "totalSales": 186.7
+  },
+  {
+    "name": "$4.00 Grocery Item",
+    "unitsSold": 47,
+    "grossSales": 188,
+    "discounts": -11.52,
+    "returns": 0,
+    "netSales": 176.48,
+    "taxes": 0,
+    "totalSales": 176.48
+  },
+  {
+    "name": "$100.00 Art/Lighting",
+    "unitsSold": 2,
+    "grossSales": 200,
+    "discounts": -40,
+    "returns": 0,
+    "netSales": 160,
+    "taxes": 13.28,
+    "totalSales": 173.28
+  },
+  {
+    "name": "$.25 Fall",
+    "unitsSold": 873,
+    "grossSales": 218.25,
+    "discounts": -63.98,
+    "returns": 0,
+    "netSales": 154.27,
+    "taxes": 12.96,
+    "totalSales": 167.23
+  },
+  {
+    "name": "$150 Toy Item",
+    "unitsSold": 1,
+    "grossSales": 150,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 150,
+    "taxes": 12.45,
+    "totalSales": 162.45
+  },
+  {
+    "name": "Bellfield Fully Upholstered Olive Accent Chair - Threshold with Studio McGee",
+    "unitsSold": 1,
+    "grossSales": 150,
+    "discounts": -5,
+    "returns": 0,
+    "netSales": 145,
+    "taxes": 12.04,
+    "totalSales": 157.04
+  },
+  {
+    "name": "$6 Kid's Shoes",
+    "unitsSold": 26,
+    "grossSales": 162,
+    "discounts": -18.52,
+    "returns": -6,
+    "netSales": 137.48,
+    "taxes": 11.48,
+    "totalSales": 148.96
+  },
+  {
+    "name": "$2 Shoes",
+    "unitsSold": 72,
+    "grossSales": 144,
+    "discounts": -8.81,
+    "returns": 0,
+    "netSales": 135.19,
+    "taxes": 11.05,
+    "totalSales": 146.24
+  },
+  {
+    "name": "$12.00 Jewelry",
+    "unitsSold": 14,
+    "grossSales": 168,
+    "discounts": -33.6,
+    "returns": 0,
+    "netSales": 134.4,
+    "taxes": 11.2,
+    "totalSales": 145.6
+  },
+  {
+    "name": "$0.50 Patio & Outdoor",
+    "unitsSold": 300,
+    "grossSales": 150,
+    "discounts": -19.75,
+    "returns": 0,
+    "netSales": 130.25,
+    "taxes": 10.98,
+    "totalSales": 141.23
+  },
+  {
+    "name": "$10.00 Jewelry",
+    "unitsSold": 16,
+    "grossSales": 160,
+    "discounts": -32,
+    "returns": 0,
+    "netSales": 128,
+    "taxes": 10.7,
+    "totalSales": 138.7
+  },
+  {
+    "name": "$80.00 Art/Lighting",
+    "unitsSold": 2,
+    "grossSales": 160,
+    "discounts": -32,
+    "returns": 0,
+    "netSales": 128,
+    "taxes": 10.62,
+    "totalSales": 138.62
+  },
+  {
+    "name": "$12.00 Fall",
+    "unitsSold": 12,
+    "grossSales": 168,
+    "discounts": -17.07,
+    "returns": -23.64,
+    "netSales": 127.29,
+    "taxes": 10.52,
+    "totalSales": 137.81
+  },
+  {
+    "name": "$6 Shoes",
+    "unitsSold": 22,
+    "grossSales": 138,
+    "discounts": -9.95,
+    "returns": -6,
+    "netSales": 122.05,
+    "taxes": 10.15,
+    "totalSales": 132.2
+  },
+  {
+    "name": "Fabric & Metal Armless Dining Chair - Cream/Black - Hearth & Hand\u2122 with Magnolia",
+    "unitsSold": 2,
+    "grossSales": 120,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 120,
+    "taxes": 9.96,
+    "totalSales": 129.96
+  },
+  {
+    "name": "$40 Baby Item",
+    "unitsSold": 3,
+    "grossSales": 120,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 120,
+    "taxes": 9.96,
+    "totalSales": 129.96
+  },
+  {
+    "name": "$5.00 Jewelry",
+    "unitsSold": 29,
+    "grossSales": 145,
+    "discounts": -29,
+    "returns": 0,
+    "netSales": 116,
+    "taxes": 9.6,
+    "totalSales": 125.6
+  },
+  {
+    "name": "WallBeyond Bathroom Medicine Cabinet with Mirror",
+    "unitsSold": 2,
+    "grossSales": 100,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 100,
+    "taxes": 8.3,
+    "totalSales": 108.3
+  },
+  {
+    "name": "$15.00 Jewelry",
+    "unitsSold": 8,
+    "grossSales": 120,
+    "discounts": -24,
+    "returns": 0,
+    "netSales": 96,
+    "taxes": 7.93,
+    "totalSales": 103.93
+  },
+  {
+    "name": "$8 Shoes",
+    "unitsSold": 12,
+    "grossSales": 104,
+    "discounts": -1.33,
+    "returns": -8,
+    "netSales": 94.67,
+    "taxes": 7.91,
+    "totalSales": 102.58
+  },
+  {
+    "name": "2pk Kaysville Curved Back Wood Dining Chair",
+    "unitsSold": 1,
+    "grossSales": 90,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 90,
+    "taxes": 7.47,
+    "totalSales": 97.47
+  },
+  {
+    "name": "$30.00 Fall",
+    "unitsSold": 3,
+    "grossSales": 90,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 90,
+    "taxes": 7.47,
+    "totalSales": 97.47
+  },
+  {
+    "name": "$15 Grocery Item",
+    "unitsSold": 6,
+    "grossSales": 90,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 90,
+    "taxes": 0,
+    "totalSales": 90
+  },
+  {
+    "name": "$8.00 Jewelry",
+    "unitsSold": 12,
+    "grossSales": 96,
+    "discounts": -19.2,
+    "returns": 0,
+    "netSales": 76.8,
+    "taxes": 6.37,
+    "totalSales": 83.17
+  },
+  {
+    "name": "$12 Grocery Item",
+    "unitsSold": 7,
+    "grossSales": 84,
+    "discounts": -1.2,
+    "returns": 0,
+    "netSales": 82.8,
+    "taxes": 0,
+    "totalSales": 82.8
+  },
+  {
+    "name": "$1 Kid's Shoes",
+    "unitsSold": 75,
+    "grossSales": 75,
+    "discounts": -6.69,
+    "returns": 0,
+    "netSales": 68.31,
+    "taxes": 5.89,
+    "totalSales": 74.2
+  },
+  {
+    "name": "$4.00 Fall",
+    "unitsSold": 20,
+    "grossSales": 80,
+    "discounts": -12.76,
+    "returns": 0,
+    "netSales": 67.24,
+    "taxes": 5.57,
+    "totalSales": 72.81
+  },
+  {
+    "name": "Twin Litchi Kids' Bookcase Headboard Pure White - South Shore",
+    "unitsSold": 1,
+    "grossSales": 60,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 60,
+    "taxes": 4.98,
+    "totalSales": 64.98
+  },
+  {
+    "name": "$1.00 Art/Lighting",
+    "unitsSold": 69,
+    "grossSales": 69,
+    "discounts": -10.1,
+    "returns": 0,
+    "netSales": 58.9,
+    "taxes": 4.89,
+    "totalSales": 63.79
+  },
+  {
+    "name": "$6.00 Jewelry",
+    "unitsSold": 12,
+    "grossSales": 78,
+    "discounts": -15.6,
+    "returns": -4.8,
+    "netSales": 57.6,
+    "taxes": 4.8,
+    "totalSales": 62.4
+  },
+  {
+    "name": "$4.00 Jewelry",
+    "unitsSold": 18,
+    "grossSales": 72,
+    "discounts": -14.4,
+    "returns": 0,
+    "netSales": 57.6,
+    "taxes": 4.69,
+    "totalSales": 62.29
+  },
+  {
+    "name": "NHL Hover Hockey Table",
+    "unitsSold": 1,
+    "grossSales": 50,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 50,
+    "taxes": 4.15,
+    "totalSales": 54.15
+  },
+  {
+    "name": "EastPoint Full Size Easy Setup Table Tennis",
+    "unitsSold": 1,
+    "grossSales": 100,
+    "discounts": 0,
+    "returns": -50,
+    "netSales": 50,
+    "taxes": 4.15,
+    "totalSales": 54.15
+  },
+  {
+    "name": "Set of 2 Parsons Dining Chair Suri Blue -HomePop",
+    "unitsSold": 1,
+    "grossSales": 50,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 50,
+    "taxes": 4.15,
+    "totalSales": 54.15
+  },
+  {
+    "name": "$0.50 Baby Item",
+    "unitsSold": 98,
+    "grossSales": 49,
+    "discounts": -4.05,
+    "returns": 0,
+    "netSales": 44.95,
+    "taxes": 3.72,
+    "totalSales": 48.67
+  },
+  {
+    "name": "$.25 Christmas",
+    "unitsSold": 202,
+    "grossSales": 50.5,
+    "discounts": -5.69,
+    "returns": 0,
+    "netSales": 44.81,
+    "taxes": 3.7,
+    "totalSales": 48.51
+  },
+  {
+    "name": "$3.00 Jewelry",
+    "unitsSold": 16,
+    "grossSales": 48,
+    "discounts": -9.6,
+    "returns": 0,
+    "netSales": 38.4,
+    "taxes": 3.2,
+    "totalSales": 41.6
+  },
+  {
+    "name": "$2.50 Bra",
+    "unitsSold": 17,
+    "grossSales": 47.5,
+    "discounts": -5.68,
+    "returns": -4,
+    "netSales": 37.82,
+    "taxes": 3.16,
+    "totalSales": 40.98
+  },
+  {
+    "name": "$10 Grocery Item",
+    "unitsSold": 4,
+    "grossSales": 40,
+    "discounts": -0.26,
+    "returns": 0,
+    "netSales": 39.74,
+    "taxes": 0,
+    "totalSales": 39.74
+  },
+  {
+    "name": "$1.50 Health & Beauty Item",
+    "unitsSold": 24,
+    "grossSales": 37.5,
+    "discounts": -1.26,
+    "returns": -1.42,
+    "netSales": 34.82,
+    "taxes": 2.81,
+    "totalSales": 37.63
+  },
+  {
+    "name": "$25.00 Fall",
+    "unitsSold": 2,
+    "grossSales": 50,
+    "discounts": -19.16,
+    "returns": 0,
+    "netSales": 30.84,
+    "taxes": 2.56,
+    "totalSales": 33.4
+  },
+  {
+    "name": "$1.50 General Merchandise",
+    "unitsSold": 19,
+    "grossSales": 28.5,
+    "discounts": -0.86,
+    "returns": 0,
+    "netSales": 27.64,
+    "taxes": 2.25,
+    "totalSales": 29.89
+  },
+  {
+    "name": "Tangkula Set of 2 Decorative Raised Garden Bed Wall-Mounted Metal Planter Box w/ Trellis",
+    "unitsSold": 1,
+    "grossSales": 25,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 25,
+    "taxes": 2.08,
+    "totalSales": 27.08
+  },
+  {
+    "name": "$3.00 Art/Lighting",
+    "unitsSold": 9,
+    "grossSales": 27,
+    "discounts": -4.8,
+    "returns": 0,
+    "netSales": 22.2,
+    "taxes": 1.85,
+    "totalSales": 24.05
+  },
+  {
+    "name": "Sculptural Upholstered and Wood Boucle Counter Height Barstool Cream -Threshold",
+    "unitsSold": 1,
+    "grossSales": 20,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 20,
+    "taxes": 1.66,
+    "totalSales": 21.66
+  },
+  {
+    "name": "$1.50 Apparel",
+    "unitsSold": 13,
+    "grossSales": 19.5,
+    "discounts": -0.83,
+    "returns": 0,
+    "netSales": 18.67,
+    "taxes": 1.54,
+    "totalSales": 20.21
+  },
+  {
+    "name": "$1.00 Jewelry",
+    "unitsSold": 20,
+    "grossSales": 20,
+    "discounts": -4,
+    "returns": 0,
+    "netSales": 16,
+    "taxes": 1.39,
+    "totalSales": 17.39
+  },
+  {
+    "name": "$20.00 Jewelry",
+    "unitsSold": 1,
+    "grossSales": 20,
+    "discounts": -4,
+    "returns": 0,
+    "netSales": 16,
+    "taxes": 1.33,
+    "totalSales": 17.33
+  },
+  {
+    "name": "$2.00 Art/Lighting",
+    "unitsSold": 9,
+    "grossSales": 18,
+    "discounts": -3.2,
+    "returns": 0,
+    "netSales": 14.8,
+    "taxes": 1.2,
+    "totalSales": 16
+  },
+  {
+    "name": "Pet $ .25",
+    "unitsSold": 63,
+    "grossSales": 15.75,
+    "discounts": -1.35,
+    "returns": 0,
+    "netSales": 14.4,
+    "taxes": 1.16,
+    "totalSales": 15.56
+  },
+  {
+    "name": "$0.25 Apparel",
+    "unitsSold": 51,
+    "grossSales": 12.75,
+    "discounts": -0.34,
+    "returns": 0,
+    "netSales": 12.41,
+    "taxes": 1.01,
+    "totalSales": 13.42
+  },
+  {
+    "name": "$0.25 Patio & Outdoor",
+    "unitsSold": 52,
+    "grossSales": 13,
+    "discounts": -1.43,
+    "returns": 0,
+    "netSales": 11.57,
+    "taxes": 0.91,
+    "totalSales": 12.48
+  },
+  {
+    "name": "$1.50 Bra",
+    "unitsSold": 8,
+    "grossSales": 13.5,
+    "discounts": -0.58,
+    "returns": -1.5,
+    "netSales": 11.42,
+    "taxes": 0.94,
+    "totalSales": 12.36
+  },
+  {
+    "name": "2 Cube Organizer - Brightroom\u2122",
+    "unitsSold": 1,
+    "grossSales": 15,
+    "discounts": -3.75,
+    "returns": 0,
+    "netSales": 11.25,
+    "taxes": 0.94,
+    "totalSales": 12.19
+  },
+  {
+    "name": "$2.00 Jewelry",
+    "unitsSold": 7,
+    "grossSales": 14,
+    "discounts": -2.8,
+    "returns": 0,
+    "netSales": 11.2,
+    "taxes": 0.91,
+    "totalSales": 12.11
+  },
+  {
+    "name": "$0.50 Bra",
+    "unitsSold": 21,
+    "grossSales": 10.5,
+    "discounts": -0.15,
+    "returns": 0,
+    "netSales": 10.35,
+    "taxes": 0.85,
+    "totalSales": 11.2
+  },
+  {
+    "name": "$1.50 Toy Item",
+    "unitsSold": 5,
+    "grossSales": 7.5,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 7.5,
+    "taxes": 0.6,
+    "totalSales": 8.1
+  },
+  {
+    "name": "$1.50 Homegoods Item",
+    "unitsSold": 5,
+    "grossSales": 7.5,
+    "discounts": -0.34,
+    "returns": 0,
+    "netSales": 7.16,
+    "taxes": 0.59,
+    "totalSales": 7.75
+  },
+  {
+    "name": "$1.50 Grocery Item",
+    "unitsSold": 3,
+    "grossSales": 4.5,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 4.5,
+    "taxes": 0,
+    "totalSales": 4.5
+  },
+  {
+    "name": "$4.00 Art/Lighting",
+    "unitsSold": 1,
+    "grossSales": 4,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 4,
+    "taxes": 0.33,
+    "totalSales": 4.33
+  },
+  {
+    "name": "$4 Shoes",
+    "unitsSold": 2,
+    "grossSales": 8,
+    "discounts": -4,
+    "returns": 0,
+    "netSales": 4,
+    "taxes": 0.32,
+    "totalSales": 4.32
+  },
+  {
+    "name": "$1.50 Patio & Outdoor",
+    "unitsSold": 2,
+    "grossSales": 3,
+    "discounts": -0.13,
+    "returns": 0,
+    "netSales": 2.87,
+    "taxes": 0.24,
+    "totalSales": 3.11
+  },
+  {
+    "name": "$.50 Art/Lighting",
+    "unitsSold": 7,
+    "grossSales": 3.5,
+    "discounts": -1.06,
+    "returns": 0,
+    "netSales": 2.44,
+    "taxes": 0.2,
+    "totalSales": 2.64
+  },
+  {
+    "name": "$0.25 Baby Item",
+    "unitsSold": 5,
+    "grossSales": 1.25,
+    "discounts": -0.03,
+    "returns": 0,
+    "netSales": 1.22,
+    "taxes": 0.09,
+    "totalSales": 1.31
+  },
+  {
+    "name": "Allandale Modular Sectional Sofa Ottoman Gray- Threshold",
+    "unitsSold": 0,
+    "grossSales": 100,
+    "discounts": 0,
+    "returns": -100,
+    "netSales": 0,
+    "taxes": 0,
+    "totalSales": 0
+  },
+  {
+    "name": "Pick-Up Appointment",
+    "unitsSold": 2,
+    "grossSales": 0,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 0,
+    "taxes": 0,
+    "totalSales": 0
+  },
+  {
+    "name": "3 Shelf Bookcase Black - Room Essentials",
+    "unitsSold": 0,
+    "grossSales": 12,
+    "discounts": 0,
+    "returns": -12,
+    "netSales": 0,
+    "taxes": 0,
+    "totalSales": 0
+  },
+  {
+    "name": "HyperX Alloy Origins 65 Mechanical Gaming Keyboard for PC",
+    "unitsSold": 0,
+    "grossSales": 30,
+    "discounts": 0,
+    "returns": -30,
+    "netSales": 0,
+    "taxes": 0,
+    "totalSales": 0
+  },
+  {
+    "name": "$100 Toy Item",
+    "unitsSold": 0,
+    "grossSales": 100,
+    "discounts": -8.92,
+    "returns": -91.08,
+    "netSales": 0,
+    "taxes": 0,
+    "totalSales": 0
+  },
+  {
+    "name": "Segway Ninebot Mecha Kit, Applicable to Electric Self-Balancing Scooter, Human-Body Sensor in Joystick, Mobile App Integration (Not Included Ninebot S)",
+    "unitsSold": 0,
+    "grossSales": 150,
+    "discounts": -37.5,
+    "returns": -112.5,
+    "netSales": 0,
+    "taxes": 0,
+    "totalSales": 0
+  },
+  {
+    "name": "Robinson Adjustable Counter Height Barstool Dark Bronze -Holli Furniture",
+    "unitsSold": 0,
+    "grossSales": 20,
+    "discounts": 0,
+    "returns": -20,
+    "netSales": 0,
+    "taxes": 0,
+    "totalSales": 0
+  },
+  {
+    "name": "Lucky Duck Dealz Gift Card",
+    "unitsSold": 30,
+    "grossSales": 0,
+    "discounts": 0,
+    "returns": 0,
+    "netSales": 0,
+    "taxes": 0,
+    "totalSales": 0
+  },
+  {
+    "name": "$5.00",
+    "unitsSold": -1,
+    "grossSales": 0,
+    "discounts": 0,
+    "returns": -5,
+    "netSales": -5,
+    "taxes": -0.42,
+    "totalSales": -5.42
+  },
+  {
+    "name": "Whirlpool 3.1 Cu. Ft. Mini Refrigerator - Black WH31BKE: Dorm Fridge Freezer Combo, Energy Star, Reversible Door",
+    "unitsSold": -1,
+    "grossSales": 0,
+    "discounts": 0,
+    "returns": -100,
+    "netSales": -100,
+    "taxes": -8.3,
+    "totalSales": -108.3
+  }
+]

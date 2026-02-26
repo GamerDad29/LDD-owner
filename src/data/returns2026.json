@@ -1,0 +1,326 @@
+[
+  {
+    "date": "2026-01-01",
+    "returns": -103.8,
+    "prevYearReturns": -194.03,
+    "yoyChange": 46.503
+  },
+  {
+    "date": "2026-01-02",
+    "returns": -533.22,
+    "prevYearReturns": -41.25,
+    "yoyChange": -1192.654
+  },
+  {
+    "date": "2026-01-03",
+    "returns": -304.42,
+    "prevYearReturns": -62.09,
+    "yoyChange": -390.288
+  },
+  {
+    "date": "2026-01-04",
+    "returns": -419.6,
+    "prevYearReturns": -339,
+    "yoyChange": -23.775
+  },
+  {
+    "date": "2026-01-05",
+    "returns": -270.75,
+    "prevYearReturns": -239.15,
+    "yoyChange": -13.213
+  },
+  {
+    "date": "2026-01-06",
+    "returns": -217.52,
+    "prevYearReturns": -511.02,
+    "yoyChange": 57.434
+  },
+  {
+    "date": "2026-01-07",
+    "returns": -223.57,
+    "prevYearReturns": -209.13,
+    "yoyChange": -6.904
+  },
+  {
+    "date": "2026-01-08",
+    "returns": -237.73,
+    "prevYearReturns": -156,
+    "yoyChange": -52.391
+  },
+  {
+    "date": "2026-01-09",
+    "returns": -271.05,
+    "prevYearReturns": -40.5,
+    "yoyChange": -569.259
+  },
+  {
+    "date": "2026-01-10",
+    "returns": -230.01,
+    "prevYearReturns": -458.38,
+    "yoyChange": 49.821
+  },
+  {
+    "date": "2026-01-11",
+    "returns": -225.51,
+    "prevYearReturns": -276.97,
+    "yoyChange": 18.579
+  },
+  {
+    "date": "2026-01-12",
+    "returns": -224.38,
+    "prevYearReturns": -165,
+    "yoyChange": -35.987
+  },
+  {
+    "date": "2026-01-13",
+    "returns": -195.91,
+    "prevYearReturns": -58.12,
+    "yoyChange": -237.078
+  },
+  {
+    "date": "2026-01-14",
+    "returns": -233.76,
+    "prevYearReturns": -252.93,
+    "yoyChange": 7.579
+  },
+  {
+    "date": "2026-01-15",
+    "returns": -173.8,
+    "prevYearReturns": -116.59,
+    "yoyChange": -49.069
+  },
+  {
+    "date": "2026-01-16",
+    "returns": -309.16,
+    "prevYearReturns": -146.05,
+    "yoyChange": -111.68
+  },
+  {
+    "date": "2026-01-17",
+    "returns": -392.03,
+    "prevYearReturns": -165.53,
+    "yoyChange": -136.833
+  },
+  {
+    "date": "2026-01-18",
+    "returns": -474,
+    "prevYearReturns": -166.11,
+    "yoyChange": -185.353
+  },
+  {
+    "date": "2026-01-19",
+    "returns": -387.06,
+    "prevYearReturns": -225.21,
+    "yoyChange": -71.866
+  },
+  {
+    "date": "2026-01-20",
+    "returns": -280.47,
+    "prevYearReturns": -359.74,
+    "yoyChange": 22.035
+  },
+  {
+    "date": "2026-01-21",
+    "returns": -358.75,
+    "prevYearReturns": -49.67,
+    "yoyChange": -622.266
+  },
+  {
+    "date": "2026-01-22",
+    "returns": -223.72,
+    "prevYearReturns": -784.72,
+    "yoyChange": 71.49
+  },
+  {
+    "date": "2026-01-23",
+    "returns": -533.04,
+    "prevYearReturns": -89,
+    "yoyChange": -498.921
+  },
+  {
+    "date": "2026-01-24",
+    "returns": -706.71,
+    "prevYearReturns": -172.16,
+    "yoyChange": -310.496
+  },
+  {
+    "date": "2026-01-25",
+    "returns": -582.53,
+    "prevYearReturns": -270.08,
+    "yoyChange": -115.687
+  },
+  {
+    "date": "2026-01-26",
+    "returns": -392.83,
+    "prevYearReturns": -212.96,
+    "yoyChange": -84.461
+  },
+  {
+    "date": "2026-01-27",
+    "returns": -481.65,
+    "prevYearReturns": -315.48,
+    "yoyChange": -52.672
+  },
+  {
+    "date": "2026-01-28",
+    "returns": -332.95,
+    "prevYearReturns": -362.71,
+    "yoyChange": 8.204
+  },
+  {
+    "date": "2026-01-29",
+    "returns": -602.35,
+    "prevYearReturns": -282.12,
+    "yoyChange": -113.508
+  },
+  {
+    "date": "2026-01-30",
+    "returns": -707.81,
+    "prevYearReturns": -127.22,
+    "yoyChange": -456.366
+  },
+  {
+    "date": "2026-01-31",
+    "returns": -627.79,
+    "prevYearReturns": -383.63,
+    "yoyChange": -63.644
+  },
+  {
+    "date": "2026-02-01",
+    "returns": -304.28,
+    "prevYearReturns": -182.88,
+    "yoyChange": -66.382
+  },
+  {
+    "date": "2026-02-02",
+    "returns": -325.72,
+    "prevYearReturns": -495.93,
+    "yoyChange": 34.321
+  },
+  {
+    "date": "2026-02-03",
+    "returns": -451.39,
+    "prevYearReturns": -147.28,
+    "yoyChange": -206.484
+  },
+  {
+    "date": "2026-02-04",
+    "returns": -372.97,
+    "prevYearReturns": -517.2,
+    "yoyChange": 27.886
+  },
+  {
+    "date": "2026-02-05",
+    "returns": -291.21,
+    "prevYearReturns": -259.03,
+    "yoyChange": -12.423
+  },
+  {
+    "date": "2026-02-06",
+    "returns": -421.72,
+    "prevYearReturns": -668.22,
+    "yoyChange": 36.889
+  },
+  {
+    "date": "2026-02-07",
+    "returns": -289.16,
+    "prevYearReturns": -153.66,
+    "yoyChange": -88.181
+  },
+  {
+    "date": "2026-02-08",
+    "returns": -396.95,
+    "prevYearReturns": -565.52,
+    "yoyChange": 29.807
+  },
+  {
+    "date": "2026-02-09",
+    "returns": -623.62,
+    "prevYearReturns": -244.26,
+    "yoyChange": -155.309
+  },
+  {
+    "date": "2026-02-10",
+    "returns": -411.71,
+    "prevYearReturns": -334.21,
+    "yoyChange": -23.189
+  },
+  {
+    "date": "2026-02-11",
+    "returns": -225.53,
+    "prevYearReturns": -464.73,
+    "yoyChange": 51.47
+  },
+  {
+    "date": "2026-02-12",
+    "returns": -254.16,
+    "prevYearReturns": -354.41,
+    "yoyChange": 28.286
+  },
+  {
+    "date": "2026-02-13",
+    "returns": -319.56,
+    "prevYearReturns": -291.27,
+    "yoyChange": -9.712
+  },
+  {
+    "date": "2026-02-14",
+    "returns": -668.16,
+    "prevYearReturns": -321.59,
+    "yoyChange": -107.767
+  },
+  {
+    "date": "2026-02-15",
+    "returns": -376.29,
+    "prevYearReturns": -337.25,
+    "yoyChange": -11.575
+  },
+  {
+    "date": "2026-02-16",
+    "returns": -632.94,
+    "prevYearReturns": -133.35,
+    "yoyChange": -374.645
+  },
+  {
+    "date": "2026-02-17",
+    "returns": -413.68,
+    "prevYearReturns": -572.39,
+    "yoyChange": 27.727
+  },
+  {
+    "date": "2026-02-18",
+    "returns": -302.86,
+    "prevYearReturns": -388.78,
+    "yoyChange": 22.099
+  },
+  {
+    "date": "2026-02-19",
+    "returns": -398.81,
+    "prevYearReturns": -192,
+    "yoyChange": -107.713
+  },
+  {
+    "date": "2026-02-20",
+    "returns": -316.03,
+    "prevYearReturns": -300.06,
+    "yoyChange": -5.322
+  },
+  {
+    "date": "2026-02-21",
+    "returns": -822.02,
+    "prevYearReturns": -502.79,
+    "yoyChange": -63.491
+  },
+  {
+    "date": "2026-02-22",
+    "returns": -240.77,
+    "prevYearReturns": -280.89,
+    "yoyChange": 14.283
+  },
+  {
+    "date": "2026-02-23",
+    "returns": -369.06,
+    "prevYearReturns": -155.71,
+    "yoyChange": -190.141
+  }
+]

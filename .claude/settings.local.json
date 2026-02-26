@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx wrangler:*)",
+      "Bash(cd /c/Users/Clyle/Downloads/mythos-architect && npx tsc --noEmit 2>&1)",
+      "Bash(cd \"C:/Users/Clyle/Downloads/mythos-architect\" && npx tsc --noEmit 2>&1)",
+      "Bash(cd:*)",
+      "Bash(grep:*)"
+    ]
+  }
+}

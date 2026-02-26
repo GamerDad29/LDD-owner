@@ -1,0 +1,36 @@
+{
+  "payPeriod": {
+    "start": "2026-01-31",
+    "end": "2026-02-13",
+    "payDate": "2026-02-17"
+  },
+  "note": "Hourly rates are estimates based on biweekly pay / estimated hours. Rebecca should adjust to actual rates.",
+  "employees": [
+    { "name": "Rebecca Richardson", "role": "Owner", "biweeklyPay": 3200.37, "hourlyRate": null, "estHours": null, "isOwner": true },
+    { "name": "Halee Miller", "role": "Warehouse Manager", "biweeklyPay": 1377.75, "hourlyRate": 15.00, "estHours": 92, "isOwner": false },
+    { "name": "Marlene Eaton", "role": "Merchandise Manager", "biweeklyPay": 1334.78, "hourlyRate": 16.00, "estHours": 83, "isOwner": false },
+    { "name": "Elijah Blackgoat", "role": "Customer Service Manager", "biweeklyPay": 1233.25, "hourlyRate": 15.00, "estHours": 82, "isOwner": false },
+    { "name": "Kim B. McGhan", "role": "Apparel", "biweeklyPay": 1188.06, "hourlyRate": 15.00, "estHours": 79, "isOwner": false },
+    { "name": "Alexandra Rivera", "role": "Staff", "biweeklyPay": 1146.73, "hourlyRate": 15.00, "estHours": 76, "isOwner": false },
+    { "name": "Alexis Bustamante", "role": "Register / Merchandise", "biweeklyPay": 1114.17, "hourlyRate": 15.00, "estHours": 74, "isOwner": false },
+    { "name": "Camry Carter", "role": "Warehouse", "biweeklyPay": 1088.66, "hourlyRate": 15.00, "estHours": 73, "isOwner": false },
+    { "name": "Melissa Demetros", "role": "Register / Merchandise", "biweeklyPay": 1088.50, "hourlyRate": 15.00, "estHours": 73, "isOwner": false },
+    { "name": "Jana Siemion", "role": "Staff", "biweeklyPay": 1071.69, "hourlyRate": 15.00, "estHours": 71, "isOwner": false },
+    { "name": "Andrea Bailey", "role": "Staff", "biweeklyPay": 1056.77, "hourlyRate": 15.00, "estHours": 70, "isOwner": false },
+    { "name": "Victoria Kruger", "role": "Staff", "biweeklyPay": 1032.92, "hourlyRate": 15.00, "estHours": 69, "isOwner": false },
+    { "name": "Brody Hartman", "role": "Warehouse", "biweeklyPay": 1022.26, "hourlyRate": 15.00, "estHours": 68, "isOwner": false },
+    { "name": "Lisa Schwarz", "role": "Apparel", "biweeklyPay": 1012.40, "hourlyRate": 15.00, "estHours": 67, "isOwner": false },
+    { "name": "Monica L. Morgan", "role": "Merchandise Manager", "biweeklyPay": 874.82, "hourlyRate": 15.00, "estHours": 58, "isOwner": false },
+    { "name": "Jayden Patterson", "role": "Staff", "biweeklyPay": 846.47, "hourlyRate": 15.00, "estHours": 56, "isOwner": false },
+    { "name": "Aubrey Renner", "role": "Register", "biweeklyPay": 760.32, "hourlyRate": 15.00, "estHours": 51, "isOwner": false },
+    { "name": "Ella Brown", "role": "Staff", "biweeklyPay": 716.48, "hourlyRate": 15.00, "estHours": 48, "isOwner": false },
+    { "name": "Catina Blanco", "role": "Sunday Staff", "biweeklyPay": 333.56, "hourlyRate": 15.00, "estHours": 22, "isOwner": false },
+    { "name": "Vanessa Smith", "role": "Sunday Staff", "biweeklyPay": 96.26, "hourlyRate": 15.00, "estHours": 6, "isOwner": false },
+    { "name": "Mackenzie Eaton", "role": "Part-Time", "biweeklyPay": 90.41, "hourlyRate": 15.00, "estHours": 6, "isOwner": false }
+  ],
+  "totals": {
+    "biweeklyGross": 21686.63,
+    "estimatedMonthly": 43373.26,
+    "estimatedAnnual": 520479.12
+  }
+}

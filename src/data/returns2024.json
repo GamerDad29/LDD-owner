@@ -1,0 +1,74 @@
+[
+  {
+    "month": "2024-01",
+    "returns": -7976.66,
+    "prevYearReturns": -3391.38,
+    "yoyChange": -135.213
+  },
+  {
+    "month": "2024-02",
+    "returns": -10509.13,
+    "prevYearReturns": -3642.11,
+    "yoyChange": -188.540
+  },
+  {
+    "month": "2024-03",
+    "returns": -11747.20,
+    "prevYearReturns": -4280.11,
+    "yoyChange": -174.461
+  },
+  {
+    "month": "2024-04",
+    "returns": -12201.65,
+    "prevYearReturns": -4493.16,
+    "yoyChange": -171.564
+  },
+  {
+    "month": "2024-05",
+    "returns": -11880.70,
+    "prevYearReturns": -4484.06,
+    "yoyChange": -164.982
+  },
+  {
+    "month": "2024-06",
+    "returns": -11114.04,
+    "prevYearReturns": -9305.14,
+    "yoyChange": -19.440
+  },
+  {
+    "month": "2024-07",
+    "returns": -12762.93,
+    "prevYearReturns": -11504.51,
+    "yoyChange": -10.939
+  },
+  {
+    "month": "2024-08",
+    "returns": -9059.80,
+    "prevYearReturns": -10332.08,
+    "yoyChange": 12.315
+  },
+  {
+    "month": "2024-09",
+    "returns": -6798.66,
+    "prevYearReturns": -13542.53,
+    "yoyChange": 49.797
+  },
+  {
+    "month": "2024-10",
+    "returns": -6210.79,
+    "prevYearReturns": -10493.54,
+    "yoyChange": 40.814
+  },
+  {
+    "month": "2024-11",
+    "returns": -6714.26,
+    "prevYearReturns": -8293.93,
+    "yoyChange": 19.045
+  },
+  {
+    "month": "2024-12",
+    "returns": -6244.35,
+    "prevYearReturns": -7033.84,
+    "yoyChange": 11.225
+  }
+]
