@@ -58,7 +58,7 @@ export default function RevenueBreakdown() {
             {mode === 'categories'
               ? active.size === 0
                 ? '2026 YTD · Jan 1–Feb 23'
-                : `2026 YTD vs ${[...active].join(' & ')} · 2026 is Jan–Feb only`
+                : `2026 YTD vs ${Array.from(active).join(' & ')} · 2026 is Jan–Feb only`
               : 'Specialty items by price point · 2026 YTD'}
           </p>
         </div>
