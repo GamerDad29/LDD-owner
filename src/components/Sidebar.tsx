@@ -36,29 +36,30 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
       <div
         className="flex items-center h-16 border-b overflow-hidden"
         style={{
-          borderColor: 'rgba(232,184,64,0.09)',
-          padding: collapsed ? '0 16px' : '0 16px',
+          borderColor: 'oklch(0.78 0.155 80 / 0.10)',
+          padding: '0 14px',
           justifyContent: collapsed ? 'center' : 'flex-start',
           gap: collapsed ? 0 : 10,
-          background: 'linear-gradient(135deg, rgba(232,184,64,0.06) 0%, transparent 60%)',
+          background: 'linear-gradient(135deg, oklch(0.78 0.155 80 / 0.07) 0%, transparent 55%)',
         }}
       >
-        {/* Logo */}
+        {/* Logo with pulse ring */}
         <div
-          className="flex-shrink-0 rounded-lg overflow-hidden flex items-center justify-center"
+          className="flex-shrink-0 rounded-xl overflow-hidden flex items-center justify-center animate-pulse-gold"
           style={{
-            width: collapsed ? 36 : 42,
-            height: collapsed ? 36 : 42,
-            background: 'rgba(232,184,64,0.08)',
-            border: '1px solid rgba(232,184,64,0.18)',
+            width: collapsed ? 34 : 40,
+            height: collapsed ? 34 : 40,
+            background: 'oklch(0.78 0.155 80 / 0.09)',
+            border: '1px solid oklch(0.78 0.155 80 / 0.22)',
             transition: 'all 0.3s ease',
+            flexShrink: 0,
           }}
         >
           <Image
             src="https://luckyduckdealz.com/cdn/shop/files/Transparent_Logo_Cropped.png?v=1692552884"
             alt="Lucky Duck Dealz"
-            width={collapsed ? 30 : 36}
-            height={collapsed ? 30 : 36}
+            width={collapsed ? 28 : 34}
+            height={collapsed ? 28 : 34}
             style={{ objectFit: 'contain', transition: 'all 0.3s ease' }}
             unoptimized
           />
@@ -73,8 +74,8 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
               Lucky Duck Dealz
             </h1>
             <p
-              className="text-[9px] font-bold tracking-[0.15em] uppercase mt-0.5"
-              style={{ color: 'var(--accent-gold)', opacity: 0.7 }}
+              className="text-[9px] font-bold tracking-[0.16em] uppercase mt-0.5"
+              style={{ color: 'var(--accent-gold)', opacity: 0.75 }}
             >
               Owner Dashboard
             </p>
@@ -100,20 +101,19 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
               key={item.id}
               onClick={() => onViewChange(item.id)}
               title={collapsed ? item.label : undefined}
-              className="sidebar-nav-item w-full flex items-center gap-2.5 text-[13px] font-medium"
+              className={`sidebar-nav-item w-full flex items-center gap-2.5 text-[13px] font-medium${isActive ? ' active' : ''}`}
               style={{
                 padding: collapsed ? '10px' : '9px 12px',
                 justifyContent: collapsed ? 'center' : 'flex-start',
                 background: isActive
-                  ? 'linear-gradient(90deg, rgba(232,184,64,0.12) 0%, rgba(232,184,64,0.04) 100%)'
+                  ? 'linear-gradient(90deg, oklch(0.78 0.155 80 / 0.12) 0%, oklch(0.78 0.155 80 / 0.03) 100%)'
                   : 'transparent',
                 color: isActive ? 'var(--accent-gold)' : 'var(--text-muted)',
-                borderLeft: isActive ? '3px solid var(--accent-gold)' : '3px solid transparent',
-                boxShadow: isActive ? '0 0 16px rgba(232,184,64,0.08)' : 'none',
+                boxShadow: isActive ? 'inset 0 1px 0 oklch(0.78 0.155 80 / 0.08)' : 'none',
               }}
               onMouseEnter={(e) => {
                 if (!isActive) {
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.04)'
+                  e.currentTarget.style.background = 'oklch(1 0 0 / 0.04)'
                   e.currentTarget.style.color = 'var(--text-secondary)'
                 }
               }}
@@ -124,7 +124,7 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
                 }
               }}
             >
-              <span style={{ opacity: isActive ? 1 : 0.65, flexShrink: 0 }}>{item.icon}</span>
+              <span style={{ opacity: isActive ? 1 : 0.6, flexShrink: 0 }}>{item.icon}</span>
               {!collapsed && <span className="truncate">{item.label}</span>}
             </button>
           )

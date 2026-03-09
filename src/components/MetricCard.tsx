@@ -52,7 +52,10 @@ export default function MetricCard({
   const positive = (change ?? 0) >= 0
 
   return (
-    <div className="metric-card p-5">
+    <div
+      className="metric-card p-5"
+      style={{ '--card-accent': accentColor } as React.CSSProperties}
+    >
       <div className="flex items-start justify-between mb-3">
         <span
           className="text-[11px] font-bold uppercase tracking-wider"
@@ -76,7 +79,7 @@ export default function MetricCard({
 
       <div
         className="font-display font-bold tracking-tight"
-        style={{ color: 'var(--text-primary)', fontSize: compact ? '24px' : '28px', lineHeight: 1.1 }}
+        style={{ color: 'var(--text-primary)', fontSize: compact ? '28px' : '32px', lineHeight: 1.1 }}
       >
         {fmt(animated)}
       </div>
