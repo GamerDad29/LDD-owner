@@ -1,9 +1,9 @@
 'use client'
 
 import Image from 'next/image'
-import { LayoutDashboard, PieChart, Users, TrendingUp, ChevronLeft, ChevronRight, BarChart3 } from 'lucide-react'
+import { LayoutDashboard, PieChart, Users, TrendingUp, ChevronLeft, ChevronRight, BarChart3, Megaphone } from 'lucide-react'
 
-export type DashboardView = 'overview' | 'profit-first' | 'team' | 'sales' | 'yoy'
+export type DashboardView = 'overview' | 'profit-first' | 'team' | 'sales' | 'yoy' | 'social-media'
 
 interface SidebarProps {
   activeView: DashboardView
@@ -18,6 +18,7 @@ const navItems: { id: DashboardView; label: string; icon: React.ReactNode }[] = 
   { id: 'team',         label: 'Team & Payroll', icon: <Users size={18} /> },
   { id: 'sales',        label: 'Sales Insights', icon: <TrendingUp size={18} /> },
   { id: 'yoy',          label: 'Year over Year', icon: <BarChart3 size={18} /> },
+  { id: 'social-media', label: 'Ad ROI Planner', icon: <Megaphone size={18} /> },
 ]
 
 export default function Sidebar({ activeView, onViewChange, collapsed, onCollapsedChange }: SidebarProps) {

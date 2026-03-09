@@ -6,8 +6,7 @@ import {
   BarChart,
 } from 'recharts'
 import { formatCurrency, formatDate, getDayOfWeek } from '@/lib/utils'
-import dailySalesData from '@/data/dailySales.json'
-import monthly2025 from '@/data/monthly2025.json'
+import { useDashboardData } from '@/context/DashboardData'
 
 type ChartMode = 'daily' | 'yoy-weekly' | 'yoy-monthly'
 
@@ -34,6 +33,9 @@ const CustomTooltip = ({ active, payload }: any) => {
 
 export default function SalesChart() {
   const [mode, setMode] = useState<ChartMode>('daily')
+  const { data: dashData } = useDashboardData()
+  const dailySalesData = dashData.dailySales
+  const monthly2025    = dashData.monthly2025
 
   // Daily data with 7-day moving average for trend line
   const dailyChart = useMemo(() => {
@@ -52,7 +54,7 @@ export default function SalesChart() {
       }
     })
     return data
-  }, [])
+  }, [dailySalesData])
 
   const weeklyYoY = useMemo(() => {
     const weeks: any[] = []
@@ -72,7 +74,7 @@ export default function SalesChart() {
     })
     if (curr) weeks.push(curr)
     return weeks
-  }, [])
+  }, [dailySalesData])
 
   const monthlyYoY = useMemo(() => {
     const months: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -92,7 +94,7 @@ export default function SalesChart() {
         y2026: y2026Monthly[m] || 0,
       }
     })
-  }, [])
+  }, [dailySalesData, monthly2025])
 
   return (
     <div className="card p-6">

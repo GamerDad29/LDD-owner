@@ -6,14 +6,14 @@ import MetricCard from '@/components/MetricCard'
 import SalesChart from '@/components/SalesChart'
 import RevenueBreakdown from '@/components/RevenueBreakdown'
 import ProfitFirstAllocator from '@/components/ProfitFirstAllocator'
+import AdROICalculator from '@/components/AdROICalculator'
 import TeamPayroll from '@/components/TeamPayroll'
 import SalesInsights from '@/components/SalesInsights'
 import YearOverYear from '@/components/YearOverYear'
 import { DollarSign, TrendingUp, ShoppingBag, ShoppingCart } from 'lucide-react'
-import dailySalesData from '@/data/dailySales.json'
 import payrollData from '@/data/payroll.json'
-import yoyData from '@/data/yearOverYear.json'
 import { formatCurrency, formatNumber } from '@/lib/utils'
+import { useDashboardData } from '@/context/DashboardData'
 
 type CompYear = '2024' | '2025'
 
@@ -22,28 +22,33 @@ export default function Dashboard() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
   const [compYear, setCompYear] = useState<CompYear>('2025')
 
-  const totSales = dailySalesData.reduce((s: number, d: any) => s + d.totalSales, 0)
-  const totOrders = dailySalesData.reduce((s: number, d: any) => s + d.orders, 0)
-  const avgDaily = totSales / dailySalesData.length
-  const avgAOV = totSales / totOrders
+  const { data: liveData, isLive, lastUpdated } = useDashboardData()
+  const dailySalesData = liveData.dailySales
+  const yoyData        = liveData.yearOverYear
+
+  const totSales  = dailySalesData.reduce((s, d) => s + d.totalSales, 0)
+  const totOrders = dailySalesData.reduce((s, d) => s + d.orders, 0)
+  const avgDaily  = dailySalesData.length > 0 ? totSales / dailySalesData.length : 0
+  const avgAOV    = totOrders > 0 ? totSales / totOrders : 0
 
   // YoY comparisons
-  const salesGrowthVs25 = yoyData.periodComparison.salesGrowth
-  const orderGrowthVs25 = yoyData.periodComparison.orderGrowth
-  const salesGrowthVs24 = (yoyData.periodComparison as any).salesGrowthVs2024 as number
-  const orderGrowthVs24 = (yoyData.periodComparison as any).orderGrowthVs2024 as number
+  const pc = yoyData.periodComparison as any
+  const salesGrowthVs25 = pc.salesGrowth ?? 0
+  const orderGrowthVs25 = pc.orderGrowth ?? 0
+  const salesGrowthVs24 = pc.salesGrowthVs2024 ?? 0
+  const orderGrowthVs24 = pc.orderGrowthVs2024 ?? 0
 
-  const comp25 = yoyData.periodComparison['2025']
-  const comp24 = (yoyData.periodComparison as any)['2024'] as { totalSales: number; totalOrders: number; aov: number }
+  const comp25 = pc['2025'] as { totalSales: number; totalOrders: number; aov: number }
+  const comp24 = pc['2024'] as { totalSales: number; totalOrders: number; aov: number }
 
   const yoySalesGrowth  = compYear === '2025' ? salesGrowthVs25 : salesGrowthVs24
   const yoyOrderGrowth  = compYear === '2025' ? orderGrowthVs25 : orderGrowthVs24
-  const prevTotalSales  = compYear === '2025' ? comp25.totalSales : comp24.totalSales
+  const prevTotalSales  = compYear === '2025' ? comp25.totalSales  : comp24.totalSales
   const prevTotalOrders = compYear === '2025' ? comp25.totalOrders : comp24.totalOrders
-  const prevAvgDaily    = prevTotalSales / dailySalesData.length
+  const prevAvgDaily    = dailySalesData.length > 0 ? prevTotalSales / dailySalesData.length : 0
   const aovPrevYear     = compYear === '2025' ? comp25.aov : comp24.aov
-  const avgDailyChange  = ((avgDaily - prevAvgDaily) / prevAvgDaily) * 100
-  const aovChange       = ((avgAOV - aovPrevYear) / aovPrevYear) * 100
+  const avgDailyChange  = prevAvgDaily > 0 ? ((avgDaily - prevAvgDaily) / prevAvgDaily) * 100 : 0
+  const aovChange       = aovPrevYear  > 0 ? ((avgAOV - aovPrevYear)   / aovPrevYear)  * 100 : 0
 
   const viewTitles: Record<DashboardView, { title: string; sub: string }> = {
     overview:     { title: 'Dashboard',       sub: 'Lucky Duck Dealz performance at a glance' },
@@ -51,6 +56,7 @@ export default function Dashboard() {
     team:         { title: 'Team & Payroll',   sub: 'Compensation, distribution, and raise modeling' },
     sales:        { title: 'Sales Insights',   sub: 'Revenue trends, patterns, and product performance' },
     yoy:          { title: 'Year over Year',   sub: '2024 vs 2025 vs 2026 performance comparison' },
+    'social-media': { title: 'Ad ROI Planner', sub: 'Model ad spend, project returns, and find your break-even' },
   }
 
   return (
@@ -166,7 +172,7 @@ export default function Dashboard() {
                   <p
                     className="font-display font-bold text-[26px] leading-tight shimmer-text"
                   >
-                    {formatCurrency(yoyData.years['2026'].annualizedSales, true)}
+                    {formatCurrency((yoyData.years['2026'] as any).annualizedSales ?? 0, true)}
                   </p>
                 </div>
               </div>
@@ -184,8 +190,13 @@ export default function Dashboard() {
                   </span>
                 </p>
                 <p className="text-[11px] mt-1" style={{ color: 'var(--text-muted)' }}>
-                  Orders pace: ~{formatNumber(Math.round(yoyData.years['2026'].annualizedOrders))}/yr
+                  Orders pace: ~{formatNumber(Math.round((yoyData.years['2026'] as any).annualizedOrders ?? 0))}/yr
                 </p>
+                {isLive && (
+                  <p className="text-[9px] mt-1" style={{ color: 'var(--accent-green)', opacity: 0.7 }}>
+                    Live · updated {new Date(lastUpdated).toLocaleDateString()}
+                  </p>
+                )}
               </div>
             </div>
 
@@ -295,6 +306,7 @@ export default function Dashboard() {
         {view === 'team' && <TeamPayroll />}
         {view === 'sales' && <SalesInsights />}
         {view === 'yoy' && <YearOverYear />}
+        {view === 'social-media' && <AdROICalculator />}
       </main>
     </div>
   )

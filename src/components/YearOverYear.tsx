@@ -6,10 +6,7 @@ import {
 } from 'recharts'
 import { formatCurrency, formatNumber } from '@/lib/utils'
 import { TrendingUp, TrendingDown, ArrowUpRight, ArrowDownRight } from 'lucide-react'
-import yoyData from '@/data/yearOverYear.json'
-import monthly2025 from '@/data/monthly2025.json'
-import returns2024 from '@/data/returns2024.json'
-import returns2025 from '@/data/returns2025.json'
+import { useDashboardData } from '@/context/DashboardData'
 
 function StatBlock({ label, value, subtext, color }: { label: string; value: string; subtext?: string; color?: string }) {
   return (
@@ -39,6 +36,12 @@ function GrowthBadge({ value, label }: { value: number; label: string }) {
 }
 
 export default function YearOverYear() {
+  const { data } = useDashboardData()
+  const yoyData    = data.yearOverYear
+  const monthly2025 = data.monthly2025
+  const returns2024 = data.returns2024
+  const returns2025 = data.returns2025
+
   const y24 = yoyData.years['2024']
   const y25 = yoyData.years['2025']
   const y26 = yoyData.years['2026']
@@ -52,7 +55,7 @@ export default function YearOverYear() {
       y2024: m.prevYearTotalSales || 0,
       y2025: m.totalSales,
     }))
-  }, [])
+  }, [monthly2025])
 
   // Monthly returns trend — 3 years
   const returnsTrend = useMemo(() => {
@@ -63,7 +66,7 @@ export default function YearOverYear() {
       y2024: Math.abs(r.prevYearReturns || 0),
       y2025: Math.abs(r.returns),
     }))
-  }, [])
+  }, [returns2024, returns2025])
 
   return (
     <div className="space-y-5">

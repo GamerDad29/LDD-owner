@@ -10,9 +10,8 @@ import {
   TrendingUp, ShoppingBag, Calendar, Package,
   Sparkles, Loader2, AlertTriangle, ChevronDown, ChevronUp,
 } from 'lucide-react'
-import dailySalesData from '@/data/dailySales.json'
 import productSalesData from '@/data/productSales.json'
-import yoyData from '@/data/yearOverYear.json'
+import { useDashboardData } from '@/context/DashboardData'
 
 // ─── Duck Norris AI hook ─────────────────────────────────────────────────────
 function useInsight(section: string, data: any) {
@@ -115,6 +114,10 @@ function DuckInsight({
 
 // ─── Main component ───────────────────────────────────────────────────────────
 export default function SalesInsights() {
+  const { data } = useDashboardData()
+  const dailySalesData = data.dailySales
+  const yoyData        = data.yearOverYear
+
   const dayOfWeekStats = useMemo(() => {
     const days: Record<string, { sales: number; orders: number; count: number }> = {}
     const order = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
@@ -130,7 +133,7 @@ export default function SalesInsights() {
       avgSales:  days[day] ? days[day].sales  / days[day].count : 0,
       avgOrders: days[day] ? Math.round(days[day].orders / days[day].count) : 0,
     }))
-  }, [])
+  }, [dailySalesData])
 
   const weeklyData = useMemo(() => {
     const weeks: any[] = []
@@ -151,7 +154,7 @@ export default function SalesInsights() {
       aov:      w.orders > 0 ? w.sales / w.orders : 0,
       avgDaily: w.sales / w.days,
     }))
-  }, [])
+  }, [dailySalesData])
 
   const aovData = useMemo(() =>
     dailySalesData.map((d: any) => ({
@@ -159,7 +162,7 @@ export default function SalesInsights() {
       dateLabel: formatDate(d.date),
       aov: d.orders > 0 ? d.totalSales / d.orders : 0,
       orders: d.orders,
-    })), [])
+    })), [dailySalesData])
 
   const totSales  = dailySalesData.reduce((s: number, d: any) => s + d.totalSales, 0)
   const totOrders = dailySalesData.reduce((s: number, d: any) => s + d.orders, 0)
