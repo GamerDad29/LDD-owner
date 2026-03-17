@@ -22,7 +22,7 @@ export default function Dashboard() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
   const [compYear, setCompYear] = useState<CompYear>('2025')
 
-  const { data: liveData, isLive, lastUpdated } = useDashboardData()
+  const { data: liveData, isLive, loading, lastUpdated } = useDashboardData()
   const dailySalesData = liveData.dailySales
   const yoyData        = liveData.yearOverYear
 
@@ -84,6 +84,24 @@ export default function Dashboard() {
             <p className="text-[12px] mt-0.5" style={{ color: 'var(--text-muted)' }}>
               {viewTitles[view].sub}
             </p>
+            {!loading && (
+              <span
+                className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider mt-1.5 px-2.5 py-1 rounded-full"
+                style={isLive
+                  ? { color: 'var(--accent-green)', background: 'rgba(46,232,154,0.08)', border: '1px solid rgba(46,232,154,0.15)' }
+                  : { color: '#ff8a65', background: 'rgba(255,138,101,0.08)', border: '1px solid rgba(255,138,101,0.15)' }
+                }
+              >
+                <span
+                  className="w-1.5 h-1.5 rounded-full"
+                  style={{ background: isLive ? 'var(--accent-green)' : '#ff8a65' }}
+                />
+                {isLive
+                  ? `Live · ${new Date(lastUpdated).toLocaleDateString()}`
+                  : 'Static data'
+                }
+              </span>
+            )}
           </div>
 
           {/* Year comparison toggle — only on overview */}
