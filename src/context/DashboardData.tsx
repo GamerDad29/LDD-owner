@@ -53,17 +53,28 @@ export function DashboardDataProvider({ children }: { children: ReactNode }) {
       const cachedTs = localStorage.getItem(CACHE_TIME_KEY)
       if (cached && cachedTs && Date.now() - parseInt(cachedTs) < CACHE_TTL_MS) {
         const parsed = JSON.parse(cached) as DashboardData
-        setData(parsed)
-        setIsLive(true)
-        setLast(parsed.lastUpdated)
-        setLoading(false)
-        return
+        // Guard: don't use cached data if dailySales is empty — it was a bad fetch
+        if (parsed.dailySales?.length > 0) {
+          setData(parsed)
+          setIsLive(true)
+          setLast(parsed.lastUpdated)
+          setLoading(false)
+          return
+        }
+        // Bad cache — clear it and fall through to fresh fetch
+        localStorage.removeItem(CACHE_KEY)
+        localStorage.removeItem(CACHE_TIME_KEY)
       }
     } catch { /* ignore localStorage errors */ }
 
     fetch('/api/shopify/data')
       .then(r => r.ok ? r.json() : Promise.reject(r.status))
       .then((d: DashboardData) => {
+        // Guard: only use live data if it has actual daily sales entries
+        if (!d.dailySales?.length) {
+          setIsLive(false)
+          return
+        }
         setData(d)
         setIsLive(true)
         setLast(d.lastUpdated)
@@ -72,8 +83,8 @@ export function DashboardDataProvider({ children }: { children: ReactNode }) {
           localStorage.setItem(CACHE_TIME_KEY, Date.now().toString())
         } catch { /* ignore */ }
       })
-      .catch(() => {
-        // Keep static fallback — already set as initial state
+      .catch((err) => {
+        console.error('Live data fetch failed, using static fallback:', err)
         setIsLive(false)
       })
       .finally(() => setLoading(false))

@@ -166,8 +166,10 @@ export default function SalesInsights() {
 
   const totSales  = dailySalesData.reduce((s: number, d: any) => s + d.totalSales, 0)
   const totOrders = dailySalesData.reduce((s: number, d: any) => s + d.orders, 0)
-  const avgAOV    = totSales / totOrders
-  const best      = dailySalesData.reduce((b: any, d: any) => d.totalSales > b.totalSales ? d : b, dailySalesData[0])
+  const avgAOV    = totOrders > 0 ? totSales / totOrders : 0
+  const best      = dailySalesData.length > 0
+    ? dailySalesData.reduce((b: any, d: any) => d.totalSales > b.totalSales ? d : b, dailySalesData[0])
+    : { totalSales: 0, date: '', orders: 0 }
   const top5      = (productSalesData as any[]).slice(0, 5)
 
   const overviewData = {

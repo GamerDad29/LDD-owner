@@ -79,7 +79,7 @@ export default function MetricCard({
 
       <div
         className="font-display font-bold tracking-tight"
-        style={{ color: 'var(--text-primary)', fontSize: compact ? '28px' : '32px', lineHeight: 1.1 }}
+        style={{ color: 'var(--text-primary)', fontSize: compact ? '24px' : '28px', lineHeight: 1.1 }}
       >
         {fmt(animated)}
       </div>

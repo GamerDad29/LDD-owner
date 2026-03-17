@@ -76,7 +76,7 @@ export default function YearOverYear() {
         <div className="card p-5" style={{ borderColor: 'rgba(255,255,255,0.04)' }}>
           <div className="flex items-center gap-2 mb-4">
             <span className="text-[13px] font-bold font-display" style={{ color: 'var(--text-muted)' }}>2024</span>
-            <GrowthBadge value={(y24 as any).yoyVs2023} label="vs 2023" />
+            <GrowthBadge value={(y24 as any).yoyVs2023 ?? 0} label="vs 2023" />
           </div>
           <div className="space-y-4">
             <StatBlock label="Annual Revenue" value={formatCurrency(y24.totalSales, true)} />

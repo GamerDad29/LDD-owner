@@ -19,7 +19,16 @@ async function shopifyQL(qlQuery: string): Promise<ShopifyRow[]> {
   const data = await res.json()
   const result = data.data?.shopifyqlQuery
   if (result?.parseErrors?.length) console.error('ShopifyQL error:', result.parseErrors)
-  return result?.tableData?.rows ?? []
+
+  const columns: { name: string }[] = result?.tableData?.columns ?? []
+  const rawRows: (string | null)[][] = result?.tableData?.rows ?? []
+
+  // Zip column names onto each positional row array to produce keyed objects
+  return rawRows.map(row => {
+    const obj: ShopifyRow = {}
+    columns.forEach((col, i) => { obj[col.name] = row[i] ?? null })
+    return obj
+  })
 }
 
 const num = (v: string | null | undefined) => parseFloat(v ?? '0') || 0
@@ -34,6 +43,11 @@ async function _fetchDashboardData() {
     shopifyQL('FROM sales SHOW total_sales, orders, gross_sales, net_sales, discounts, returns, taxes GROUP BY month SINCE 2025-01-01 UNTIL 2025-12-31 ORDER BY month'),
     shopifyQL(`FROM sales SHOW total_sales, orders, gross_sales, net_sales, discounts, returns, taxes GROUP BY month SINCE ${currentYear}-01-01 ORDER BY month`),
   ])
+
+  // ── Guard: if Shopify returned no rows, don't cache empty data ───────────────
+  if (daily.length === 0) {
+    throw new Error('ShopifyQL returned no daily sales data — credentials or query issue')
+  }
 
   // ── Daily Sales ──────────────────────────────────────────────────────────────
   const dailySales = daily.map(r => ({
@@ -148,7 +162,7 @@ async function _fetchDashboardData() {
 
   const yearOverYear = {
     years: {
-      '2024': { ...y2024 },
+      '2024': { ...y2024, yoyVs2023: 0 },
       '2025': { ...y2025, yoyVs2024: y2024.totalSales > 0 ? ((y2025.totalSales - y2024.totalSales) / y2024.totalSales) * 100 : 0 },
       '2026': {
         periodDays,
