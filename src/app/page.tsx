@@ -3,15 +3,17 @@
 import { useState } from 'react'
 import Sidebar, { DashboardView } from '@/components/Sidebar'
 import MetricCard from '@/components/MetricCard'
-import SalesChart from '@/components/SalesChart'
-import RevenueBreakdown from '@/components/RevenueBreakdown'
+import NavigationCard from '@/components/NavigationCard'
+import AmbientOrbs from '@/components/AmbientOrbs'
+import NoiseOverlay from '@/components/NoiseOverlay'
 import ProfitFirstAllocator from '@/components/ProfitFirstAllocator'
 import AdROICalculator from '@/components/AdROICalculator'
 import TeamPayroll from '@/components/TeamPayroll'
 import SalesInsights from '@/components/SalesInsights'
 import YearOverYear from '@/components/YearOverYear'
-import { DollarSign, TrendingUp, ShoppingBag, ShoppingCart } from 'lucide-react'
+import { DollarSign, TrendingUp, ShoppingBag, ShoppingCart, PieChart, Users, BarChart3, Megaphone, X } from 'lucide-react'
 import payrollData from '@/data/payroll.json'
+import profitFirstData from '@/data/profitFirst.json'
 import { formatCurrency, formatNumber } from '@/lib/utils'
 import { useDashboardData } from '@/context/DashboardData'
 
@@ -22,7 +24,7 @@ export default function Dashboard() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
   const [compYear, setCompYear] = useState<CompYear>('2025')
 
-  const { data: liveData, isLive, loading, lastUpdated } = useDashboardData()
+  const { data: liveData, isLive, loading, lastUpdated, error, dismissError } = useDashboardData()
   const dailySalesData = liveData.dailySales
   const yoyData        = liveData.yearOverYear
 
@@ -50,17 +52,28 @@ export default function Dashboard() {
   const avgDailyChange  = prevAvgDaily > 0 ? ((avgDaily - prevAvgDaily) / prevAvgDaily) * 100 : 0
   const aovChange       = aovPrevYear  > 0 ? ((avgAOV - aovPrevYear)   / aovPrevYear)  * 100 : 0
 
+  // Nav card preview metrics
+  const inventoryPct = (profitFirstData as any)?.inventoryRemainder ?? '—'
+  const biweeklyPayroll = formatCurrency(payrollData.totals.biweeklyGross)
+  const bestDay = dailySalesData.length > 0
+    ? formatCurrency(dailySalesData.reduce((b, d) => d.totalSales > b.totalSales ? d : b, dailySalesData[0]).totalSales)
+    : '$0'
+  const yoyGrowth = `${salesGrowthVs25 >= 0 ? '+' : ''}${salesGrowthVs25.toFixed(1)}%`
+
   const viewTitles: Record<DashboardView, { title: string; sub: string }> = {
-    overview:     { title: 'Dashboard',       sub: 'Lucky Duck Dealz performance at a glance' },
-    'profit-first': { title: 'Profit First',  sub: 'Weekly allocation model in real time' },
-    team:         { title: 'Team & Payroll',   sub: 'Compensation, distribution, and raise modeling' },
-    sales:        { title: 'Sales Insights',   sub: 'Revenue trends, patterns, and product performance' },
-    yoy:          { title: 'Year over Year',   sub: '2024 vs 2025 vs 2026 performance comparison' },
-    'social-media': { title: 'Ad ROI Planner', sub: 'Model ad spend, project returns, and find your break-even' },
+    overview:       { title: 'Owners Space',     sub: 'Lucky Duck Dealz performance at a glance' },
+    'profit-first': { title: 'Profit First',     sub: 'Weekly allocation model in real time' },
+    team:           { title: 'Team & Payroll',    sub: 'Compensation, distribution, and raise modeling' },
+    sales:          { title: 'Sales Insights',    sub: 'Revenue trends, patterns, and product performance' },
+    yoy:            { title: 'Year over Year',    sub: '2024 vs 2025 vs 2026 performance comparison' },
+    'social-media': { title: 'Social Media',      sub: 'Ad ROI modeling and future social integrations' },
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <AmbientOrbs />
+      <NoiseOverlay />
+
       <Sidebar
         activeView={view}
         onViewChange={setView}
@@ -69,9 +82,31 @@ export default function Dashboard() {
       />
 
       <main
-        className="transition-all duration-300"
+        className="transition-all duration-300 relative z-10"
         style={{ marginLeft: sidebarCollapsed ? 64 : 228, padding: '32px 28px' }}
       >
+        {/* Error banner */}
+        {error && (
+          <div
+            className="mb-5 px-4 py-3 rounded-xl flex items-center justify-between"
+            style={{
+              background: 'oklch(0.63 0.17 18 / 0.08)',
+              border: '1px solid oklch(0.63 0.17 18 / 0.18)',
+            }}
+          >
+            <p className="text-[12px] font-medium" style={{ color: 'var(--accent-red)' }}>
+              Shopify connection failed: {error}
+            </p>
+            <button
+              onClick={dismissError}
+              className="p-1 rounded-md transition-colors"
+              style={{ color: 'var(--accent-red)' }}
+            >
+              <X size={14} />
+            </button>
+          </div>
+        )}
+
         {/* Page header */}
         <div className="mb-7 flex items-center justify-between">
           <div>
@@ -88,7 +123,7 @@ export default function Dashboard() {
               <span
                 className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider mt-1.5 px-2.5 py-1 rounded-full"
                 style={isLive
-                  ? { color: 'var(--accent-green)', background: 'rgba(46,232,154,0.08)', border: '1px solid rgba(46,232,154,0.15)' }
+                  ? { color: 'var(--accent-green)', background: 'oklch(0.75 0.14 155 / 0.08)', border: '1px solid oklch(0.75 0.14 155 / 0.15)' }
                   : { color: '#ff8a65', background: 'rgba(255,138,101,0.08)', border: '1px solid rgba(255,138,101,0.15)' }
                 }
               >
@@ -136,7 +171,7 @@ export default function Dashboard() {
                 change={yoySalesGrowth}
                 changeLabel={`vs ${formatCurrency(prevTotalSales, true)} in ${compYear}`}
                 icon={<DollarSign size={16} />}
-                accentColor="var(--accent-gold)"
+                accentColor="var(--accent-rose)"
                 compact
               />
               <MetricCard
@@ -164,19 +199,19 @@ export default function Dashboard() {
                 change={aovChange}
                 changeLabel={`vs ${formatCurrency(aovPrevYear)} in ${compYear}`}
                 icon={<ShoppingBag size={16} />}
-                accentColor="var(--accent-purple)"
+                accentColor="var(--accent-lavender)"
               />
             </div>
 
             {/* Annualized pace banner */}
             <div
               className="card px-5 py-4 flex items-center justify-between"
-              style={{ borderColor: 'rgba(46,232,154,0.14)' }}
+              style={{ borderColor: 'oklch(0.75 0.14 155 / 0.14)' }}
             >
               <div className="flex items-center gap-3">
                 <div
                   className="p-2.5 rounded-xl"
-                  style={{ background: 'rgba(46,232,154,0.1)', boxShadow: '0 0 16px rgba(46,232,154,0.1)' }}
+                  style={{ background: 'oklch(0.75 0.14 155 / 0.08)', boxShadow: '0 0 16px oklch(0.75 0.14 155 / 0.08)' }}
                 >
                   <TrendingUp size={17} style={{ color: 'var(--accent-green)' }} />
                 </div>
@@ -218,104 +253,61 @@ export default function Dashboard() {
               </div>
             </div>
 
-            <SalesChart />
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-              <RevenueBreakdown />
-
-              {/* Payroll snapshot */}
-              <div className="card p-6">
-                <h3
-                  className="font-display font-bold text-[17px]"
-                  style={{ color: 'var(--text-primary)' }}
-                >
-                  Payroll Snapshot
-                </h3>
-                <p className="text-[11px] mt-0.5 mb-4" style={{ color: 'var(--text-muted)' }}>
-                  Most recent pay period
-                </p>
-
-                <div className="grid grid-cols-2 gap-3 mb-4">
-                  <div
-                    className="rounded-xl p-3"
-                    style={{ background: 'rgba(232,184,64,0.06)', border: '1px solid rgba(232,184,64,0.12)' }}
-                  >
-                    <p className="text-[10px] font-bold uppercase tracking-wider mb-1" style={{ color: 'var(--text-muted)' }}>
-                      Biweekly
-                    </p>
-                    <p
-                      className="font-display font-bold text-[20px]"
-                      style={{ color: 'var(--accent-gold)' }}
-                    >
-                      {formatCurrency(payrollData.totals.biweeklyGross)}
-                    </p>
-                  </div>
-                  <div
-                    className="rounded-xl p-3"
-                    style={{ background: 'rgba(91,173,255,0.06)', border: '1px solid rgba(91,173,255,0.12)' }}
-                  >
-                    <p className="text-[10px] font-bold uppercase tracking-wider mb-1" style={{ color: 'var(--text-muted)' }}>
-                      Est. Monthly
-                    </p>
-                    <p
-                      className="font-display font-bold text-[20px]"
-                      style={{ color: 'var(--accent-blue)' }}
-                    >
-                      {formatCurrency(payrollData.totals.estimatedMonthly)}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="space-y-1.5">
-                  {payrollData.employees
-                    .filter((e: any) => !e.isOwner)
-                    .sort((a: any, b: any) => b.biweeklyPay - a.biweeklyPay)
-                    .slice(0, 8)
-                    .map((emp: any, i: number) => (
-                      <div
-                        key={i}
-                        className="flex items-center justify-between py-1.5 px-2 rounded-lg transition-all"
-                        style={{ borderBottom: '1px solid var(--border-subtle)' }}
-                        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.03)' }}
-                        onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
-                      >
-                        <div className="flex items-center gap-2.5">
-                          <div
-                            className="w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-bold"
-                            style={{ background: 'rgba(232,184,64,0.1)', color: 'var(--accent-gold)' }}
-                          >
-                            {emp.name.charAt(0)}
-                          </div>
-                          <div>
-                            <p className="text-[12px] font-semibold" style={{ color: 'var(--text-primary)' }}>
-                              {emp.name}
-                            </p>
-                            <p className="text-[10px]" style={{ color: 'var(--text-muted)' }}>{emp.role}</p>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <span className="text-[12px] font-mono font-semibold" style={{ color: 'var(--text-primary)' }}>
-                            {formatCurrency(emp.biweeklyPay)}
-                          </span>
-                          {emp.hourlyRate && (
-                            <span className="text-[10px] font-mono ml-2" style={{ color: 'var(--accent-amber)' }}>
-                              ${emp.hourlyRate}/hr
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  <button
-                    onClick={() => setView('team')}
-                    className="w-full text-center text-[11px] py-2.5 mt-2 font-bold rounded-lg transition-all"
-                    style={{ color: 'var(--accent-gold)', background: 'rgba(232,184,64,0.06)', border: '1px solid rgba(232,184,64,0.12)' }}
-                    onMouseEnter={e => { e.currentTarget.style.background = 'rgba(232,184,64,0.1)' }}
-                    onMouseLeave={e => { e.currentTarget.style.background = 'rgba(232,184,64,0.06)' }}
-                  >
-                    View all {payrollData.employees.length} team members →
-                  </button>
-                </div>
-              </div>
+            {/* Navigation cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <NavigationCard
+                icon={<PieChart size={18} />}
+                title="Profit First"
+                description="Weekly cash allocation with real-time balance tracking"
+                metric={typeof inventoryPct === 'number' ? `${inventoryPct}%` : '—'}
+                metricLabel="inventory remainder"
+                accentColor="oklch(0.75 0.14 155)"
+                view="profit-first"
+                onNavigate={setView}
+                index={0}
+              />
+              <NavigationCard
+                icon={<Users size={18} />}
+                title="Team & Payroll"
+                description="Roster management, raise simulator, and payroll tracking"
+                metric={biweeklyPayroll}
+                metricLabel="biweekly payroll"
+                accentColor="oklch(0.68 0.13 290)"
+                view="team"
+                onNavigate={setView}
+                index={1}
+              />
+              <NavigationCard
+                icon={<TrendingUp size={18} />}
+                title="Sales Insights"
+                description="Revenue patterns, product performance, and Duck Norris AI"
+                metric={bestDay}
+                metricLabel="best day revenue"
+                accentColor="oklch(0.70 0.14 228)"
+                view="sales"
+                onNavigate={setView}
+                index={2}
+              />
+              <NavigationCard
+                icon={<BarChart3 size={18} />}
+                title="Year over Year"
+                description="2024 vs 2025 vs 2026 apples-to-apples comparison"
+                metric={yoyGrowth}
+                metricLabel="YoY growth"
+                accentColor="oklch(0.76 0.12 55)"
+                view="yoy"
+                onNavigate={setView}
+                index={3}
+              />
+              <NavigationCard
+                icon={<Megaphone size={18} />}
+                title="Social Media"
+                description="Ad ROI planner and future social media integrations"
+                accentColor="oklch(0.72 0.10 15)"
+                view="social-media"
+                onNavigate={setView}
+                index={4}
+              />
             </div>
           </div>
         )}

@@ -2,76 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* ═══════════════════════════════════════════════════════════
    TOKEN SYSTEM — Primitive → Semantic → Component
+   LDD Owners Space — Warm charcoal + rose gold palette
    ═══════════════════════════════════════════════════════════ */
 :root {
   /* ── Primitive: raw oklch values ────────────────────────── */
-  --prim-obsidian-0:  oklch(0.065 0.013 268);
-  --prim-obsidian-1:  oklch(0.095 0.018 272);
-  --prim-obsidian-2:  oklch(0.125 0.020 274);
-  --prim-obsidian-3:  oklch(0.155 0.021 272);
+  --prim-charcoal-0:  oklch(0.14  0.015 270);
+  --prim-charcoal-1:  oklch(0.17  0.018 268);
+  --prim-charcoal-2:  oklch(0.20  0.018 270);
+  --prim-charcoal-3:  oklch(0.23  0.017 268);
 
-  --prim-gold:        oklch(0.78  0.155 80);
-  --prim-gold-bright: oklch(0.88  0.12  82);
-  --prim-gold-dim:    oklch(0.78  0.155 80 / 0.14);
-  --prim-blue:        oklch(0.70  0.155 228);
-  --prim-green:       oklch(0.80  0.175 158);
-  --prim-red:         oklch(0.63  0.215 22);
-  --prim-purple:      oklch(0.65  0.195 300);
-  --prim-amber:       oklch(0.76  0.165 68);
-  --prim-cyan:        oklch(0.80  0.155 198);
-  --prim-pink:        oklch(0.70  0.195 345);
+  --prim-rose:        oklch(0.72  0.10  15);
+  --prim-rose-bright: oklch(0.82  0.08  18);
+  --prim-rose-dim:    oklch(0.72  0.10  15 / 0.14);
+  --prim-blue:        oklch(0.70  0.14  228);
+  --prim-green:       oklch(0.75  0.14  155);
+  --prim-red:         oklch(0.63  0.17  18);
+  --prim-lavender:    oklch(0.68  0.13  290);
+  --prim-peach:       oklch(0.76  0.12  55);
+  --prim-cyan:        oklch(0.78  0.13  198);
+  --prim-pink:        oklch(0.70  0.16  345);
 
   /* ── Semantic: purpose-driven tokens ───────────────────── */
-  --bg-primary:       var(--prim-obsidian-0);
-  --bg-secondary:     var(--prim-obsidian-1);
-  --bg-tertiary:      var(--prim-obsidian-2);
-  --bg-elevated:      var(--prim-obsidian-3);
-  --bg-glass:         oklch(0.095 0.018 272 / 0.88);
+  --bg-primary:       var(--prim-charcoal-0);
+  --bg-secondary:     var(--prim-charcoal-1);
+  --bg-tertiary:      var(--prim-charcoal-2);
+  --bg-elevated:      var(--prim-charcoal-3);
+  --bg-glass:         oklch(0.17 0.018 268 / 0.88);
 
   --border-subtle:    oklch(1 0 0 / 0.055);
   --border-default:   oklch(1 0 0 / 0.10);
-  --border-gold:      oklch(0.78 0.155 80 / 0.28);
+  --border-rose:      oklch(0.72 0.10 15 / 0.28);
 
   --text-primary:     oklch(0.94  0.010 268);
   --text-secondary:   oklch(0.60  0.022 270);
   --text-muted:       oklch(0.40  0.020 272);
 
-  --accent-gold:      var(--prim-gold);
-  --accent-gold-dim:  var(--prim-gold-dim);
+  --accent-rose:      var(--prim-rose);
+  --accent-rose-dim:  var(--prim-rose-dim);
   --accent-blue:      var(--prim-blue);
   --accent-green:     var(--prim-green);
   --accent-red:       var(--prim-red);
-  --accent-purple:    var(--prim-purple);
-  --accent-amber:     var(--prim-amber);
+  --accent-lavender:  var(--prim-lavender);
+  --accent-peach:     var(--prim-peach);
   --accent-cyan:      var(--prim-cyan);
   --accent-pink:      var(--prim-pink);
 
+  /* Legacy aliases — components still reference these */
+  --accent-gold:      var(--prim-rose);
+  --accent-gold-dim:  var(--prim-rose-dim);
+  --accent-purple:    var(--prim-lavender);
+  --accent-amber:     var(--prim-peach);
+  --border-gold:      var(--border-rose);
+
   /* ── Elevation shadow system ────────────────────────────── */
-  --shadow-sm:  0 1px 3px oklch(0 0 0 / 0.45), 0 1px 2px oklch(0 0 0 / 0.3);
-  --shadow-md:  0 4px 16px oklch(0 0 0 / 0.5), 0 2px 6px oklch(0 0 0 / 0.35);
-  --shadow-lg:  0 8px 32px oklch(0 0 0 / 0.55), 0 4px 12px oklch(0 0 0 / 0.4);
-  --shadow-xl:  0 16px 48px oklch(0 0 0 / 0.6), 0 8px 20px oklch(0 0 0 / 0.45);
+  --shadow-sm:  0 1px 3px oklch(0 0 0 / 0.35), 0 1px 2px oklch(0 0 0 / 0.25);
+  --shadow-md:  0 4px 16px oklch(0 0 0 / 0.4), 0 2px 6px oklch(0 0 0 / 0.3);
+  --shadow-lg:  0 8px 32px oklch(0 0 0 / 0.45), 0 4px 12px oklch(0 0 0 / 0.35);
+  --shadow-xl:  0 16px 48px oklch(0 0 0 / 0.5), 0 8px 20px oklch(0 0 0 / 0.4);
 
   /* ── Glow shadows ───────────────────────────────────────── */
-  --glow-gold:   0 0 24px oklch(0.78 0.155 80 / 0.20), 0 0 48px oklch(0.78 0.155 80 / 0.08);
-  --glow-blue:   0 0 24px oklch(0.70 0.155 228 / 0.16), 0 0 48px oklch(0.70 0.155 228 / 0.06);
-  --glow-green:  0 0 24px oklch(0.80 0.175 158 / 0.16);
-  --glow-purple: 0 0 24px oklch(0.65 0.195 300 / 0.16);
+  --glow-rose:   0 0 24px oklch(0.72 0.10 15 / 0.18), 0 0 48px oklch(0.72 0.10 15 / 0.07);
+  --glow-blue:   0 0 24px oklch(0.70 0.14 228 / 0.14), 0 0 48px oklch(0.70 0.14 228 / 0.05);
+  --glow-green:  0 0 24px oklch(0.75 0.14 155 / 0.14);
+  --glow-lavender: 0 0 24px oklch(0.68 0.13 290 / 0.14);
+
+  /* Legacy aliases */
+  --glow-gold:   var(--glow-rose);
+  --glow-purple: var(--glow-lavender);
 
   /* ── Spacing scale (4px base) ───────────────────────────── */
-  --space-1: 0.25rem;   /* 4px  */
-  --space-2: 0.5rem;    /* 8px  */
-  --space-3: 0.75rem;   /* 12px */
-  --space-4: 1rem;      /* 16px */
-  --space-5: 1.25rem;   /* 20px */
-  --space-6: 1.5rem;    /* 24px */
-  --space-8: 2rem;      /* 32px */
-  --space-10: 2.5rem;   /* 40px */
-  --space-12: 3rem;     /* 48px */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
 
   /* ── Radius scale ───────────────────────────────────────── */
   --radius-sm:  6px;
@@ -81,11 +93,11 @@
 
   /* ── Font tokens ────────────────────────────────────────── */
   --font-display: 'Plus Jakarta Sans', sans-serif;
-  --font-body:    'DM Sans', sans-serif;
+  --font-body:    'Nunito', sans-serif;
   --font-mono:    'JetBrains Mono', monospace;
 
   /* ── Component defaults ─────────────────────────────────── */
-  --card-accent: var(--accent-gold);
+  --card-accent: var(--accent-rose);
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -107,19 +119,17 @@ body {
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern' 1, 'liga' 1;
 
-  /* Atmospheric depth: warm gold source from top-left (brand/sidebar),
-     cool blue from bottom-right, central richness from a mid radial.
-     Fixed so it stays as a full-viewport backdrop behind scrolling content. */
+  /* Rose gold glow top-left + lavender glow bottom-right */
   background-image:
-    radial-gradient(ellipse 65% 50% at 8% -8%, oklch(0.78 0.155 80 / 0.065) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 40% at 92% 108%, oklch(0.70 0.155 228 / 0.045) 0%, transparent 55%),
-    radial-gradient(ellipse 80% 60% at 50% 40%, oklch(0.095 0.018 272) 0%, transparent 100%);
+    radial-gradient(ellipse 65% 50% at 8% -8%, oklch(0.72 0.10 15 / 0.055) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 92% 108%, oklch(0.68 0.13 290 / 0.04) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 60% at 50% 40%, oklch(0.17 0.018 268) 0%, transparent 100%);
   background-attachment: fixed;
 }
 
-/* Focus: brand-aligned, beautiful, not the browser default */
+/* Focus: brand-aligned */
 :focus-visible {
-  outline: 2px solid oklch(0.78 0.155 80 / 0.75);
+  outline: 2px solid oklch(0.72 0.10 15 / 0.65);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
@@ -131,12 +141,12 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom,
-    oklch(0.78 0.155 80 / 0.22),
-    oklch(0.78 0.155 80 / 0.08)
+    oklch(0.72 0.10 15 / 0.20),
+    oklch(0.72 0.10 15 / 0.07)
   );
   border-radius: 4px;
 }
-::-webkit-scrollbar-thumb:hover { background: oklch(0.78 0.155 80 / 0.38); }
+::-webkit-scrollbar-thumb:hover { background: oklch(0.72 0.10 15 / 0.35); }
 
 /* ═══════════════════════════════════════════════════════════
    CARDS
@@ -155,37 +165,31 @@ body {
 }
 
 .card:hover {
-  border-color: oklch(0.78 0.155 80 / 0.18);
-  box-shadow: var(--shadow-md), 0 0 0 1px oklch(0.78 0.155 80 / 0.05) inset;
+  border-color: oklch(0.72 0.10 15 / 0.16);
+  box-shadow: var(--shadow-md), 0 0 0 1px oklch(0.72 0.10 15 / 0.04) inset;
   transform: translateY(-1px);
 }
 
-.card-glow-gold {
-  border-color: var(--border-gold) !important;
-  box-shadow: var(--glow-gold), var(--shadow-md) !important;
+.card-glow-rose {
+  border-color: var(--border-rose) !important;
+  box-shadow: var(--glow-rose), var(--shadow-md) !important;
 }
 .card-glow-blue {
-  border-color: oklch(0.70 0.155 228 / 0.28) !important;
+  border-color: oklch(0.70 0.14 228 / 0.28) !important;
   box-shadow: var(--glow-blue), var(--shadow-md) !important;
 }
 .card-glow-green {
-  border-color: oklch(0.80 0.175 158 / 0.22) !important;
+  border-color: oklch(0.75 0.14 155 / 0.22) !important;
   box-shadow: var(--glow-green), var(--shadow-md) !important;
 }
 
 /* ═══════════════════════════════════════════════════════════
    METRIC CARDS
-   The signature design element: each card has a 2px top border
-   in its accent color, creating a consistent color-encoding
-   system across the entire dashboard. Revenue = gold,
-   Orders = blue, Daily = green, AOV = purple.
    ═══════════════════════════════════════════════════════════ */
 .metric-card {
   background: var(--bg-secondary);
-  /* Base border — bottom and sides */
   border: 1px solid var(--border-subtle);
-  /* Accent top border — set via --card-accent in the component */
-  border-top: 2px solid var(--card-accent, var(--accent-gold));
+  border-top: 2px solid var(--card-accent, var(--accent-rose));
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   transition:
@@ -197,7 +201,6 @@ body {
   overflow: hidden;
 }
 
-/* Subtle ambient glow from the accent color — top-right corner */
 .metric-card::after {
   content: '';
   position: absolute;
@@ -206,7 +209,7 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--card-accent, var(--accent-gold)) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--card-accent, var(--accent-rose)) 0%, transparent 70%);
   opacity: 0.05;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -214,8 +217,8 @@ body {
 
 .metric-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg), 0 0 20px oklch(0.78 0.155 80 / 0.07);
-  border-color: oklch(0.78 0.155 80 / 0.20);
+  box-shadow: var(--shadow-lg), 0 0 20px oklch(0.72 0.10 15 / 0.06);
+  border-color: oklch(0.72 0.10 15 / 0.18);
 }
 
 .metric-card:hover::after { opacity: 0.10; }
@@ -230,7 +233,6 @@ body {
   overflow: hidden;
 }
 
-/* Left accent bar — spring easing on reveal */
 .sidebar-nav-item::before {
   content: '';
   position: absolute;
@@ -239,8 +241,8 @@ body {
   bottom: 18%;
   width: 2.5px;
   border-radius: 0 2px 2px 0;
-  background: var(--accent-gold);
-  box-shadow: 0 0 10px oklch(0.78 0.155 80 / 0.6);
+  background: var(--accent-rose);
+  box-shadow: 0 0 10px oklch(0.72 0.10 15 / 0.5);
   transform: scaleY(0);
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -263,21 +265,21 @@ input[type="range"]::-webkit-slider-thumb {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--accent-gold);
+  background: var(--accent-rose);
   border: 2px solid var(--bg-primary);
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 0 0 3px oklch(0.78 0.155 80 / 0.15);
+  box-shadow: 0 0 0 3px oklch(0.72 0.10 15 / 0.13);
 }
 input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 0 5px oklch(0.78 0.155 80 / 0.22);
+  box-shadow: 0 0 0 5px oklch(0.72 0.10 15 / 0.20);
 }
 input[type="range"]::-moz-range-thumb {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--accent-gold);
+  background: var(--accent-rose);
   border: 2px solid var(--bg-primary);
   cursor: pointer;
 }
@@ -305,9 +307,9 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
 }
 .toggle-btn.active {
-  background: oklch(0.78 0.155 80 / 0.13);
-  color: var(--accent-gold);
-  box-shadow: 0 0 12px oklch(0.78 0.155 80 / 0.10);
+  background: oklch(0.72 0.10 15 / 0.12);
+  color: var(--accent-rose);
+  box-shadow: 0 0 12px oklch(0.72 0.10 15 / 0.09);
 }
 .toggle-btn:hover:not(.active) {
   color: var(--text-secondary);
@@ -317,10 +319,21 @@ input[type="range"]::-moz-range-thumb {
 /* ═══════════════════════════════════════════════════════════
    BADGES
    ═══════════════════════════════════════════════════════════ */
+.badge-rose {
+  background: oklch(0.72 0.10 15 / 0.10);
+  color: var(--accent-rose);
+  border: 1px solid oklch(0.72 0.10 15 / 0.20);
+  border-radius: var(--radius-sm);
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
 .badge-gold {
-  background: oklch(0.78 0.155 80 / 0.12);
-  color: var(--accent-gold);
-  border: 1px solid oklch(0.78 0.155 80 / 0.22);
+  background: oklch(0.72 0.10 15 / 0.10);
+  color: var(--accent-rose);
+  border: 1px solid oklch(0.72 0.10 15 / 0.20);
   border-radius: var(--radius-sm);
   padding: 2px 8px;
   font-size: 10px;
@@ -329,18 +342,18 @@ input[type="range"]::-moz-range-thumb {
   text-transform: uppercase;
 }
 .badge-green {
-  background: oklch(0.80 0.175 158 / 0.10);
+  background: oklch(0.75 0.14 155 / 0.10);
   color: var(--accent-green);
-  border: 1px solid oklch(0.80 0.175 158 / 0.20);
+  border: 1px solid oklch(0.75 0.14 155 / 0.18);
   border-radius: var(--radius-sm);
   padding: 2px 8px;
   font-size: 10px;
   font-weight: 700;
 }
 .badge-blue {
-  background: oklch(0.70 0.155 228 / 0.10);
+  background: oklch(0.70 0.14 228 / 0.10);
   color: var(--accent-blue);
-  border: 1px solid oklch(0.70 0.155 228 / 0.20);
+  border: 1px solid oklch(0.70 0.14 228 / 0.18);
   border-radius: var(--radius-sm);
   padding: 2px 8px;
   font-size: 10px;
@@ -391,9 +404,15 @@ input[type="number"] { -moz-appearance: textfield; }
   to   { opacity: 1; transform: translateX(0);      }
 }
 
+@keyframes pulse-rose {
+  0%, 100% { box-shadow: 0 0 0 0   oklch(0.72 0.10 15 / 0.30); }
+  50%       { box-shadow: 0 0 0 8px oklch(0.72 0.10 15 / 0);    }
+}
+
+/* Legacy alias */
 @keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 0 0 0   oklch(0.78 0.155 80 / 0.35); }
-  50%       { box-shadow: 0 0 0 8px oklch(0.78 0.155 80 / 0);    }
+  0%, 100% { box-shadow: 0 0 0 0   oklch(0.72 0.10 15 / 0.30); }
+  50%       { box-shadow: 0 0 0 8px oklch(0.72 0.10 15 / 0);    }
 }
 
 @keyframes shimmer {
@@ -406,19 +425,25 @@ input[type="number"] { -moz-appearance: textfield; }
   to   { transform: rotate(360deg); }
 }
 
+@keyframes breathe {
+  0%, 100% { transform: scale(1);    opacity: 0.04; }
+  50%      { transform: scale(1.08); opacity: 0.06; }
+}
+
 .animate-fade-in    { animation: fadeIn 0.35s ease forwards; }
 .animate-slide-in   { animation: slideInLeft 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-.animate-pulse-gold { animation: pulse-gold 2.5s infinite; }
+.animate-pulse-gold { animation: pulse-rose 2.5s infinite; }
+.animate-pulse-rose { animation: pulse-rose 2.5s infinite; }
 
-/* Rich gold shimmer — warm highlight at the center gives a metallic feel */
+/* Rose gold shimmer — warm metallic feel */
 .shimmer-text {
   background: linear-gradient(
     90deg,
-    var(--accent-gold)      0%,
-    oklch(0.92 0.10 82)    38%,
-    oklch(0.97 0.06 80)    50%,
-    oklch(0.92 0.10 82)    62%,
-    var(--accent-gold)     100%
+    var(--accent-rose)     0%,
+    oklch(0.85 0.07 18)   38%,
+    oklch(0.90 0.04 15)   50%,
+    oklch(0.85 0.07 18)   62%,
+    var(--accent-rose)    100%
   );
   background-size: 200% 100%;
   -webkit-background-clip: text;
@@ -453,7 +478,7 @@ input[type="number"] { -moz-appearance: textfield; }
   }
   .shimmer-text {
     animation: none !important;
-    background: var(--accent-gold);
+    background: var(--accent-rose);
     -webkit-background-clip: text;
     background-clip: text;
   }

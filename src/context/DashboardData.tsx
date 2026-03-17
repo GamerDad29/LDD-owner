@@ -28,6 +28,8 @@ interface ContextValue {
   loading:     boolean
   isLive:      boolean
   lastUpdated: string
+  error:       string | null
+  dismissError: () => void
 }
 
 const DashboardDataContext = createContext<ContextValue>({
@@ -35,6 +37,8 @@ const DashboardDataContext = createContext<ContextValue>({
   loading:     true,
   isLive:      false,
   lastUpdated: 'static',
+  error:       null,
+  dismissError: () => {},
 })
 
 const CACHE_KEY      = 'ldd-dashboard-data'
@@ -46,6 +50,9 @@ export function DashboardDataProvider({ children }: { children: ReactNode }) {
   const [loading,     setLoading] = useState(true)
   const [isLive,      setIsLive]  = useState(false)
   const [lastUpdated, setLast]    = useState('static')
+  const [error,       setError]   = useState<string | null>(null)
+
+  const dismissError = () => setError(null)
 
   useEffect(() => {
     try {
@@ -53,7 +60,6 @@ export function DashboardDataProvider({ children }: { children: ReactNode }) {
       const cachedTs = localStorage.getItem(CACHE_TIME_KEY)
       if (cached && cachedTs && Date.now() - parseInt(cachedTs) < CACHE_TTL_MS) {
         const parsed = JSON.parse(cached) as DashboardData
-        // Guard: don't use cached data if dailySales is empty — it was a bad fetch
         if (parsed.dailySales?.length > 0) {
           setData(parsed)
           setIsLive(true)
@@ -61,16 +67,20 @@ export function DashboardDataProvider({ children }: { children: ReactNode }) {
           setLoading(false)
           return
         }
-        // Bad cache — clear it and fall through to fresh fetch
         localStorage.removeItem(CACHE_KEY)
         localStorage.removeItem(CACHE_TIME_KEY)
       }
     } catch { /* ignore localStorage errors */ }
 
     fetch('/api/shopify/data')
-      .then(r => r.ok ? r.json() : Promise.reject(r.status))
-      .then((d: DashboardData) => {
-        // Guard: only use live data if it has actual daily sales entries
+      .then(async r => {
+        const json = await r.json()
+        if (!r.ok) {
+          throw new Error(json.error || `HTTP ${r.status}`)
+        }
+        return json as DashboardData
+      })
+      .then((d) => {
         if (!d.dailySales?.length) {
           setIsLive(false)
           return
@@ -85,13 +95,14 @@ export function DashboardDataProvider({ children }: { children: ReactNode }) {
       })
       .catch((err) => {
         console.error('Live data fetch failed, using static fallback:', err)
+        setError(err.message || 'Failed to connect to Shopify')
         setIsLive(false)
       })
       .finally(() => setLoading(false))
   }, [])
 
   return (
-    <DashboardDataContext.Provider value={{ data, loading, isLive, lastUpdated }}>
+    <DashboardDataContext.Provider value={{ data, loading, isLive, lastUpdated, error, dismissError }}>
       {children}
     </DashboardDataContext.Provider>
   )

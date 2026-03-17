@@ -18,7 +18,7 @@ const navItems: { id: DashboardView; label: string; icon: React.ReactNode }[] = 
   { id: 'team',         label: 'Team & Payroll', icon: <Users size={18} /> },
   { id: 'sales',        label: 'Sales Insights', icon: <TrendingUp size={18} /> },
   { id: 'yoy',          label: 'Year over Year', icon: <BarChart3 size={18} /> },
-  { id: 'social-media', label: 'Ad ROI Planner', icon: <Megaphone size={18} /> },
+  { id: 'social-media', label: 'Social Media',   icon: <Megaphone size={18} /> },
 ]
 
 export default function Sidebar({ activeView, onViewChange, collapsed, onCollapsedChange }: SidebarProps) {
@@ -27,30 +27,30 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
       className="fixed top-0 left-0 h-screen z-50 flex flex-col transition-all duration-300 ease-out"
       style={{
         width: collapsed ? 64 : 228,
-        background: 'linear-gradient(180deg, #0c0e1a 0%, #08090f 100%)',
-        borderRight: '1px solid rgba(232, 184, 64, 0.09)',
-        boxShadow: '4px 0 32px rgba(0,0,0,0.4)',
+        background: 'linear-gradient(180deg, oklch(0.16 0.015 270) 0%, oklch(0.12 0.012 268) 100%)',
+        borderRight: '1px solid oklch(0.72 0.10 15 / 0.08)',
+        boxShadow: '4px 0 32px rgba(0,0,0,0.35)',
       }}
     >
       {/* Brand header */}
       <div
         className="flex items-center h-16 border-b overflow-hidden"
         style={{
-          borderColor: 'oklch(0.78 0.155 80 / 0.10)',
+          borderColor: 'oklch(0.72 0.10 15 / 0.09)',
           padding: '0 14px',
           justifyContent: collapsed ? 'center' : 'flex-start',
           gap: collapsed ? 0 : 10,
-          background: 'linear-gradient(135deg, oklch(0.78 0.155 80 / 0.07) 0%, transparent 55%)',
+          background: 'linear-gradient(135deg, oklch(0.72 0.10 15 / 0.06) 0%, transparent 55%)',
         }}
       >
         {/* Logo with pulse ring */}
         <div
-          className="flex-shrink-0 rounded-xl overflow-hidden flex items-center justify-center animate-pulse-gold"
+          className="flex-shrink-0 rounded-xl overflow-hidden flex items-center justify-center animate-pulse-rose"
           style={{
             width: collapsed ? 34 : 40,
             height: collapsed ? 34 : 40,
-            background: 'oklch(0.78 0.155 80 / 0.09)',
-            border: '1px solid oklch(0.78 0.155 80 / 0.22)',
+            background: 'oklch(0.72 0.10 15 / 0.08)',
+            border: '1px solid oklch(0.72 0.10 15 / 0.20)',
             transition: 'all 0.3s ease',
             flexShrink: 0,
           }}
@@ -75,9 +75,9 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
             </h1>
             <p
               className="text-[9px] font-bold tracking-[0.16em] uppercase mt-0.5"
-              style={{ color: 'var(--accent-gold)', opacity: 0.75 }}
+              style={{ color: 'var(--accent-rose)', opacity: 0.75 }}
             >
-              Owner Dashboard
+              Owners Space
             </p>
           </div>
         )}
@@ -106,10 +106,10 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
                 padding: collapsed ? '10px' : '9px 12px',
                 justifyContent: collapsed ? 'center' : 'flex-start',
                 background: isActive
-                  ? 'linear-gradient(90deg, oklch(0.78 0.155 80 / 0.12) 0%, oklch(0.78 0.155 80 / 0.03) 100%)'
+                  ? 'linear-gradient(90deg, oklch(0.72 0.10 15 / 0.10) 0%, oklch(0.72 0.10 15 / 0.02) 100%)'
                   : 'transparent',
-                color: isActive ? 'var(--accent-gold)' : 'var(--text-muted)',
-                boxShadow: isActive ? 'inset 0 1px 0 oklch(0.78 0.155 80 / 0.08)' : 'none',
+                color: isActive ? 'var(--accent-rose)' : 'var(--text-muted)',
+                boxShadow: isActive ? 'inset 0 1px 0 oklch(0.72 0.10 15 / 0.06)' : 'none',
               }}
               onMouseEnter={(e) => {
                 if (!isActive) {
@@ -132,14 +132,14 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
       </nav>
 
       {/* Collapse toggle */}
-      <div className="p-2 border-t" style={{ borderColor: 'rgba(232,184,64,0.08)' }}>
+      <div className="p-2 border-t" style={{ borderColor: 'oklch(0.72 0.10 15 / 0.07)' }}>
         <button
           onClick={() => onCollapsedChange(!collapsed)}
           className="w-full flex items-center justify-center gap-1.5 px-2 py-2 rounded-lg text-xs transition-all duration-200"
           style={{ color: 'var(--text-muted)' }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'rgba(232,184,64,0.06)'
-            e.currentTarget.style.color = 'var(--accent-gold)'
+            e.currentTarget.style.background = 'oklch(0.72 0.10 15 / 0.05)'
+            e.currentTarget.style.color = 'var(--accent-rose)'
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = 'transparent'

@@ -8,9 +8,9 @@ import allData from '@/data/categoryBreakdown.json'
 type ViewMode = 'categories' | 'specialty'
 
 const YEAR_COLORS: Record<string, string> = {
-  '2024':     '#e8b840',
+  '2024':     '#d4918a',
   '2025':     '#5badff',
-  '2026 YTD': '#2ee89a',
+  '2026 YTD': '#6dd4a8',
 }
 
 export default function RevenueBreakdown() {

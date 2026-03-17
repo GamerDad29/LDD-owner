@@ -65,13 +65,13 @@ function DuckInsight({
         title={buttonLabel ? label : undefined}
         className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold transition-all"
         style={{
-          background: 'rgba(232,184,64,0.08)',
-          border: '1px solid rgba(232,184,64,0.18)',
-          color: 'var(--accent-gold)',
+          background: 'oklch(0.72 0.10 15 / 0.07)',
+          border: '1px solid oklch(0.72 0.10 15 / 0.16)',
+          color: 'var(--accent-rose)',
           opacity: loading ? 0.7 : 1,
         }}
-        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(232,184,64,0.14)' }}
-        onMouseLeave={e => { e.currentTarget.style.background = 'rgba(232,184,64,0.08)' }}
+        onMouseEnter={e => { e.currentTarget.style.background = 'oklch(0.72 0.10 15 / 0.12)' }}
+        onMouseLeave={e => { e.currentTarget.style.background = 'oklch(0.72 0.10 15 / 0.07)' }}
       >
         {loading
           ? <><Loader2 size={12} className="animate-spin" /> Thinking...</>
@@ -84,7 +84,7 @@ function DuckInsight({
       </button>
 
       {error && (
-        <div className="mt-2 flex items-start gap-2 px-3 py-2 rounded-lg text-[11px]" style={{ background: 'rgba(255,82,82,0.06)', border: '1px solid rgba(255,82,82,0.15)', color: 'var(--accent-red)' }}>
+        <div className="mt-2 flex items-start gap-2 px-3 py-2 rounded-lg text-[11px]" style={{ background: 'oklch(0.63 0.17 18 / 0.06)', border: '1px solid oklch(0.63 0.17 18 / 0.13)', color: 'var(--accent-red)' }}>
           <AlertTriangle size={12} className="mt-0.5 flex-shrink-0" />
           <span>{error}</span>
         </div>
@@ -94,16 +94,16 @@ function DuckInsight({
         <div
           className="mt-2 px-3.5 py-3 rounded-xl text-[12px] leading-relaxed"
           style={{
-            background: 'linear-gradient(135deg, rgba(232,184,64,0.07) 0%, rgba(232,184,64,0.03) 100%)',
-            border: '1px solid rgba(232,184,64,0.18)',
+            background: 'linear-gradient(135deg, oklch(0.72 0.10 15 / 0.06) 0%, oklch(0.72 0.10 15 / 0.02) 100%)',
+            border: '1px solid oklch(0.72 0.10 15 / 0.16)',
             color: 'var(--text-secondary)',
           }}
         >
           <div className="flex items-center gap-1.5 mb-1.5">
-            <div className="w-4 h-4 rounded-full flex items-center justify-center" style={{ background: 'rgba(232,184,64,0.15)' }}>
-              <Sparkles size={9} style={{ color: 'var(--accent-gold)' }} />
+            <div className="w-4 h-4 rounded-full flex items-center justify-center" style={{ background: 'oklch(0.72 0.10 15 / 0.13)' }}>
+              <Sparkles size={9} style={{ color: 'var(--accent-rose)' }} />
             </div>
-            <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: 'var(--accent-gold)' }}>Duck Norris</span>
+            <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: 'var(--accent-rose)' }}>Duck Norris</span>
           </div>
           {text}
         </div>
@@ -189,25 +189,25 @@ export default function SalesInsights() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 stagger">
         {[
           {
-            icon: <TrendingUp size={15} />, color: 'rgba(91,173,255,0.1)', iconColor: 'var(--accent-blue)',
+            icon: <TrendingUp size={15} />, color: 'oklch(0.70 0.14 228 / 0.1)', iconColor: 'var(--accent-blue)',
             label: 'Period Sales', value: formatCurrency(totSales, true),
             sub: `+${yoyData.periodComparison.salesGrowth.toFixed(0)}% vs 2025 same period`,
             subColor: 'var(--accent-green)',
           },
           {
-            icon: <ShoppingBag size={15} />, color: 'rgba(245,166,35,0.1)', iconColor: 'var(--accent-amber)',
+            icon: <ShoppingBag size={15} />, color: 'oklch(0.76 0.12 55 / 0.1)', iconColor: 'var(--accent-peach)',
             label: 'Avg Order Value', value: formatCurrency(avgAOV),
             sub: `${formatNumber(totOrders)} orders · 2025 was ${formatCurrency(yoyData.periodComparison['2025'].aov)}`,
             subColor: 'var(--text-muted)',
           },
           {
-            icon: <Calendar size={15} />, color: 'rgba(46,232,154,0.1)', iconColor: 'var(--accent-green)',
+            icon: <Calendar size={15} />, color: 'oklch(0.75 0.14 155 / 0.1)', iconColor: 'var(--accent-green)',
             label: 'Best Single Day', value: formatCurrency(best.totalSales),
             sub: `${getDayOfWeek(best.date)} · ${formatDate(best.date)}`,
             subColor: 'var(--text-muted)',
           },
           {
-            icon: <Package size={15} />, color: 'rgba(157,120,255,0.1)', iconColor: 'var(--accent-purple)',
+            icon: <Package size={15} />, color: 'oklch(0.68 0.13 290 / 0.1)', iconColor: 'var(--accent-lavender)',
             label: 'Top Product', value: top5[0]?.name ?? '—',
             sub: `${formatNumber(top5[0]?.unitsSold ?? 0)} units · ${formatCurrency(top5[0]?.totalSales ?? 0)}`,
             subColor: 'var(--text-muted)',
@@ -231,14 +231,14 @@ export default function SalesInsights() {
       </div>
 
       {/* Executive summary — Duck Norris */}
-      <div className="card p-5" style={{ borderColor: 'rgba(232,184,64,0.12)' }}>
+      <div className="card p-5" style={{ borderColor: 'oklch(0.72 0.10 15 / 0.10)' }}>
         <div className="flex items-center gap-2 mb-1">
-          <Sparkles size={15} style={{ color: 'var(--accent-gold)' }} />
+          <Sparkles size={15} style={{ color: 'var(--accent-rose)' }} />
           <h3 className="font-display font-bold text-[16px]" style={{ color: 'var(--text-primary)' }}>
             Executive Summary
           </h3>
           <span className="text-[10px] px-2 py-0.5 rounded-md font-bold uppercase tracking-wider ml-1"
-            style={{ background: 'rgba(232,184,64,0.1)', color: 'var(--accent-gold)', border: '1px solid rgba(232,184,64,0.2)' }}>
+            style={{ background: 'oklch(0.72 0.10 15 / 0.08)', color: 'var(--accent-rose)', border: '1px solid oklch(0.72 0.10 15 / 0.18)' }}>
             Duck Norris
           </span>
         </div>
@@ -280,7 +280,7 @@ export default function SalesInsights() {
                           Avg Orders: <span className="font-mono">{d.avgOrders}</span>
                         </p>
                         <p className="text-[11px]" style={{ color: 'var(--text-secondary)' }}>
-                          $/Order: <span className="font-mono" style={{ color: 'var(--accent-amber)' }}>
+                          $/Order: <span className="font-mono" style={{ color: 'var(--accent-peach)' }}>
                             {d.avgOrders > 0 ? formatCurrency(d.avgSales / d.avgOrders) : '—'}
                           </span>
                         </p>
@@ -312,8 +312,8 @@ export default function SalesInsights() {
               <AreaChart data={aovData}>
                 <defs>
                   <linearGradient id="aovG2" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#f5a623" stopOpacity={0.15} />
-                    <stop offset="100%" stopColor="#f5a623" stopOpacity={0} />
+                    <stop offset="0%" stopColor="oklch(0.76 0.12 55)" stopOpacity={0.15} />
+                    <stop offset="100%" stopColor="oklch(0.76 0.12 55)" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.03)" vertical={false} />
@@ -327,7 +327,7 @@ export default function SalesInsights() {
                       <div className="card p-3 shadow-2xl" style={{ background: 'var(--bg-elevated)', border: '1px solid var(--border-default)' }}>
                         <p className="text-[12px] font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>{formatDate(d.date)}</p>
                         <p className="text-[11px]" style={{ color: 'var(--text-secondary)' }}>
-                          AOV: <span className="font-mono" style={{ color: 'var(--accent-amber)' }}>{formatCurrency(d.aov)}</span>
+                          AOV: <span className="font-mono" style={{ color: 'var(--accent-peach)' }}>{formatCurrency(d.aov)}</span>
                         </p>
                         <p className="text-[11px]" style={{ color: 'var(--text-secondary)' }}>
                           Orders: <span className="font-mono">{d.orders}</span>
@@ -336,7 +336,7 @@ export default function SalesInsights() {
                     )
                   }}
                 />
-                <Area type="monotone" dataKey="aov" stroke="#f5a623" strokeWidth={2} fill="url(#aovG2)" />
+                <Area type="monotone" dataKey="aov" stroke="oklch(0.76 0.12 55)" strokeWidth={2} fill="url(#aovG2)" />
               </AreaChart>
             </ResponsiveContainer>
           </div>
@@ -377,7 +377,7 @@ export default function SalesInsights() {
                   </td>
                   <td className="py-2.5 px-2 text-right font-mono font-semibold" style={{ color: 'var(--text-primary)' }}>{formatCurrency(w.sales)}</td>
                   <td className="py-2.5 px-2 text-right font-mono" style={{ color: 'var(--text-secondary)' }}>{formatNumber(w.orders)}</td>
-                  <td className="py-2.5 px-2 text-right font-mono" style={{ color: 'var(--accent-amber)' }}>{formatCurrency(w.aov)}</td>
+                  <td className="py-2.5 px-2 text-right font-mono" style={{ color: 'var(--accent-peach)' }}>{formatCurrency(w.aov)}</td>
                   <td className="py-2.5 px-2 text-right font-mono" style={{ color: 'var(--text-secondary)' }}>{formatCurrency(w.avgDaily)}</td>
                 </tr>
               ))}
@@ -404,21 +404,21 @@ export default function SalesInsights() {
                   <div className="flex items-center gap-2.5">
                     <span
                       className="w-5 h-5 rounded-md text-[10px] font-bold flex items-center justify-center flex-shrink-0"
-                      style={{ background: 'rgba(232,184,64,0.12)', color: 'var(--accent-gold)' }}
+                      style={{ background: 'oklch(0.72 0.10 15 / 0.10)', color: 'var(--accent-rose)' }}
                     >
                       {i + 1}
                     </span>
                     <span className="text-[12px] font-semibold" style={{ color: 'var(--text-primary)' }}>{p.name}</span>
                   </div>
                   <div className="text-right">
-                    <span className="text-[13px] font-mono font-bold" style={{ color: 'var(--accent-gold)' }}>{formatCurrency(p.totalSales)}</span>
+                    <span className="text-[13px] font-mono font-bold" style={{ color: 'var(--accent-rose)' }}>{formatCurrency(p.totalSales)}</span>
                     <span className="text-[10px] ml-2 font-mono" style={{ color: 'var(--text-muted)' }}>{formatNumber(p.unitsSold)} units</span>
                   </div>
                 </div>
                 <div className="h-1 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
                   <div
                     className="h-full rounded-full"
-                    style={{ width: `${pct}%`, background: `var(--accent-gold)`, opacity: 0.6 }}
+                    style={{ width: `${pct}%`, background: `var(--accent-rose)`, opacity: 0.5 }}
                   />
                 </div>
                 <span className="text-[9px] mt-0.5 block" style={{ color: 'var(--text-muted)' }}>

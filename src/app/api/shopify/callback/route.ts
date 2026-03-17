@@ -32,10 +32,10 @@ export async function GET(request: NextRequest) {
     return new NextResponse(`
       <html>
         <head><title>Shopify Connected</title></head>
-        <body style="font-family: -apple-system, sans-serif; background: #07080f; color: #e8b840; padding: 48px; max-width: 700px; margin: 0 auto;">
+        <body style="font-family: -apple-system, sans-serif; background: #07080f; color: #d4918a; padding: 48px; max-width: 700px; margin: 0 auto;">
           <h2 style="margin-bottom: 8px;">Shopify Connected!</h2>
-          <p style="color: #888; margin-bottom: 24px;">Copy the token below and add it to Vercel as <code style="color:#e8b840">SHOPIFY_ACCESS_TOKEN</code>.</p>
-          <div style="background: #111428; padding: 20px; border-radius: 10px; word-break: break-all; color: #fff; border: 1px solid rgba(232,184,64,0.2); font-family: monospace; font-size: 14px; margin-bottom: 24px;">
+          <p style="color: #888; margin-bottom: 24px;">Copy the token below and add it to Vercel as <code style="color:#d4918a">SHOPIFY_ACCESS_TOKEN</code>.</p>
+          <div style="background: #111428; padding: 20px; border-radius: 10px; word-break: break-all; color: #fff; border: 1px solid rgba(212,145,138,0.2); font-family: monospace; font-size: 14px; margin-bottom: 24px;">
             ${data.access_token}
           </div>
           <p style="color: #555; font-size: 13px;">Once you have saved this to Vercel, this page can be safely ignored.</p>

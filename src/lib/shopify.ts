@@ -1,29 +1,47 @@
 import { unstable_cache } from 'next/cache'
 
-const API_URL = `https://${process.env.SHOPIFY_STORE}/admin/api/2026-01/graphql.json`
+const API_VERSION = process.env.SHOPIFY_API_VERSION || '2026-01'
+const API_URL = `https://${process.env.SHOPIFY_STORE}/admin/api/${API_VERSION}/graphql.json`
 
 type ShopifyRow = Record<string, string | null>
 
 async function shopifyQL(qlQuery: string): Promise<ShopifyRow[]> {
+  const store = process.env.SHOPIFY_STORE
+  const token = process.env.SHOPIFY_ACCESS_TOKEN
+  if (!store) throw new Error('Missing SHOPIFY_STORE env var')
+  if (!token) throw new Error('Missing SHOPIFY_ACCESS_TOKEN env var')
+
   const escaped = qlQuery.replace(/\\/g, '\\\\').replace(/"/g, '\\"')
   const res = await fetch(API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'X-Shopify-Access-Token': process.env.SHOPIFY_ACCESS_TOKEN!,
+      'X-Shopify-Access-Token': token,
     },
     body: JSON.stringify({
       query: `{ shopifyqlQuery(query: "${escaped}") { tableData { columns { name } rows } parseErrors } }`,
     }),
   })
+
+  if (!res.ok) {
+    const text = await res.text().catch(() => '')
+    throw new Error(`Shopify API returned HTTP ${res.status}: ${text.slice(0, 300)}`)
+  }
+
   const data = await res.json()
+
+  if (data.errors) {
+    throw new Error(`Shopify GraphQL errors: ${JSON.stringify(data.errors).slice(0, 300)}`)
+  }
+
   const result = data.data?.shopifyqlQuery
-  if (result?.parseErrors?.length) console.error('ShopifyQL error:', result.parseErrors)
+  if (result?.parseErrors?.length) {
+    throw new Error(`ShopifyQL parse errors: ${JSON.stringify(result.parseErrors).slice(0, 300)}`)
+  }
 
   const columns: { name: string }[] = result?.tableData?.columns ?? []
   const rawRows: (string | null)[][] = result?.tableData?.rows ?? []
 
-  // Zip column names onto each positional row array to produce keyed objects
   return rawRows.map(row => {
     const obj: ShopifyRow = {}
     columns.forEach((col, i) => { obj[col.name] = row[i] ?? null })
@@ -34,6 +52,10 @@ async function shopifyQL(qlQuery: string): Promise<ShopifyRow[]> {
 const num = (v: string | null | undefined) => parseFloat(v ?? '0') || 0
 
 async function _fetchDashboardData() {
+  // Validate env vars upfront
+  if (!process.env.SHOPIFY_STORE) throw new Error('SHOPIFY_STORE is not set — add it in Vercel Environment Variables')
+  if (!process.env.SHOPIFY_ACCESS_TOKEN) throw new Error('SHOPIFY_ACCESS_TOKEN is not set — add it in Vercel Environment Variables')
+
   const today = new Date()
   const currentYear = today.getFullYear()
 
@@ -44,12 +66,10 @@ async function _fetchDashboardData() {
     shopifyQL(`FROM sales SHOW total_sales, orders, gross_sales, net_sales, discounts, returns, taxes GROUP BY month SINCE ${currentYear}-01-01 ORDER BY month`),
   ])
 
-  // ── Guard: if Shopify returned no rows, don't cache empty data ───────────────
   if (daily.length === 0) {
     throw new Error('ShopifyQL returned no daily sales data — credentials or query issue')
   }
 
-  // ── Daily Sales ──────────────────────────────────────────────────────────────
   const dailySales = daily.map(r => ({
     date:       r.day ?? '',
     orders:     num(r.orders),
@@ -61,7 +81,6 @@ async function _fetchDashboardData() {
     totalSales: num(r.total_sales),
   }))
 
-  // ── Monthly lookup maps ──────────────────────────────────────────────────────
   const map2024: Record<string, ShopifyRow> = {}
   for (const r of m2024) { if (r.month) map2024[r.month.slice(0, 7)] = r }
 
@@ -97,7 +116,6 @@ async function _fetchDashboardData() {
   const monthly2025 = buildMonthly(m2025, map2024, '2024-')
   const monthly2026 = buildMonthly(m2026, map2025, '2025-')
 
-  // ── Returns (monthly) ────────────────────────────────────────────────────────
   const returns2024 = monthly2024.map(m => ({
     month:           m.month,
     returns:         m.returns,
@@ -114,7 +132,6 @@ async function _fetchDashboardData() {
     prevYearReturns: num(map2025['2025-' + m.month.slice(5)]?.returns),
   }))
 
-  // ── Year aggregates ──────────────────────────────────────────────────────────
   const sumYear = (months: typeof monthly2024) => {
     const ts  = months.reduce((s, m) => s + m.totalSales, 0)
     const ord = months.reduce((s, m) => s + m.orders, 0)
@@ -135,7 +152,6 @@ async function _fetchDashboardData() {
   const ytdRet = dailySales.reduce((s, d) => s + d.returns, 0)
   const dailyAvg = periodDays > 0 ? ytdTs / periodDays : 0
 
-  // ── Period comparison (same calendar window across years) ────────────────────
   const lastDate    = dailySales.length > 0 ? dailySales[dailySales.length - 1].date : ''
   const lastMonthYr = lastDate.slice(0, 7)
   const sameMo2025  = '2025-' + lastMonthYr.slice(5)

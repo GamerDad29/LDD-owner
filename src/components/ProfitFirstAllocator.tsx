@@ -29,7 +29,7 @@ type ComputedAllocation = AllocationDef & {
 const INITIAL: AllocationDef[] = [
   { key: 'profit',       label: 'Profit',        color: '#2ee89a', mode: 'percent',   pct: 7.5,  flatAmount: 0,     min: 0,    max: 20,    target: 7.5   },
   { key: 'cashReserves', label: 'Cash Reserves', color: '#ff9a3c', mode: 'percent',   pct: 7.5,  flatAmount: 0,     min: 0,    max: 20,    target: 7.5   },
-  { key: 'ownersPay',    label: "Owner's Pay",   color: '#e8b840', mode: 'percent',   pct: 1.0,  flatAmount: 0,     min: 0,    max: 15,    target: 1.0   },
+  { key: 'ownersPay',    label: "Owner's Pay",   color: '#d4918a', mode: 'percent',   pct: 1.0,  flatAmount: 0,     min: 0,    max: 15,    target: 1.0   },
   { key: 'salesTax',     label: 'Sales Tax',     color: '#9d78ff', mode: 'percent',   pct: 8.0,  flatAmount: 0,     min: 5,    max: 12,    target: 8.0   },
   { key: 'payroll',      label: 'Payroll',       color: '#ff6eb3', mode: 'flat',      pct: 0,    flatAmount: 14000, min: 8000, max: 22000, target: 14000 },
   { key: 'operating',    label: 'Operating',     color: '#64748b', mode: 'flat',      pct: 0,    flatAmount: 6500,  min: 3000, max: 12000, target: 6500  },
@@ -95,7 +95,7 @@ export default function ProfitFirstAllocator() {
     <div className="space-y-5">
 
       {/* ── Revenue Hero ─────────────────────────── */}
-      <div className="card p-6" style={{ borderColor: 'rgba(232,184,64,0.14)' }}>
+      <div className="card p-6" style={{ borderColor: 'oklch(0.72 0.10 15 / 0.12)' }}>
         <div className="flex items-start justify-between mb-5">
           <div>
             <p className="text-[10px] font-bold uppercase tracking-widest mb-1.5" style={{ color: 'var(--text-muted)' }}>
@@ -112,7 +112,7 @@ export default function ProfitFirstAllocator() {
             onClick={reset}
             className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-[11px] font-semibold transition-all"
             style={{ color: 'var(--text-muted)', background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border-subtle)' }}
-            onMouseEnter={e => { e.currentTarget.style.color = 'var(--accent-gold)'; e.currentTarget.style.borderColor = 'rgba(232,184,64,0.25)' }}
+            onMouseEnter={e => { e.currentTarget.style.color = 'var(--accent-rose)'; e.currentTarget.style.borderColor = 'oklch(0.72 0.10 15 / 0.22)' }}
             onMouseLeave={e => { e.currentTarget.style.color = 'var(--text-muted)';  e.currentTarget.style.borderColor = 'var(--border-subtle)' }}
           >
             <RotateCcw size={12} /> Reset

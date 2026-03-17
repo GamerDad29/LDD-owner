@@ -5,8 +5,9 @@ export async function GET() {
   try {
     const data = await fetchDashboardData()
     return NextResponse.json(data)
-  } catch (err) {
+  } catch (err: any) {
     console.error('Shopify data fetch failed:', err)
-    return NextResponse.json({ error: 'Failed to fetch Shopify data' }, { status: 500 })
+    const message = err?.message || 'Unknown error fetching Shopify data'
+    return NextResponse.json({ error: message }, { status: 500 })
   }
 }
