@@ -40,11 +40,23 @@ async function shopifyQL(qlQuery: string): Promise<ShopifyRow[]> {
   }
 
   const columns: { name: string }[] = result?.tableData?.columns ?? []
-  const rawRows: (string | null)[][] = result?.tableData?.rows ?? []
+  const rawRows: any[] = result?.tableData?.rows ?? []
 
+  // Shopify API may return rows as positional arrays OR as keyed objects
+  // depending on API version. Handle both formats.
   return rawRows.map(row => {
+    if (Array.isArray(row)) {
+      // Positional array — zip with column names
+      const obj: ShopifyRow = {}
+      columns.forEach((col, i) => { obj[col.name] = row[i] ?? null })
+      return obj
+    }
+    // Already a keyed object — cast values to strings for consistency
     const obj: ShopifyRow = {}
-    columns.forEach((col, i) => { obj[col.name] = row[i] ?? null })
+    for (const col of columns) {
+      const val = row[col.name]
+      obj[col.name] = val != null ? String(val) : null
+    }
     return obj
   })
 }

@@ -88,10 +88,10 @@ export async function GET() {
     }
   }
 
-  // 3. ShopifyQL test query
+  // 3. ShopifyQL test query (actual daily query pattern)
   if (workingVersion) {
     const url = `https://${store}/admin/api/${workingVersion}/graphql.json`
-    const ql = 'FROM sales SHOW total_sales, orders SINCE -7d ORDER BY day'
+    const ql = 'FROM sales SHOW total_sales, orders GROUP BY day SINCE -7d ORDER BY day'
     const escaped = ql.replace(/\\/g, '\\\\').replace(/"/g, '\\"')
     const t0 = Date.now()
     try {
@@ -135,10 +135,37 @@ export async function GET() {
     }
   }
 
+  // 4. Raw column inspection — show exactly what Shopify returns
+  let rawColumns: any = null
+  let rawFirstRow: any = null
+  if (workingVersion) {
+    const url = `https://${store}/admin/api/${workingVersion}/graphql.json`
+    const ql = 'FROM sales SHOW gross_sales, net_sales, total_sales, orders GROUP BY day SINCE -7d ORDER BY day'
+    const escaped = ql.replace(/\\/g, '\\\\').replace(/"/g, '\\"')
+    try {
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Shopify-Access-Token': token,
+        },
+        body: JSON.stringify({
+          query: `{ shopifyqlQuery(query: "${escaped}") { tableData { columns { name dataType } rows } parseErrors } }`,
+        }),
+      })
+      const data = await res.json()
+      const result = data.data?.shopifyqlQuery
+      rawColumns = result?.tableData?.columns ?? []
+      rawFirstRow = result?.tableData?.rows?.[0] ?? null
+    } catch { /* ignore */ }
+  }
+
   const allPassed = checks.every(c => c.passed)
   return NextResponse.json({
     ok: allPassed,
     apiVersion: workingVersion || null,
     checks,
+    rawColumns,
+    rawFirstRow,
   })
 }
