@@ -27,9 +27,11 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
       className="fixed top-0 left-0 h-screen z-50 flex flex-col transition-all duration-300 ease-out"
       style={{
         width: collapsed ? 64 : 228,
-        background: 'linear-gradient(180deg, oklch(0.16 0.015 270) 0%, oklch(0.12 0.012 268) 100%)',
-        borderRight: '1px solid oklch(0.72 0.10 15 / 0.08)',
-        boxShadow: '4px 0 32px rgba(0,0,0,0.35)',
+        background: 'oklch(0.11 0.014 270 / 0.85)',
+        backdropFilter: 'blur(40px) saturate(1.4)',
+        WebkitBackdropFilter: 'blur(40px) saturate(1.4)',
+        borderRight: '1px solid oklch(1 0 0 / 0.06)',
+        boxShadow: '4px 0 40px rgba(0,0,0,0.3)',
       }}
     >
       {/* Brand header */}
