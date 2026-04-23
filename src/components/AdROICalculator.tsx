@@ -64,7 +64,7 @@ export default function AdROICalculator() {
     return { requiredSpend, requiredLiftPct, costPerDollar }
   }, [targetRevenue, efficiency, revDuration, baselines.avgWeeklyRev])
 
-  // Scenario chart data — fixed lift% per $1k spent (linear assumption)
+  // Scenario chart data. Fixed lift% per $1k spent, linear assumption.
   const liftPerKDollar = adSpend > 0 ? liftPct / (adSpend / 1000) : 5
   const scenarioData = SPEND_SCENARIOS.map(spend => {
     const scenarioLift   = liftPerKDollar * (spend / 1000)
@@ -79,7 +79,7 @@ export default function AdROICalculator() {
       {/* ── Baseline Metrics ─────────────────────── */}
       <div className="grid grid-cols-3 gap-4">
         {[
-          { label: 'Avg Weekly Revenue',  value: formatCurrency(baselines.avgWeeklyRev, true), color: 'var(--accent-rose)',   bg: 'oklch(0.72 0.10 15 / 0.06)',  border: 'oklch(0.72 0.10 15 / 0.14)' },
+          { label: 'Avg Weekly Revenue',  value: formatCurrency(baselines.avgWeeklyRev, true), color: 'var(--accent-revenue)', bg: 'oklch(0.72 0.16 55 / 0.06)',  border: 'oklch(0.72 0.16 55 / 0.16)' },
           { label: 'Avg Order Value',     value: formatCurrency(baselines.avgAOV),              color: 'var(--accent-blue)',   bg: 'oklch(0.70 0.14 228 / 0.06)',  border: 'oklch(0.70 0.14 228 / 0.14)' },
           { label: 'Avg Weekly Orders',   value: Math.round(baselines.avgWeeklyOrders).toString(), color: 'var(--accent-green)', bg: 'oklch(0.75 0.14 155 / 0.06)',  border: 'oklch(0.75 0.14 155 / 0.14)' },
         ].map(m => (
@@ -94,11 +94,11 @@ export default function AdROICalculator() {
       {/* ── Data Notice ──────────────────────────── */}
       <div
         className="card px-5 py-3 flex items-center gap-3"
-        style={{ borderColor: 'oklch(0.72 0.10 15 / 0.12)', background: 'oklch(0.72 0.10 15 / 0.04)' }}
+        style={{ borderColor: 'oklch(0.78 0.13 198 / 0.14)', background: 'oklch(0.78 0.13 198 / 0.04)' }}
       >
-        <TrendingUp size={14} style={{ color: 'var(--accent-rose)', flexShrink: 0 }} />
+        <TrendingUp size={14} style={{ color: 'var(--accent-primary)', flexShrink: 0 }} />
         <p className="text-[11px]" style={{ color: 'var(--text-muted)' }}>
-          No historical ad data yet — projections are based on your assumptions. Log real campaign results over time to sharpen accuracy.
+          No historical ad data yet. Projections are based on your assumptions. Log real campaign results over time to sharpen accuracy.
         </p>
       </div>
 
@@ -116,7 +116,7 @@ export default function AdROICalculator() {
           onClick={reset}
           className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-[11px] font-semibold transition-all ml-auto"
           style={{ color: 'var(--text-muted)', background: 'rgba(255,255,255,0.04)', border: '1px solid var(--border-subtle)' }}
-          onMouseEnter={e => { e.currentTarget.style.color = 'var(--accent-rose)'; e.currentTarget.style.borderColor = 'oklch(0.72 0.10 15 / 0.22)' }}
+          onMouseEnter={e => { e.currentTarget.style.color = 'var(--accent-primary)'; e.currentTarget.style.borderColor = 'oklch(0.78 0.13 198 / 0.28)' }}
           onMouseLeave={e => { e.currentTarget.style.color = 'var(--text-muted)';  e.currentTarget.style.borderColor = 'var(--border-subtle)' }}
         >
           <RotateCcw size={12} /> Reset
@@ -143,14 +143,14 @@ export default function AdROICalculator() {
                     type="number" value={adSpend} step={100} min={0}
                     onChange={e => setAdSpend(Math.max(0, Number(e.target.value) || 0))}
                     className="w-full rounded-lg py-1.5 pl-6 pr-2 font-mono text-[12px] text-right focus:outline-none"
-                    style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid oklch(0.72 0.10 15 / 0.22)', color: 'var(--text-primary)' }}
+                    style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid oklch(0.72 0.16 55 / 0.28)', color: 'var(--text-primary)' }}
                   />
                 </div>
               </div>
               <input type="range" min={0} max={10000} step={100} value={adSpend}
                 onChange={e => setAdSpend(Number(e.target.value))}
                 className="w-full"
-                style={{ background: `linear-gradient(to right, oklch(0.72 0.10 15 / 0.45) ${adSpend / 100}%, rgba(255,255,255,0.06) ${adSpend / 100}%)` }}
+                style={{ background: `linear-gradient(to right, oklch(0.72 0.16 55 / 0.50) ${adSpend / 100}%, rgba(255,255,255,0.06) ${adSpend / 100}%)` }}
               />
               <div className="flex justify-between mt-1 text-[9px]" style={{ color: 'var(--text-muted)' }}>
                 <span>$0</span><span>$5k</span><span>$10k</span>
@@ -196,7 +196,7 @@ export default function AdROICalculator() {
                 </div>
               </div>
               <p className="text-[9px] mb-2" style={{ color: 'var(--text-muted)' }}>
-                Industry benchmark for retail social: 3–8% lift per active campaign week
+                Industry benchmark for retail social: 3% to 8% lift per active campaign week
               </p>
               <input type="range" min={0} max={30} step={0.5} value={liftPct}
                 onChange={e => setLiftPct(Number(e.target.value))}
@@ -235,7 +235,7 @@ export default function AdROICalculator() {
                 style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-subtle)' }}
               >
                 <span className="text-[11px]" style={{ color: 'var(--text-muted)' }}>Break-even lift needed</span>
-                <span className="font-mono font-bold text-[14px]" style={{ color: 'var(--accent-rose)' }}>
+                <span className="font-mono font-bold text-[14px]" style={{ color: 'var(--accent-revenue)' }}>
                   {forwardCalc.breakEvenLift.toFixed(1)}%/wk
                 </span>
               </div>
@@ -243,9 +243,9 @@ export default function AdROICalculator() {
 
             <div
               className="card px-4 py-3 text-[11px]"
-              style={{ borderColor: 'oklch(0.72 0.10 15 / 0.10)', background: 'oklch(0.72 0.10 15 / 0.03)' }}
+              style={{ borderColor: 'oklch(0.78 0.13 198 / 0.12)', background: 'oklch(0.78 0.13 198 / 0.03)' }}
             >
-              <p className="font-semibold mb-1" style={{ color: 'var(--accent-rose)' }}>Reading this</p>
+              <p className="font-semibold mb-1" style={{ color: 'var(--accent-primary)' }}>Reading this</p>
               <p style={{ color: 'var(--text-muted)' }}>
                 Spending {formatCurrency(adSpend)} over {duration} week{duration !== 1 ? 's' : ''} at a {liftPct}% weekly lift
                 generates {formatCurrency(forwardCalc.additionalRevenue, true)} in additional revenue.
@@ -323,18 +323,18 @@ export default function AdROICalculator() {
                     type="number" value={efficiency} step={0.5} min={0.5} max={10}
                     onChange={e => setEfficiency(Math.max(0.5, Math.min(10, Number(e.target.value) || 1)))}
                     className="w-full rounded-lg py-1.5 px-2 font-mono text-[12px] text-right focus:outline-none pr-10"
-                    style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid oklch(0.72 0.10 15 / 0.22)', color: 'var(--text-primary)' }}
+                    style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid oklch(0.78 0.13 198 / 0.28)', color: 'var(--text-primary)' }}
                   />
                   <span className="absolute right-2 top-1/2 -translate-y-1/2 text-[10px]" style={{ color: 'var(--text-muted)' }}>:1</span>
                 </div>
               </div>
               <p className="text-[9px] mb-2" style={{ color: 'var(--text-muted)' }}>
-                Assumed return ratio — e.g. 3.0 means $1 spent returns $3 in revenue. Retail social benchmark: 2.0–5.0
+                Assumed return ratio. For example, 3.0 means $1 spent returns $3 in revenue. Retail social benchmark: 2.0 to 5.0
               </p>
               <input type="range" min={0.5} max={10} step={0.5} value={efficiency}
                 onChange={e => setEfficiency(Number(e.target.value))}
                 className="w-full"
-                style={{ background: `linear-gradient(to right, oklch(0.72 0.10 15 / 0.45) ${(efficiency - 0.5) / 9.5 * 100}%, rgba(255,255,255,0.06) ${(efficiency - 0.5) / 9.5 * 100}%)` }}
+                style={{ background: `linear-gradient(to right, oklch(0.78 0.13 198 / 0.50) ${(efficiency - 0.5) / 9.5 * 100}%, rgba(255,255,255,0.06) ${(efficiency - 0.5) / 9.5 * 100}%)` }}
               />
               <div className="flex justify-between mt-1 text-[9px]" style={{ color: 'var(--text-muted)' }}>
                 <span>0.5:1</span><span>5:1</span><span>10:1</span>
@@ -344,13 +344,13 @@ export default function AdROICalculator() {
 
           {/* Results */}
           <div className="space-y-4">
-            <div className="card p-6 space-y-4" style={{ borderColor: 'oklch(0.72 0.10 15 / 0.16)' }}>
+            <div className="card p-6 space-y-4" style={{ borderColor: 'oklch(0.72 0.16 55 / 0.18)' }}>
               <h3 className="text-[11px] font-bold uppercase tracking-widest" style={{ color: 'var(--text-muted)' }}>
                 What You Need
               </h3>
 
               <div className="grid grid-cols-1 gap-3">
-                <div className="rounded-xl p-4" style={{ background: 'oklch(0.72 0.10 15 / 0.05)', border: '1px solid oklch(0.72 0.10 15 / 0.16)' }}>
+                <div className="rounded-xl p-4" style={{ background: 'oklch(0.72 0.16 55 / 0.06)', border: '1px solid oklch(0.72 0.16 55 / 0.18)' }}>
                   <p className="text-[9px] font-bold uppercase tracking-wider mb-1" style={{ color: 'var(--text-muted)' }}>Estimated Budget Needed</p>
                   <p className="font-display font-bold text-[36px] leading-none shimmer-text">{formatCurrency(reverseCalc.requiredSpend, true)}</p>
                   <p className="text-[10px] mt-1" style={{ color: 'var(--text-muted)' }}>at {efficiency}:1 return ratio over {revDuration} week{revDuration !== 1 ? 's' : ''}</p>
@@ -375,9 +375,9 @@ export default function AdROICalculator() {
 
             <div
               className="card px-4 py-3 text-[11px]"
-              style={{ borderColor: 'oklch(0.72 0.10 15 / 0.10)', background: 'oklch(0.72 0.10 15 / 0.03)' }}
+              style={{ borderColor: 'oklch(0.78 0.13 198 / 0.12)', background: 'oklch(0.78 0.13 198 / 0.03)' }}
             >
-              <p className="font-semibold mb-1" style={{ color: 'var(--accent-rose)' }}>Reading this</p>
+              <p className="font-semibold mb-1" style={{ color: 'var(--accent-primary)' }}>Reading this</p>
               <p style={{ color: 'var(--text-muted)' }}>
                 To generate {formatCurrency(targetRevenue, true)} in additional revenue over {revDuration} week{revDuration !== 1 ? 's' : ''},
                 you need a {reverseCalc.requiredLiftPct.toFixed(1)}% weekly lift.

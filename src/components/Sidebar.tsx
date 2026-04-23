@@ -27,7 +27,7 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
       className="fixed top-0 left-0 h-screen z-50 flex flex-col transition-all duration-300 ease-out"
       style={{
         width: collapsed ? 64 : 228,
-        background: 'oklch(0.11 0.014 270 / 0.85)',
+        background: 'oklch(0.11 0.020 250 / 0.85)',
         backdropFilter: 'blur(40px) saturate(1.4)',
         WebkitBackdropFilter: 'blur(40px) saturate(1.4)',
         borderRight: '1px solid oklch(1 0 0 / 0.06)',
@@ -38,21 +38,21 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
       <div
         className="flex items-center h-16 border-b overflow-hidden"
         style={{
-          borderColor: 'oklch(0.72 0.10 15 / 0.09)',
+          borderColor: 'oklch(0.78 0.13 198 / 0.09)',
           padding: '0 14px',
           justifyContent: collapsed ? 'center' : 'flex-start',
           gap: collapsed ? 0 : 10,
-          background: 'linear-gradient(135deg, oklch(0.72 0.10 15 / 0.06) 0%, transparent 55%)',
+          background: 'linear-gradient(135deg, oklch(0.78 0.13 198 / 0.06) 0%, transparent 55%)',
         }}
       >
         {/* Logo with pulse ring */}
         <div
-          className="flex-shrink-0 rounded-xl overflow-hidden flex items-center justify-center animate-pulse-rose"
+          className="flex-shrink-0 rounded-xl overflow-hidden flex items-center justify-center animate-pulse-primary"
           style={{
             width: collapsed ? 34 : 40,
             height: collapsed ? 34 : 40,
-            background: 'oklch(0.72 0.10 15 / 0.08)',
-            border: '1px solid oklch(0.72 0.10 15 / 0.20)',
+            background: 'oklch(0.78 0.13 198 / 0.08)',
+            border: '1px solid oklch(0.78 0.13 198 / 0.20)',
             transition: 'all 0.3s ease',
             flexShrink: 0,
           }}
@@ -77,9 +77,9 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
             </h1>
             <p
               className="text-[9px] font-bold tracking-[0.16em] uppercase mt-0.5"
-              style={{ color: 'var(--accent-rose)', opacity: 0.75 }}
+              style={{ color: 'var(--accent-primary)', opacity: 0.80 }}
             >
-              Owners Space
+              Owner&apos;s Space
             </p>
           </div>
         )}
@@ -108,10 +108,10 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
                 padding: collapsed ? '10px' : '9px 12px',
                 justifyContent: collapsed ? 'center' : 'flex-start',
                 background: isActive
-                  ? 'linear-gradient(90deg, oklch(0.72 0.10 15 / 0.10) 0%, oklch(0.72 0.10 15 / 0.02) 100%)'
+                  ? 'linear-gradient(90deg, oklch(0.78 0.13 198 / 0.12) 0%, oklch(0.78 0.13 198 / 0.02) 100%)'
                   : 'transparent',
-                color: isActive ? 'var(--accent-rose)' : 'var(--text-muted)',
-                boxShadow: isActive ? 'inset 0 1px 0 oklch(0.72 0.10 15 / 0.06)' : 'none',
+                color: isActive ? 'var(--accent-primary)' : 'var(--text-muted)',
+                boxShadow: isActive ? 'inset 0 1px 0 oklch(0.78 0.13 198 / 0.06)' : 'none',
               }}
               onMouseEnter={(e) => {
                 if (!isActive) {
@@ -134,14 +134,14 @@ export default function Sidebar({ activeView, onViewChange, collapsed, onCollaps
       </nav>
 
       {/* Collapse toggle */}
-      <div className="p-2 border-t" style={{ borderColor: 'oklch(0.72 0.10 15 / 0.07)' }}>
+      <div className="p-2 border-t" style={{ borderColor: 'oklch(0.78 0.13 198 / 0.07)' }}>
         <button
           onClick={() => onCollapsedChange(!collapsed)}
           className="w-full flex items-center justify-center gap-1.5 px-2 py-2 rounded-lg text-xs transition-all duration-200"
           style={{ color: 'var(--text-muted)' }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'oklch(0.72 0.10 15 / 0.05)'
-            e.currentTarget.style.color = 'var(--accent-rose)'
+            e.currentTarget.style.background = 'oklch(0.78 0.13 198 / 0.06)'
+            e.currentTarget.style.color = 'var(--accent-primary)'
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = 'transparent'

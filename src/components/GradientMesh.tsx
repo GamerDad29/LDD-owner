@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-// Animated WebGL gradient mesh — the signature background effect
+// Animated WebGL gradient mesh. Signature background effect.
 // Renders flowing aurora-like gradients that slowly morph and breathe
 
 const VERTEX_SHADER = `
@@ -55,24 +55,23 @@ const FRAGMENT_SHADER = `
     float n2 = snoise(uv * 2.5 + vec2(-t * 0.2, t * 0.35));
     float n3 = snoise(uv * 0.8 + vec2(t * 0.15, -t * 0.1));
 
-    // Rose gold:  rgb(0.82, 0.58, 0.54)  — oklch(0.72 0.10 15)
-    // Lavender:   rgb(0.62, 0.50, 0.82)  — oklch(0.68 0.13 290)
-    // Peach:      rgb(0.82, 0.68, 0.52)  — oklch(0.76 0.12 55)
+    // Cyan:      approx oklch(0.78 0.13 198)
+    // Orange:    approx oklch(0.72 0.16 55)
+    // Lavender:  approx oklch(0.68 0.13 290)
 
-    vec3 roseGold = vec3(0.82, 0.56, 0.52);
+    vec3 cyan     = vec3(0.25, 0.78, 0.86);
+    vec3 orange   = vec3(0.98, 0.62, 0.25);
     vec3 lavender = vec3(0.60, 0.48, 0.80);
-    vec3 peach    = vec3(0.80, 0.66, 0.50);
-    vec3 deep     = vec3(0.08, 0.08, 0.12);
+    vec3 deep     = vec3(0.04, 0.06, 0.10);
 
-    // Blend colors based on noise + position
     float blend1 = smoothstep(-0.3, 0.6, n1) * smoothstep(0.0, 0.7, 1.0 - uv.y + uv.x * 0.3);
     float blend2 = smoothstep(-0.2, 0.5, n2) * smoothstep(0.0, 0.8, uv.y + (1.0 - uv.x) * 0.2);
     float blend3 = smoothstep(-0.1, 0.7, n3) * smoothstep(0.2, 0.9, uv.x * 0.5 + uv.y * 0.5);
 
     vec3 color = deep;
-    color = mix(color, roseGold, blend1 * 0.08);
-    color = mix(color, lavender, blend2 * 0.06);
-    color = mix(color, peach, blend3 * 0.04);
+    color = mix(color, cyan,     blend1 * 0.07);
+    color = mix(color, orange,   blend2 * 0.05);
+    color = mix(color, lavender, blend3 * 0.04);
 
     // Subtle vignette
     float vignette = 1.0 - smoothstep(0.4, 1.4, length(uv - 0.5) * 1.2);

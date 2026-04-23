@@ -80,7 +80,7 @@ export default function TeamPayroll() {
 
         <div className="card p-5">
           <div className="flex items-center gap-2 mb-2">
-            <div className="p-2 rounded-lg" style={{ background: 'rgba(245,166,35,0.1)' }}><DollarSign size={15} style={{ color: 'var(--accent-amber)' }} /></div>
+            <div className="p-2 rounded-lg" style={{ background: 'rgba(245,166,35,0.1)' }}><DollarSign size={15} style={{ color: 'var(--accent-peach)' }} /></div>
             <span className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>Monthly Payroll</span>
           </div>
           <div className="font-display font-bold text-[26px]" style={{ color: 'var(--text-primary)' }}>{formatCurrency(currentMo)}</div>
@@ -93,10 +93,10 @@ export default function TeamPayroll() {
 
         <div className="card p-5">
           <div className="flex items-center gap-2 mb-2">
-            <div className="p-2 rounded-lg" style={{ background: 'rgba(160,125,252,0.1)' }}><TrendingUp size={15} style={{ color: 'var(--accent-purple)' }} /></div>
+            <div className="p-2 rounded-lg" style={{ background: 'rgba(160,125,252,0.1)' }}><TrendingUp size={15} style={{ color: 'var(--accent-lavender)' }} /></div>
             <span className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>% of Revenue</span>
           </div>
-          <div className="font-display font-bold text-[26px]" style={{ color: pctRev > 30 ? 'var(--accent-red)' : pctRev > 25 ? 'var(--accent-amber)' : 'var(--accent-green)' }}>
+          <div className="font-display font-bold text-[26px]" style={{ color: pctRev > 30 ? 'var(--accent-red)' : pctRev > 25 ? 'var(--accent-peach)' : 'var(--accent-green)' }}>
             {pctRev.toFixed(1)}%
           </div>
           <p className="text-[11px] mt-1" style={{ color: 'var(--text-muted)' }}>Target: 25% | Rev: {formatCurrency(monthlyRev)}/mo</p>
@@ -118,10 +118,10 @@ export default function TeamPayroll() {
       {owner && (
         <div className="card px-5 py-3 flex items-center justify-between" style={{ borderColor: 'rgba(245,166,35,0.12)' }}>
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full flex items-center justify-center text-[12px] font-bold" style={{ background: 'rgba(245,166,35,0.12)', color: 'var(--accent-amber)' }}>R</div>
+            <div className="w-8 h-8 rounded-full flex items-center justify-center text-[12px] font-bold" style={{ background: 'rgba(245,166,35,0.12)', color: 'var(--accent-peach)' }}>R</div>
             <div>
               <p className="text-[13px] font-semibold" style={{ color: 'var(--text-primary)' }}>{owner.name}</p>
-              <p className="text-[11px]" style={{ color: 'var(--accent-amber)' }}>Owner</p>
+              <p className="text-[11px]" style={{ color: 'var(--accent-peach)' }}>Owner</p>
             </div>
           </div>
           <div className="text-right">
@@ -198,7 +198,7 @@ export default function TeamPayroll() {
                     <td className="py-2.5 px-2">
                       <span className="text-[11px] px-2 py-0.5 rounded" style={{ color: roleColor, background: `${roleColor}12` }}>{emp.role}</span>
                     </td>
-                    <td className="py-2.5 px-2 text-right font-mono" style={{ color: 'var(--accent-amber)' }}>
+                    <td className="py-2.5 px-2 text-right font-mono" style={{ color: 'var(--accent-peach)' }}>
                       {emp.hourlyRate ? `$${emp.hourlyRate.toFixed(2)}` : '-'}
                     </td>
                     <td className="py-2.5 px-2 text-right font-mono" style={{ color: 'var(--text-muted)' }}>
@@ -295,7 +295,7 @@ export default function TeamPayroll() {
                 </div>
                 <div>
                   <p style={{ color: 'var(--text-muted)' }}>New Payroll % of Rev</p>
-                  <p className="font-mono font-bold text-[14px]" style={{ color: pctRev > 30 ? 'var(--accent-red)' : 'var(--accent-amber)' }}>
+                  <p className="font-mono font-bold text-[14px]" style={{ color: pctRev > 30 ? 'var(--accent-red)' : 'var(--accent-peach)' }}>
                     {pctRev.toFixed(1)}%
                   </p>
                 </div>

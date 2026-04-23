@@ -65,13 +65,13 @@ function DuckInsight({
         title={buttonLabel ? label : undefined}
         className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold transition-all"
         style={{
-          background: 'oklch(0.72 0.10 15 / 0.07)',
-          border: '1px solid oklch(0.72 0.10 15 / 0.16)',
-          color: 'var(--accent-rose)',
+          background: 'oklch(0.78 0.13 198 / 0.07)',
+          border: '1px solid oklch(0.78 0.13 198 / 0.18)',
+          color: 'var(--accent-primary)',
           opacity: loading ? 0.7 : 1,
         }}
-        onMouseEnter={e => { e.currentTarget.style.background = 'oklch(0.72 0.10 15 / 0.12)' }}
-        onMouseLeave={e => { e.currentTarget.style.background = 'oklch(0.72 0.10 15 / 0.07)' }}
+        onMouseEnter={e => { e.currentTarget.style.background = 'oklch(0.78 0.13 198 / 0.14)' }}
+        onMouseLeave={e => { e.currentTarget.style.background = 'oklch(0.78 0.13 198 / 0.07)' }}
       >
         {loading
           ? <><Loader2 size={12} className="animate-spin" /> Thinking...</>
@@ -94,16 +94,16 @@ function DuckInsight({
         <div
           className="mt-2 px-3.5 py-3 rounded-xl text-[12px] leading-relaxed"
           style={{
-            background: 'linear-gradient(135deg, oklch(0.72 0.10 15 / 0.06) 0%, oklch(0.72 0.10 15 / 0.02) 100%)',
-            border: '1px solid oklch(0.72 0.10 15 / 0.16)',
+            background: 'linear-gradient(135deg, oklch(0.78 0.13 198 / 0.06) 0%, oklch(0.78 0.13 198 / 0.02) 100%)',
+            border: '1px solid oklch(0.78 0.13 198 / 0.16)',
             color: 'var(--text-secondary)',
           }}
         >
           <div className="flex items-center gap-1.5 mb-1.5">
-            <div className="w-4 h-4 rounded-full flex items-center justify-center" style={{ background: 'oklch(0.72 0.10 15 / 0.13)' }}>
-              <Sparkles size={9} style={{ color: 'var(--accent-rose)' }} />
+            <div className="w-4 h-4 rounded-full flex items-center justify-center" style={{ background: 'oklch(0.78 0.13 198 / 0.13)' }}>
+              <Sparkles size={9} style={{ color: 'var(--accent-primary)' }} />
             </div>
-            <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: 'var(--accent-rose)' }}>Duck Norris</span>
+            <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: 'var(--accent-primary)' }}>Duck Norris</span>
           </div>
           {text}
         </div>
@@ -172,6 +172,12 @@ export default function SalesInsights() {
     : { totalSales: 0, date: '', orders: 0 }
   const top5      = (productSalesData as any[]).slice(0, 5)
 
+  const firstDate = dailySalesData[0]?.date
+  const lastDate  = dailySalesData[dailySalesData.length - 1]?.date
+  const periodLabel = firstDate && lastDate
+    ? `${formatDate(firstDate)} - ${formatDate(lastDate)}`
+    : 'Current period'
+
   const overviewData = {
     days: dailySalesData.length,
     totalSales: totSales,
@@ -180,6 +186,7 @@ export default function SalesInsights() {
     bestDay: best.totalSales,
     yoySales: yoyData.periodComparison.salesGrowth,
     yoyOrders: yoyData.periodComparison.orderGrowth,
+    periodLabel,
   }
 
   return (
@@ -208,7 +215,7 @@ export default function SalesInsights() {
           },
           {
             icon: <Package size={15} />, color: 'oklch(0.68 0.13 290 / 0.1)', iconColor: 'var(--accent-lavender)',
-            label: 'Top Product', value: top5[0]?.name ?? '—',
+            label: 'Top Product', value: top5[0]?.name ?? '-',
             sub: `${formatNumber(top5[0]?.unitsSold ?? 0)} units · ${formatCurrency(top5[0]?.totalSales ?? 0)}`,
             subColor: 'var(--text-muted)',
             small: true,
@@ -230,20 +237,20 @@ export default function SalesInsights() {
         ))}
       </div>
 
-      {/* Executive summary — Duck Norris */}
-      <div className="card p-5" style={{ borderColor: 'oklch(0.72 0.10 15 / 0.10)' }}>
+      {/* Executive summary rendered by Duck Norris */}
+      <div className="card p-5" style={{ borderColor: 'oklch(0.78 0.13 198 / 0.12)' }}>
         <div className="flex items-center gap-2 mb-1">
-          <Sparkles size={15} style={{ color: 'var(--accent-rose)' }} />
+          <Sparkles size={15} style={{ color: 'var(--accent-primary)' }} />
           <h3 className="font-display font-bold text-[16px]" style={{ color: 'var(--text-primary)' }}>
             Executive Summary
           </h3>
           <span className="text-[10px] px-2 py-0.5 rounded-md font-bold uppercase tracking-wider ml-1"
-            style={{ background: 'oklch(0.72 0.10 15 / 0.08)', color: 'var(--accent-rose)', border: '1px solid oklch(0.72 0.10 15 / 0.18)' }}>
+            style={{ background: 'oklch(0.78 0.13 198 / 0.08)', color: 'var(--accent-primary)', border: '1px solid oklch(0.78 0.13 198 / 0.18)' }}>
             Duck Norris
           </span>
         </div>
         <p className="text-[11px] mb-2" style={{ color: 'var(--text-muted)' }}>
-          Jan 1 – Feb 23, 2026 · {dailySalesData.length} days · {formatCurrency(totSales, true)} revenue
+          {periodLabel} · {dailySalesData.length} days · {formatCurrency(totSales, true)} revenue
         </p>
         <DuckInsight section="overview" data={overviewData} label="Generate Summary" buttonLabel="What the Duck?" />
       </div>
@@ -281,7 +288,7 @@ export default function SalesInsights() {
                         </p>
                         <p className="text-[11px]" style={{ color: 'var(--text-secondary)' }}>
                           $/Order: <span className="font-mono" style={{ color: 'var(--accent-peach)' }}>
-                            {d.avgOrders > 0 ? formatCurrency(d.avgSales / d.avgOrders) : '—'}
+                            {d.avgOrders > 0 ? formatCurrency(d.avgSales / d.avgOrders) : '-'}
                           </span>
                         </p>
                       </div>
@@ -404,21 +411,21 @@ export default function SalesInsights() {
                   <div className="flex items-center gap-2.5">
                     <span
                       className="w-5 h-5 rounded-md text-[10px] font-bold flex items-center justify-center flex-shrink-0"
-                      style={{ background: 'oklch(0.72 0.10 15 / 0.10)', color: 'var(--accent-rose)' }}
+                      style={{ background: 'oklch(0.78 0.13 198 / 0.10)', color: 'var(--accent-primary)' }}
                     >
                       {i + 1}
                     </span>
                     <span className="text-[12px] font-semibold" style={{ color: 'var(--text-primary)' }}>{p.name}</span>
                   </div>
                   <div className="text-right">
-                    <span className="text-[13px] font-mono font-bold" style={{ color: 'var(--accent-rose)' }}>{formatCurrency(p.totalSales)}</span>
+                    <span className="text-[13px] font-mono font-bold" style={{ color: 'var(--accent-revenue)' }}>{formatCurrency(p.totalSales)}</span>
                     <span className="text-[10px] ml-2 font-mono" style={{ color: 'var(--text-muted)' }}>{formatNumber(p.unitsSold)} units</span>
                   </div>
                 </div>
                 <div className="h-1 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
                   <div
                     className="h-full rounded-full"
-                    style={{ width: `${pct}%`, background: `var(--accent-rose)`, opacity: 0.5 }}
+                    style={{ width: `${pct}%`, background: `var(--accent-revenue)`, opacity: 0.55 }}
                   />
                 </div>
                 <span className="text-[9px] mt-0.5 block" style={{ color: 'var(--text-muted)' }}>

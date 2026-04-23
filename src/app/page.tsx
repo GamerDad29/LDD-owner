@@ -12,7 +12,10 @@ import AdROICalculator from '@/components/AdROICalculator'
 import TeamPayroll from '@/components/TeamPayroll'
 import SalesInsights from '@/components/SalesInsights'
 import YearOverYear from '@/components/YearOverYear'
-import { DollarSign, TrendingUp, ShoppingBag, ShoppingCart, PieChart, Users, BarChart3, Megaphone, X } from 'lucide-react'
+import {
+  DollarSign, TrendingUp, ShoppingBag, ShoppingCart, PieChart,
+  Users, BarChart3, Megaphone, RotateCcw,
+} from 'lucide-react'
 import payrollData from '@/data/payroll.json'
 import { formatCurrency, formatNumber } from '@/lib/utils'
 import { useDashboardData } from '@/context/DashboardData'
@@ -38,7 +41,7 @@ export default function Dashboard() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
   const [compYear, setCompYear] = useState<CompYear>('2025')
 
-  const { data: liveData, isLive, loading, lastUpdated, error, dismissError } = useDashboardData()
+  const { data: liveData, isLive, loading, lastUpdated } = useDashboardData()
   const dailySalesData = liveData.dailySales
   const yoyData        = liveData.yearOverYear
 
@@ -65,6 +68,14 @@ export default function Dashboard() {
   const avgDailyChange  = prevAvgDaily > 0 ? ((avgDaily - prevAvgDaily) / prevAvgDaily) * 100 : 0
   const aovChange       = aovPrevYear  > 0 ? ((avgAOV - aovPrevYear)   / aovPrevYear)  * 100 : 0
 
+  const rate2026 = (yoyData.years['2026'] as any).returnRate ?? 0
+  const rate2025 = (yoyData.years['2025'] as any).returnRate ?? 0
+  const returnRateDelta = rate2025 > 0 ? ((rate2026 - rate2025) / rate2025) * 100 : 0
+  const returnAccent =
+    rate2026 >= 5 ? 'var(--accent-red)'
+    : rate2026 >= 4 ? 'var(--accent-peach)'
+    : 'var(--accent-green)'
+
   const biweeklyPayroll = formatCurrency(payrollData.totals.biweeklyGross)
   const bestDay = dailySalesData.length > 0
     ? formatCurrency(dailySalesData.reduce((b, d) => d.totalSales > b.totalSales ? d : b, dailySalesData[0]).totalSales)
@@ -72,17 +83,29 @@ export default function Dashboard() {
   const yoyGrowth = `${salesGrowthVs25 >= 0 ? '+' : ''}${salesGrowthVs25.toFixed(1)}%`
 
   const viewTitles: Record<DashboardView, { title: string; sub: string }> = {
-    overview:       { title: 'Owners Space',     sub: 'Your business command center' },
+    overview:       { title: "Owner's Space",    sub: 'Your business command center' },
     'profit-first': { title: 'Profit First',     sub: 'Weekly allocation model in real time' },
-    team:           { title: 'Team & Payroll',    sub: 'Compensation, distribution, and raise modeling' },
-    sales:          { title: 'Sales Insights',    sub: 'Revenue trends, patterns, and product performance' },
-    yoy:            { title: 'Year over Year',    sub: '2024 vs 2025 vs 2026 performance comparison' },
-    'social-media': { title: 'Social Media',      sub: 'Ad ROI modeling and future social integrations' },
+    team:           { title: 'Team & Payroll',   sub: 'Compensation, distribution, and raise modeling' },
+    sales:          { title: 'Sales Insights',   sub: 'Revenue trends, patterns, and product performance' },
+    yoy:            { title: 'Year over Year',   sub: '2024 vs 2025 vs 2026 performance comparison' },
+    'social-media': { title: 'Social Media',     sub: 'Ad ROI modeling and future social integrations' },
   }
+
+  const livePillStyle = isLive
+    ? {
+        color: 'var(--accent-primary)',
+        background: 'oklch(0.78 0.13 198 / 0.08)',
+        border: '1px solid oklch(0.78 0.13 198 / 0.18)',
+        backdropFilter: 'blur(8px)',
+      }
+    : {
+        color: 'var(--text-muted)',
+        background: 'oklch(1 0 0 / 0.04)',
+        border: '1px solid var(--border-subtle)',
+      }
 
   return (
     <div className="min-h-screen relative">
-      {/* WebGL gradient mesh background */}
       <GradientMesh />
       <NoiseOverlay />
 
@@ -97,30 +120,6 @@ export default function Dashboard() {
         className="transition-all duration-300 relative z-10"
         style={{ marginLeft: sidebarCollapsed ? 64 : 228, padding: '32px 32px' }}
       >
-        {/* Error banner */}
-        <AnimatePresence>
-          {error && (
-            <motion.div
-              initial={{ opacity: 0, y: -12, height: 0 }}
-              animate={{ opacity: 1, y: 0, height: 'auto' }}
-              exit={{ opacity: 0, y: -12, height: 0 }}
-              className="mb-5 px-4 py-3 rounded-xl flex items-center justify-between"
-              style={{
-                background: 'oklch(0.63 0.17 18 / 0.08)',
-                border: '1px solid oklch(0.63 0.17 18 / 0.18)',
-                backdropFilter: 'blur(12px)',
-              }}
-            >
-              <p className="text-[12px] font-medium" style={{ color: 'var(--accent-red)' }}>
-                Shopify connection failed: {error}
-              </p>
-              <button onClick={dismissError} className="p-1 rounded-md" style={{ color: 'var(--accent-red)' }}>
-                <X size={14} />
-              </button>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
         {/* Page header */}
         <div className="mb-8 flex items-center justify-between">
           <div>
@@ -137,7 +136,7 @@ export default function Dashboard() {
                   className="font-display font-bold text-[28px] tracking-tight leading-tight"
                   style={{ color: 'var(--text-primary)' }}
                 >
-                  Owners Space
+                  Owner&apos;s Space
                 </h2>
                 <p className="text-[13px] mt-1" style={{ color: 'var(--text-muted)' }}>
                   Lucky Duck Dealz performance at a glance
@@ -159,23 +158,17 @@ export default function Dashboard() {
             {!loading && (
               <span
                 className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider mt-2 px-2.5 py-1 rounded-full"
-                style={isLive
-                  ? {
-                      color: 'var(--accent-green)',
-                      background: 'oklch(0.75 0.14 155 / 0.08)',
-                      border: '1px solid oklch(0.75 0.14 155 / 0.15)',
-                      backdropFilter: 'blur(8px)',
-                    }
-                  : { color: '#ff8a65', background: 'rgba(255,138,101,0.08)', border: '1px solid rgba(255,138,101,0.15)' }
-                }
+                style={livePillStyle}
               >
-                <span
-                  className="w-1.5 h-1.5 rounded-full animate-pulse"
-                  style={{ background: isLive ? 'var(--accent-green)' : '#ff8a65' }}
-                />
+                {isLive && (
+                  <span
+                    className="w-1.5 h-1.5 rounded-full animate-pulse"
+                    style={{ background: 'var(--accent-primary)' }}
+                  />
+                )}
                 {isLive
-                  ? `Live · ${new Date(lastUpdated).toLocaleDateString()}`
-                  : 'Static data'
+                  ? `Live · updated ${new Date(lastUpdated).toLocaleDateString()}`
+                  : 'Demo data'
                 }
               </span>
             )}
@@ -205,8 +198,8 @@ export default function Dashboard() {
         <AnimatePresence mode="wait">
           {view === 'overview' && (
             <motion.div key="overview" {...pageTransition} className="space-y-6">
-              {/* 4 KPI cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 stagger" key={compYear}>
+              {/* 5 KPI cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 stagger" key={compYear}>
                 <MetricCard
                   label="Period Revenue"
                   value={totSales}
@@ -214,7 +207,7 @@ export default function Dashboard() {
                   change={yoySalesGrowth}
                   changeLabel={`vs ${formatCurrency(prevTotalSales, true)} in ${compYear}`}
                   icon={<DollarSign size={16} />}
-                  accentColor="var(--accent-rose)"
+                  accentColor="var(--accent-revenue)"
                   compact
                 />
                 <MetricCard
@@ -244,23 +237,34 @@ export default function Dashboard() {
                   icon={<ShoppingBag size={16} />}
                   accentColor="var(--accent-lavender)"
                 />
+                <MetricCard
+                  label="Return Rate"
+                  value={rate2026}
+                  format="percent"
+                  change={returnRateDelta}
+                  changeLabel={`vs ${rate2025.toFixed(2)}% in 2025`}
+                  icon={<RotateCcw size={16} />}
+                  accentColor={returnAccent}
+                  invertDelta
+                  compact
+                />
               </div>
 
-              {/* Annualized pace banner — with animated gradient border */}
+              {/* Annualized pace banner with animated gradient border */}
               <div className="gradient-border">
                 <div
                   className="card px-6 py-5 flex items-center justify-between"
-                  style={{ borderColor: 'oklch(0.75 0.14 155 / 0.12)' }}
+                  style={{ borderColor: 'oklch(0.72 0.16 55 / 0.12)' }}
                 >
                   <div className="flex items-center gap-4">
                     <div
                       className="p-3 rounded-xl"
                       style={{
-                        background: 'oklch(0.75 0.14 155 / 0.08)',
-                        boxShadow: '0 0 20px oklch(0.75 0.14 155 / 0.08)',
+                        background: 'oklch(0.72 0.16 55 / 0.08)',
+                        boxShadow: '0 0 20px oklch(0.72 0.16 55 / 0.10)',
                       }}
                     >
-                      <TrendingUp size={20} style={{ color: 'var(--accent-green)' }} />
+                      <TrendingUp size={20} style={{ color: 'var(--accent-revenue)' }} />
                     </div>
                     <div>
                       <p
@@ -302,8 +306,8 @@ export default function Dashboard() {
                   description="Weekly cash allocation with real-time balance tracking"
                   metric="42.9%"
                   metricLabel="inventory remainder"
-                  accentColor="oklch(0.75 0.14 155)"
-                  glowColor="oklch(0.68 0.13 290)"
+                  accentColor="oklch(0.78 0.13 198)"
+                  glowColor="oklch(0.76 0.12 55)"
                   view="profit-first"
                   onNavigate={setView}
                   index={0}
@@ -315,7 +319,7 @@ export default function Dashboard() {
                   metric={biweeklyPayroll}
                   metricLabel="biweekly payroll"
                   accentColor="oklch(0.68 0.13 290)"
-                  glowColor="oklch(0.72 0.10 15)"
+                  glowColor="oklch(0.78 0.13 198)"
                   view="team"
                   onNavigate={setView}
                   index={1}
@@ -326,8 +330,8 @@ export default function Dashboard() {
                   description="Revenue patterns, product performance, and Duck Norris AI"
                   metric={bestDay}
                   metricLabel="best day revenue"
-                  accentColor="oklch(0.70 0.14 228)"
-                  glowColor="oklch(0.75 0.14 155)"
+                  accentColor="oklch(0.72 0.16 55)"
+                  glowColor="oklch(0.78 0.13 198)"
                   view="sales"
                   onNavigate={setView}
                   index={2}
@@ -338,8 +342,8 @@ export default function Dashboard() {
                   description="2024 vs 2025 vs 2026 apples-to-apples comparison"
                   metric={yoyGrowth}
                   metricLabel="YoY growth"
-                  accentColor="oklch(0.76 0.12 55)"
-                  glowColor="oklch(0.72 0.10 15)"
+                  accentColor="oklch(0.75 0.14 155)"
+                  glowColor="oklch(0.72 0.16 55)"
                   view="yoy"
                   onNavigate={setView}
                   index={3}
@@ -348,8 +352,8 @@ export default function Dashboard() {
                   icon={<Megaphone size={18} />}
                   title="Social Media"
                   description="Ad ROI planner and future social media integrations"
-                  accentColor="oklch(0.72 0.10 15)"
-                  glowColor="oklch(0.68 0.13 290)"
+                  accentColor="oklch(0.78 0.13 198)"
+                  glowColor="oklch(0.72 0.16 55)"
                   view="social-media"
                   onNavigate={setView}
                   index={4}

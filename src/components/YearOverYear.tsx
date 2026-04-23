@@ -4,7 +4,7 @@ import { useMemo } from 'react'
 import {
   BarChart, Bar, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
 } from 'recharts'
-import { formatCurrency, formatNumber } from '@/lib/utils'
+import { formatCurrency, formatDate, formatNumber } from '@/lib/utils'
 import { TrendingUp, TrendingDown, ArrowUpRight, ArrowDownRight } from 'lucide-react'
 import { useDashboardData } from '@/context/DashboardData'
 
@@ -38,6 +38,7 @@ function GrowthBadge({ value, label }: { value: number; label: string }) {
 export default function YearOverYear() {
   const { data } = useDashboardData()
   const yoyData    = data.yearOverYear
+  const dailySales = data.dailySales
   const monthly2025 = data.monthly2025
   const returns2024 = data.returns2024
   const returns2025 = data.returns2025
@@ -46,6 +47,13 @@ export default function YearOverYear() {
   const y25 = yoyData.years['2025']
   const y26 = yoyData.years['2026']
   const comp = yoyData.periodComparison
+
+  const firstDate = dailySales[0]?.date
+  const lastDate  = dailySales[dailySales.length - 1]?.date
+  const periodLabel = firstDate && lastDate
+    ? `${formatDate(firstDate)} - ${formatDate(lastDate)}`
+    : 'Current period'
+  const periodDays = dailySales.length
 
   // Monthly revenue trend: 2025 full year
   const monthlyTrend = useMemo(() => {
@@ -57,7 +65,7 @@ export default function YearOverYear() {
     }))
   }, [monthly2025])
 
-  // Monthly returns trend — 3 years
+  // Monthly returns trend across 3 years
   const returnsTrend = useMemo(() => {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     return returns2025.map((r: any, i: number) => ({
@@ -90,7 +98,7 @@ export default function YearOverYear() {
         {/* 2025 */}
         <div className="card p-5" style={{ borderColor: 'rgba(160,125,252,0.12)' }}>
           <div className="flex items-center gap-2 mb-4">
-            <span className="text-[13px] font-bold font-display" style={{ color: 'var(--accent-purple)' }}>2025</span>
+            <span className="text-[13px] font-bold font-display" style={{ color: 'var(--accent-lavender)' }}>2025</span>
             <GrowthBadge value={y25.yoyVs2024} label="vs 2024" />
           </div>
           <div className="space-y-4">
@@ -106,7 +114,7 @@ export default function YearOverYear() {
         <div className="card p-5" style={{ borderColor: 'rgba(77,159,255,0.15)' }}>
           <div className="flex items-center gap-2 mb-4">
             <span className="text-[13px] font-bold font-display" style={{ color: 'var(--accent-blue)' }}>2026</span>
-            <span className="px-2 py-0.5 rounded text-[10px] font-semibold" style={{ background: 'rgba(77,159,255,0.1)', color: 'var(--accent-blue)' }}>54 days</span>
+            <span className="px-2 py-0.5 rounded text-[10px] font-semibold" style={{ background: 'rgba(77,159,255,0.1)', color: 'var(--accent-blue)' }}>{periodDays} days</span>
           </div>
           <div className="space-y-4">
             <StatBlock label="Period Revenue" value={formatCurrency(y26.totalSales, true)} />
@@ -127,7 +135,7 @@ export default function YearOverYear() {
       {/* Same-period comparison callout */}
       <div className="card p-5" style={{ borderColor: 'rgba(61,214,140,0.12)' }}>
         <h4 className="text-[13px] font-bold font-display mb-3" style={{ color: 'var(--text-primary)' }}>
-          Apples to Apples: Jan 1 - Feb 23
+          Apples to Apples: {periodLabel}
         </h4>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
           <div>

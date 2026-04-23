@@ -13,6 +13,7 @@ interface MetricCardProps {
   icon?: React.ReactNode
   accentColor?: string
   compact?: boolean
+  invertDelta?: boolean
 }
 
 function useCountUp(target: number, duration = 750) {
@@ -39,7 +40,8 @@ function useCountUp(target: number, duration = 750) {
 }
 
 export default function MetricCard({
-  label, value, format = 'currency', change, changeLabel, icon, accentColor = 'var(--accent-blue)', compact = false,
+  label, value, format = 'currency', change, changeLabel, icon,
+  accentColor = 'var(--accent-blue)', compact = false, invertDelta = false,
 }: MetricCardProps) {
   const animated = useCountUp(value)
 
@@ -49,7 +51,9 @@ export default function MetricCard({
     return `${v.toFixed(1)}%`
   }
 
-  const positive = (change ?? 0) >= 0
+  const rawPositive = (change ?? 0) >= 0
+  // When invertDelta is true, growth is bad (e.g. return rate).
+  const good = invertDelta ? !rawPositive : rawPositive
 
   return (
     <div
@@ -89,19 +93,19 @@ export default function MetricCard({
           <div
             className="flex items-center gap-1 px-1.5 py-0.5 rounded-md"
             style={{
-              background: positive ? 'rgba(46,232,154,0.1)' : 'rgba(255,82,82,0.1)',
-              border: `1px solid ${positive ? 'rgba(46,232,154,0.2)' : 'rgba(255,82,82,0.2)'}`,
+              background: good ? 'rgba(46,232,154,0.1)' : 'rgba(255,82,82,0.1)',
+              border: `1px solid ${good ? 'rgba(46,232,154,0.2)' : 'rgba(255,82,82,0.2)'}`,
             }}
           >
-            {positive
-              ? <TrendingUp size={11} style={{ color: 'var(--accent-green)' }} />
-              : <TrendingDown size={11} style={{ color: 'var(--accent-red)' }} />
+            {rawPositive
+              ? <TrendingUp size={11} style={{ color: good ? 'var(--accent-green)' : 'var(--accent-red)' }} />
+              : <TrendingDown size={11} style={{ color: good ? 'var(--accent-green)' : 'var(--accent-red)' }} />
             }
             <span
               className="text-[11px] font-bold font-mono"
-              style={{ color: positive ? 'var(--accent-green)' : 'var(--accent-red)' }}
+              style={{ color: good ? 'var(--accent-green)' : 'var(--accent-red)' }}
             >
-              {positive ? '+' : ''}{change.toFixed(1)}%
+              {rawPositive ? '+' : ''}{change.toFixed(1)}%
             </span>
           </div>
           {changeLabel && (
